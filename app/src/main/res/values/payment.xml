@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">MadProject</string>
+    <string name="tvSelect">Select Payee</string>
+
+    <string-array name="payee">
+        <item>Select</item>
+        <item>CEYLON ELECTRICITY BOARD[CEB]</item>
+        <item>LANKA ELECTRICITY COMPANY(PVT)LTD[LECO]</item>
+
+    </string-array>
+
+
+
+</resources>
