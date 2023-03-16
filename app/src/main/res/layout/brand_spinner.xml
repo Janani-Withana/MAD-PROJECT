@@ -2,10 +2,10 @@
 <TextView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:backgroundTint="@color/white"
+
     android:padding="10dp"
     android:text="Tharuka"
-    android:textColor="#13D51B"
+    android:textColor="#0A0B0A"
     android:textSize="24dp">
 
 </TextView>
