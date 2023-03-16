@@ -4,6 +4,13 @@
     <string name="Catergory">Category</string>
     <string name="Brand">Brands</string>
     <string name="Quantity">Quantity</string>
+    <string name="DailyUsage">Daily Usage(Hrs)</string>
+    <string name="MonthlyUsage">Monthly Usage(Hrs)</string>
+    <string name="Add">Add</string>
+    <string name="ViewList">View List</string>
+    <string name="addCustomItem">Have any other items?</string>
+    <string name="btnaddCustomItem">Add</string>
+
     <string-array name="Types">
         <item>Tv</item>
         <item>Fridge</item>
