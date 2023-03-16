@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string-array name="payee">
-        <item>Select</item>
-        <item>CEYLON ELECTRICITY BOARD[CEB]</item>
-        <item>LANKA ELECTRICITY COMPANY(PVT)LTD[LECO]</item>
-
-    </string-array>
-</resources>
