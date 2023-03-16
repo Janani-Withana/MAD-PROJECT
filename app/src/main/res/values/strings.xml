@@ -1,5 +1,28 @@
 <resources>
     <string name="app_name">ElectricitySaver</string>
+    <string name="account_number">Account Number</string>
+    <string name="electrcity_bill_account_name">Electrcity Bill Account Name</string>
+    <string name="electrcity_bill_account_number">Electrcity Bill Account Number</string>
+    <string name="select_payee">Select Payee</string>
+    <string name="amount">Amount</string>
+    <string name="view_favourite_list">View Favourite List</string>
+    <string name="pay">Pay</string>
+    <string name="account_number1">Account Number</string>
+    <string name="amount1">amount</string>
+    <string name="pay1">Pay</string>
+    <string name="delete1">Delete</string>
+    <string name="update1">Update</string>
+    <string name="account_number2">Account Number :</string>
+    <string name="withana_j_w_j">Withana J.W.J</string>
+    <string name="account_name3">Account Name :</string>
+    <string name="account_number3">Account Number :</string>
+    <string name="my_bills">My Bills</string>
+    <string name="account_name4">Account Name :</string>
+    <string name="lokuge_p_p">Lokuge P.P</string>
+    <string name="update3">Update</string>
+    <string name="delete3">Delete</string>
+    <string name="pay3">Pay</string>
+    <string name="back2">Back</string>
 
 
 </resources>
