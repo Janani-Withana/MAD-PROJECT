@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".User_addItems">
+
     <ImageView
         android:id="@+id/UseraddImage1"
         android:layout_width="match_parent"
@@ -255,14 +256,15 @@
             android:textSize="20sp" />
 
         <Button
+            android:id="@+id/btnadd"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="16dp"
             android:layout_marginRight="16dp"
-            android:backgroundTint="#EFB813"
             android:layout_weight="9"
-            android:textColor="@color/black"
-            android:text="@string/btnaddCustomItem" />
+            android:backgroundTint="#EFB813"
+            android:text="@string/btnaddCustomItem"
+            android:textColor="@color/black" />
 
 
     </LinearLayout>
