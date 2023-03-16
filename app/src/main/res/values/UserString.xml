@@ -2,5 +2,23 @@
 <resources>
     <!--User Item adding-->
     <string name="Catergory">Category</string>
+    <string name="Brand">Brands</string>
+    <string name="Quantity">Quantity</string>
+    <string-array name="Types">
+        <item>Tv</item>
+        <item>Fridge</item>
+        <item>Bulb</item>
+        <item>Iron</item>
+        <item>Rice Cooker</item>
+
+    </string-array>
+    <string-array name="Brands">
+        <item>LG</item>
+        <item>Abans</item>
+        <item>Singer</item>
+        <item>Panasonic</item>
+        <item>Samsung</item>
+
+    </string-array>
 
 </resources>
