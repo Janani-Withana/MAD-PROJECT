@@ -10,6 +10,8 @@
     <string name="ViewList">View List</string>
     <string name="addCustomItem">Have any other items?</string>
     <string name="btnaddCustomItem">Add</string>
+    <string name="WattCount">Number of Watts</string>
+
 
     <string-array name="Types">
         <item>Tv</item>
