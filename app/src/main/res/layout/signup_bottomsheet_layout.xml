@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -14,13 +15,12 @@
         tools:ignore="MissingConstraints">
 
         <ImageView
-            android:id="@+id/bottomSheet"
             android:layout_width="match_parent"
             android:layout_height="500dp"
             android:src="@drawable/bottom_sheet" />
 
         <ImageView
-            android:id="@+id/bottomSheet_bg"
+            android:id="@+id/imageView2"
             android:layout_width="489dp"
             android:layout_height="353dp"
             android:layout_alignParentStart="true"
@@ -34,19 +34,19 @@
             app:srcCompat="@drawable/asset_12" />
 
         <Button
-            android:id="@+id/btn_SignUp"
-            android:layout_width="133dp"
-            android:layout_height="51dp"
+            android:id="@+id/btnSignUp"
+            android:layout_width="110dp"
+            android:layout_height="52dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="139dp"
-            android:layout_marginTop="390dp"
-            android:layout_marginEnd="136dp"
+            android:layout_marginStart="146dp"
+            android:layout_marginTop="389dp"
+            android:layout_marginEnd="152dp"
             android:layout_marginBottom="59dp"
             android:backgroundTint="@color/btnColorYellow"
-            android:text="@string/btn_hint_signup"
+            android:text="@string/btnSignUp"
             android:textColorHint="@color/white"
             android:textSize="16sp"
             app:cornerRadius="50dp"
@@ -58,23 +58,22 @@
             app:layout_constraintVertical_bias="0.655" />
 
         <TextView
-            android:id="@+id/tv_SignUp"
-            android:layout_width="wrap_content"
-            android:layout_height="53dp"
+            android:id="@+id/textView17"
+            android:layout_width="129dp"
+            android:layout_height="47dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="149dp"
-            android:layout_marginTop="47dp"
-            android:layout_marginEnd="112dp"
-            android:layout_marginBottom="400dp"
-            android:text="@string/tv_sign_up"
+            android:layout_marginStart="145dp"
+            android:layout_marginTop="52dp"
+            android:layout_marginBottom="401dp"
+            android:hint="@string/tvSignUp"
+            android:text="Sign Up"
             android:textColor="@color/white"
             android:textSize="34sp" />
 
         <EditText
-            android:id="@+id/edtName"
+            android:id="@+id/editTextTextPersonName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
@@ -86,12 +85,12 @@
             android:layout_marginEnd="95dp"
             android:layout_marginBottom="342dp"
             android:ems="10"
-            android:hint="@string/hint_name"
-            android:textColorHint="@color/hintColorBlue"
-            android:inputType="textPersonName" />
+            android:hint="@string/hintName"
+            android:inputType="textPersonName"
+            android:textColorHint="@color/hintColorBlue" />
 
         <EditText
-            android:id="@+id/edtPassword"
+            android:id="@+id/editTextTextPassword"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
@@ -103,12 +102,12 @@
             android:layout_marginEnd="94dp"
             android:layout_marginBottom="222dp"
             android:ems="10"
-            android:hint="@string/hint_Password"
-            android:textColorHint="@color/hintColorBlue"
-            android:inputType="textPassword" />
+            android:hint="@string/hintPassword"
+            android:inputType="textPassword"
+            android:textColorHint="@color/hintColorBlue" />
 
         <EditText
-            android:id="@+id/edtEmail"
+            android:id="@+id/editTextTextEmailAddress"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
@@ -121,11 +120,11 @@
             android:layout_marginBottom="284dp"
             android:ems="10"
             android:hint="@string/hint_Email"
-            android:textColorHint="@color/hintColorBlue"
-            android:inputType="textEmailAddress" />
+            android:inputType="textEmailAddress"
+            android:textColorHint="@color/hintColorBlue" />
 
         <EditText
-            android:id="@+id/edtReenter_pwd"
+            android:id="@+id/editTextTextPassword2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
@@ -138,8 +137,8 @@
             android:layout_marginBottom="145dp"
             android:ems="10"
             android:hint="@string/hint_reEnter_password"
-            android:textColorHint="@color/hintColorBlue"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            android:textColorHint="@color/hintColorBlue" />
 
 
 
