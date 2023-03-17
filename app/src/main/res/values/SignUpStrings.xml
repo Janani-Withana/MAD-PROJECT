@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="btnSignUp">Sign Up</string>
+    <string name="tvSignUp">Sign Up</string>
+    <string name="hintName">Name</string>
+    <string name="hintEmail">Email</string>
+    <string name="hintPassword">Password</string>
+    <string name="hintReEnterPassword">Re-enter Password</string>
+</resources>

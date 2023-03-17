@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
-
+        android:src="@drawable/_601333"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="0dp" />
 
@@ -56,23 +56,24 @@
             android:layout_marginTop="16dp"
             android:layout_weight="4"
             android:text="@string/Catergory"
-            android:textColor="@color/black"
+            android:textColor="#F1EAEA"
             android:textSize="32dp" />
 
-        <EditText
-            android:id="@+id/ccat"
+        <Spinner
+            android:id="@+id/catspinner"
+            style="@style/Widget.AppCompat.Light.Spinner.DropDown.ActionBar"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="16dp"
             android:layout_marginRight="16dp"
             android:layout_weight="3"
-            android:backgroundTint="@color/black"
+            android:backgroundTint="@color/white"
+            android:entries="@array/Types"
             android:textAlignment="center" />
         "
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout5"
         android:layout_width="match_parent"
         android:layout_height="82dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -80,7 +81,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.363">
+        app:layout_constraintVertical_bias="0.363" >
 
         <TextView
             android:layout_width="match_parent"
@@ -89,26 +90,27 @@
             android:layout_marginTop="16dp"
             android:layout_weight="4"
             android:text="@string/Brand"
-            android:textColor="@color/black"
+            android:textColor="#F1EAEA"
             android:textSize="32dp" />
 
-        <EditText
-            android:id="@+id/brand"
+        <Spinner
+            android:id="@+id/bradspinner"
+            style="@style/Widget.AppCompat.Light.Spinner.DropDown.ActionBar"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="16dp"
             android:layout_marginRight="16dp"
             android:layout_weight="3"
-            android:backgroundTint="@color/black"
+            android:backgroundTint="@color/white"
+            android:entries="@array/Brands"
             android:textAlignment="center" />
-
-
+        "
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout3"
         android:layout_width="410dp"
         android:layout_height="66dp"
+        android:layout_marginEnd="1dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -122,145 +124,12 @@
             android:layout_marginTop="16dp"
             android:layout_weight="4"
             android:text="@string/Quantity"
-            android:textColor="@color/black"
+            android:textColor="#F1EAEA"
             android:textSize="32dp" />
-
-        <NumberPicker
+        <EditText
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_weight="3"
-            android:backgroundTint="@color/black"
-            android:entries="@array/Brands"
-            android:textAlignment="center" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:layout_width="match_parent"
-        android:layout_height="82dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.602">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_weight="4"
-            android:text="@string/DailyUsage"
-            android:textColor="@color/black"
-            android:textSize="28dp" />
-
-        <NumberPicker
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_weight="6"
-            android:backgroundTint="@color/black"
-            android:entries="@array/Brands"
-            android:textAlignment="center" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout4"
-        android:layout_width="match_parent"
-        android:layout_height="82dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.728">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_weight="4"
-            android:text="@string/MonthlyUsage"
-            android:textColor="@color/black"
-            android:textSize="28dp" />
-
-        <NumberPicker
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_weight="9"
-            android:backgroundTint="@color/black"
-            android:entries="@array/Brands"
-            android:textAlignment="center" />
-
-    </LinearLayout>
-
-    <Button
-        android:id="@+id/btnlist"
-        android:layout_width="wrap_content"
-        android:layout_height="48dp"
-        android:backgroundTint="#15A4E6"
-        android:text="@string/ViewList"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.738"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.954" />
-
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="wrap_content"
-        android:layout_height="48dp"
-        android:backgroundTint="#4EF109"
-        android:text="@string/Add"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.281"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.954" />
-
-    <LinearLayout
-        android:id="@+id/linearLayout6"
-        android:layout_width="match_parent"
-        android:layout_height="82dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.855"
-        tools:layout_editor_absoluteX="1dp">
-
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_weight="4"
-            android:text="@string/WattCount"
-            android:textColor="@color/black"
-            android:textSize="28sp" />
-
-        <NumberPicker
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_weight="9"
-            android:backgroundTint="@color/black"
-            android:entries="@array/Brands"
-            android:textAlignment="center" />
-
+            android:layout_weight="3"/>
 
     </LinearLayout>
 

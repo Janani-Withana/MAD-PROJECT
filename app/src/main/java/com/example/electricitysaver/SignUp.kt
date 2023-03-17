@@ -9,6 +9,10 @@ class SignUp : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.signup_bottomsheet_layout)
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
         supportActionBar?.hide()
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
