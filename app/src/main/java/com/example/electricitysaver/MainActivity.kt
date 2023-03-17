@@ -49,13 +49,13 @@ class MainActivity : AppCompatActivity() {
             dialog.show()
         }
 
-        val btnPlay = findViewById<Button>(R.id.btn_login)
-
-        btnPlay.setOnClickListener {
+        val btnLogin = findViewById<Button>(R.id.btn_login)
+        btnLogin.setOnClickListener {
             val mainIntent = Intent(this@MainActivity, HomePage::class.java)
             startActivity(mainIntent)
             //finish()
         }
+
 
     }
 }
