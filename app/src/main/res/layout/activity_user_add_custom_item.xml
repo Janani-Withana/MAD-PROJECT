@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".User_addItems">
+
     <ImageView
         android:id="@+id/UseraddImage1"
         android:layout_width="match_parent"
@@ -23,7 +24,7 @@
         app:layout_constraintHorizontal_bias="0.217"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.043" />
+        app:layout_constraintVertical_bias="0.015" />
 
     <TextView
         android:id="@+id/textView2"
@@ -35,10 +36,10 @@
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.689"
+        app:layout_constraintHorizontal_bias="0.65"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.069" />
+        app:layout_constraintVertical_bias="0.04" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -59,14 +60,16 @@
             android:textColor="@color/black"
             android:textSize="32dp" />
 
-        <EditText
-            android:id="@+id/ccat"
+        <Spinner
+            android:id="@+id/catspinner"
+            style="@style/Widget.AppCompat.Light.Spinner.DropDown.ActionBar"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="16dp"
             android:layout_marginRight="16dp"
             android:layout_weight="3"
             android:backgroundTint="@color/black"
+            android:entries="@array/Types"
             android:textAlignment="center" />
         "
     </LinearLayout>
@@ -92,17 +95,18 @@
             android:textColor="@color/black"
             android:textSize="32dp" />
 
-        <EditText
-            android:id="@+id/brand"
+        <Spinner
+            android:id="@+id/bradspinner"
+            style="@style/Widget.AppCompat.Light.Spinner.DropDown.ActionBar"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="16dp"
             android:layout_marginRight="16dp"
             android:layout_weight="3"
             android:backgroundTint="@color/black"
+            android:entries="@array/Brands"
             android:textAlignment="center" />
-
-
+        "
     </LinearLayout>
 
     <LinearLayout
@@ -212,10 +216,10 @@
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.738"
+        app:layout_constraintHorizontal_bias="0.788"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.954" />
+        app:layout_constraintVertical_bias="0.827" />
 
     <Button
         android:id="@+id/button4"
@@ -226,10 +230,10 @@
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.281"
+        app:layout_constraintHorizontal_bias="0.238"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.954" />
+        app:layout_constraintVertical_bias="0.827" />
 
     <LinearLayout
         android:id="@+id/linearLayout6"
@@ -237,8 +241,7 @@
         android:layout_height="82dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.855"
-        tools:layout_editor_absoluteX="1dp">
+        app:layout_constraintVertical_bias="0.961">
 
 
         <TextView
@@ -247,19 +250,21 @@
             android:layout_marginLeft="16dp"
             android:layout_marginTop="16dp"
             android:layout_weight="4"
-            android:text="@string/WattCount"
+            android:gravity="center"
+            android:text="@string/addCustomItem"
             android:textColor="@color/black"
-            android:textSize="28sp" />
+            android:textSize="20sp" />
 
-        <NumberPicker
+        <Button
+            android:id="@+id/btnadd"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="16dp"
             android:layout_marginRight="16dp"
             android:layout_weight="9"
-            android:backgroundTint="@color/black"
-            android:entries="@array/Brands"
-            android:textAlignment="center" />
+            android:backgroundTint="#EFB813"
+            android:text="@string/btnaddCustomItem"
+            android:textColor="@color/black" />
 
 
     </LinearLayout>
