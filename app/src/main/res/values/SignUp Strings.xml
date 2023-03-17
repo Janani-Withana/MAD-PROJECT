@@ -5,4 +5,5 @@
     <string name="hint_name">Name</string>
     <string name="hint_Password">Password</string>
     <string name="hint_Email">Email</string>
+    <string name="hint_reEnter_password">Re-enter Password</string>
 </resources>

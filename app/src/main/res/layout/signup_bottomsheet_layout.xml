@@ -137,7 +137,7 @@
             android:layout_marginEnd="94dp"
             android:layout_marginBottom="145dp"
             android:ems="10"
-            android:hint="@string/hint_Reenter_pwd"
+            android:hint="@string/hint_reEnter_password"
             android:textColorHint="@color/hintColorBlue"
             android:inputType="textPassword" />
 
