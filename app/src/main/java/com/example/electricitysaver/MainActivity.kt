@@ -25,7 +25,8 @@ class MainActivity : AppCompatActivity() {
         supportActionBar?.hide()
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            window.navigationBarColor = Color.parseColor("#133B5C") // Replace with your desired color
+            window.navigationBarColor =
+                Color.parseColor("#133B5C") // Replace with your desired color
         }
 
         // initializing our variable for textView with its id.
@@ -38,19 +39,23 @@ class MainActivity : AppCompatActivity() {
             // on below line we are inflating a layout file which we have created.
             val view = layoutInflater.inflate(R.layout.signup_bottomsheet_layout, null)
 
-            // below line is use to set cancelable to avoid
-            // closing of dialog box when clicking on the screen.
+            // below line is use to set cancelable to avoid closing of dialog box when clicking on the screen.
             dialog.setCancelable(true)
 
-            // on below line we are setting
-            // content view to our view.
+            // on below line we are setting content view to our view.
             dialog.setContentView(view)
 
-            // on below line we are calling
-            // a show method to display a dialog.
+            // on below line we are calling a show method to display a dialog.
             dialog.show()
         }
 
+        val btnPlay = findViewById<Button>(R.id.btn_login)
+
+        btnPlay.setOnClickListener {
+            val mainIntent = Intent(this@MainActivity, HomePage::class.java)
+            startActivity(mainIntent)
+            //finish()
         }
 
     }
+}

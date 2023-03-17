@@ -4,8 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="@drawable/login_bg">
+    android:background="@drawable/login_bg"
+    android:onClick="navigateToHomePage"
+    tools:context=".MainActivity">
 
 
     <TextView
@@ -27,6 +28,7 @@
         android:layout_width="110dp"
         android:layout_height="52dp"
         android:backgroundTint="@color/btnColorYellow"
+        android:onClick="navigateToHomePage"
         android:text="@string/btnLogin"
         android:textColorHint="@color/white"
         android:textSize="16sp"
