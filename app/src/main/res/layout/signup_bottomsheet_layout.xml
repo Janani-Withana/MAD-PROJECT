@@ -15,12 +15,13 @@
         tools:ignore="MissingConstraints">
 
         <ImageView
+            android:id="@+id/bottomSheet"
             android:layout_width="match_parent"
             android:layout_height="500dp"
             android:src="@drawable/bottom_sheet" />
 
         <ImageView
-            android:id="@+id/imageView2"
+            android:id="@+id/signUp_bg"
             android:layout_width="489dp"
             android:layout_height="353dp"
             android:layout_alignParentStart="true"
@@ -58,7 +59,7 @@
             app:layout_constraintVertical_bias="0.655" />
 
         <TextView
-            android:id="@+id/textView17"
+            android:id="@+id/tv_SignUp"
             android:layout_width="129dp"
             android:layout_height="47dp"
             android:layout_alignParentStart="true"
@@ -73,7 +74,7 @@
             android:textSize="34sp" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName"
+            android:id="@+id/edtName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
@@ -90,7 +91,7 @@
             android:textColorHint="@color/hintColorBlue" />
 
         <EditText
-            android:id="@+id/editTextTextPassword"
+            android:id="@+id/edtPwd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
@@ -107,7 +108,7 @@
             android:textColorHint="@color/hintColorBlue" />
 
         <EditText
-            android:id="@+id/editTextTextEmailAddress"
+            android:id="@+id/edtEmail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
@@ -124,7 +125,7 @@
             android:textColorHint="@color/hintColorBlue" />
 
         <EditText
-            android:id="@+id/editTextTextPassword2"
+            android:id="@+id/re_enter_pwd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
