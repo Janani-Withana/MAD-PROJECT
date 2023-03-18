@@ -6,6 +6,6 @@ import android.os.Bundle
 class AdminAddDevices : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_admin_add_devices)
+        setContentView(R.layout.admin_add_devices_bottomsheet)
     }
 }
