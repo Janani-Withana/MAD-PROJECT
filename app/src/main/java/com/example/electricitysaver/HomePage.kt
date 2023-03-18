@@ -33,5 +33,11 @@ class HomePage : AppCompatActivity() {
             startActivity(mainIntent)
             //finish()
         }
+        val btnAdminPanel = findViewById<Button>(R.id.btnAdmin)
+        btnAdminPanel.setOnClickListener {
+            val mainIntent = Intent(this@HomePage, AdminDashboard::class.java)
+            startActivity(mainIntent)
+            //finish()
+        }
     }
 }
