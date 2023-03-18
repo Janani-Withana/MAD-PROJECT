@@ -55,6 +55,6 @@ class MainActivity : AppCompatActivity() {
             startActivity(mainIntent)
             //finish()
         }
-        
+
     }
 }

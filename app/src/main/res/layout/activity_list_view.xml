@@ -55,8 +55,8 @@
 
     <TextView
         android:id="@+id/textView19"
-        android:layout_width="339dp"
-        android:layout_height="64dp"
+        android:layout_width="330dp"
+        android:layout_height="41dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/border"
@@ -68,10 +68,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.575"
+        app:layout_constraintHorizontal_bias="0.653"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.098" />
+        app:layout_constraintVertical_bias="0.023" />
 
     <TextView
         android:id="@+id/textView15"
@@ -141,7 +141,7 @@
         app:layout_constraintVertical_bias="0.868" />
 
     <Button
-        android:id="@+id/button10"
+        android:id="@+id/submit_btn"
         android:layout_width="103dp"
         android:layout_height="48dp"
         android:layout_marginStart="162dp"
@@ -152,6 +152,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.953" />
+        app:layout_constraintVertical_bias="0.954" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
