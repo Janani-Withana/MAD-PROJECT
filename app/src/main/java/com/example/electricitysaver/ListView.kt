@@ -34,9 +34,6 @@ class ListView : AppCompatActivity() {
         adapter.setItems(items)
         adapter.notifyDataSetChanged()
 
-
-
-
     }
 
 }

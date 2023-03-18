@@ -8,7 +8,7 @@
     android:background="@color/white"
     >
 
-<!--    <ImageView-->
+    <!--    <ImageView-->
 <!--        android:id="@+id/imageView"-->
 <!--        android:layout_width="302dp"-->
 <!--        android:layout_height="471dp"-->
@@ -21,6 +21,18 @@
 <!--        app:srcCompat="@drawable/shape1" />-->
 
     <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="412dp"
+        android:layout_height="358dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/gradient" />
+
+    <ImageView
         android:id="@+id/imageView4"
         android:layout_width="376dp"
         android:layout_height="573dp"
@@ -29,8 +41,20 @@
         app:layout_constraintHorizontal_bias="0.542"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.898"
+        app:layout_constraintVertical_bias="0.689"
         app:srcCompat="@drawable/shadow_1" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="317dp"
+        android:layout_height="193dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.356"
+        app:srcCompat="@drawable/rectangle" />
 
     <EditText
         android:id="@+id/editTextTextPersonName2"
@@ -45,7 +69,7 @@
         app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.685" />
+        app:layout_constraintVertical_bias="0.676" />
 
     <Spinner
         android:id="@+id/spinner"
@@ -57,7 +81,7 @@
         app:layout_constraintHorizontal_bias="0.517"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.547" />
+        app:layout_constraintVertical_bias="0.534" />
 
     <EditText
         android:id="@+id/ptAccountNo"
@@ -72,7 +96,7 @@
         app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.603" />
+        app:layout_constraintVertical_bias="0.606" />
 
     <TextView
         android:id="@+id/tvSelect"
@@ -82,10 +106,10 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.299"
+        app:layout_constraintHorizontal_bias="0.303"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.499" />
+        app:layout_constraintVertical_bias="0.491" />
 
     <EditText
         android:id="@+id/editTextTextPersonName3"
@@ -101,25 +125,25 @@
         app:layout_constraintHorizontal_bias="0.398"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.769" />
+        app:layout_constraintVertical_bias="0.744" />
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="201dp"
-        android:layout_height="40dp"
-        android:backgroundTint="@color/hintColorBlue"
+        android:layout_width="217dp"
+        android:layout_height="45dp"
+        android:backgroundTint="@color/purple_700"
         android:text="View Favourite List"
         app:cornerRadius="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.976" />
+        app:layout_constraintVertical_bias="0.947" />
 
     <Button
         android:id="@+id/button"
-        android:layout_width="172dp"
-        android:layout_height="60dp"
+        android:layout_width="180dp"
+        android:layout_height="67dp"
         android:backgroundTint="@color/btnColorYellow"
         android:text="Pay"
         android:textSize="20sp"
@@ -129,7 +153,7 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.895" />
+        app:layout_constraintVertical_bias="0.853" />
 
     <ImageView
         android:id="@+id/imageView3"
@@ -140,7 +164,7 @@
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.243"
+        app:layout_constraintVertical_bias="0.233"
         app:srcCompat="@drawable/asset_paybill" />
 
 
