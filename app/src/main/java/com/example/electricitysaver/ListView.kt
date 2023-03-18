@@ -1,6 +1,8 @@
 package com.example.electricitysaver
 
 import android.content.Intent
+import android.graphics.Color
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -15,6 +17,12 @@ class ListView : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_list_view)
+
+        supportActionBar?.hide()
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            window.navigationBarColor =
+                Color.parseColor("#133B5C") // Replace with your desired color
+        }
 
         val recyclerView :RecyclerView = findViewById(R.id.itemreview)
         adapter = ListAdapter(ArrayList())

@@ -12,7 +12,7 @@
     <string name="btnaddCustomItem">Add</string>
     <string name="WattCount">Number of Watts</string>
     <string name="listTableUsage">Usage Hours(Monthly)</string>
-    <string name="AddedItemList">Added Items List</string>
+    <string name="AddedItemList">Device List</string>
     <string name="TotalUnits">Total Units</string>
     <string name="ExpectedUnits">Expected Units</string>
     <string name="Submit">Submit</string>

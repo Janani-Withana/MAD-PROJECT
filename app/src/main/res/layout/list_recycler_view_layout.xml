@@ -24,7 +24,7 @@
             android:layout_weight="3"
             android:gravity="center"
             android:text="LG 32 inch Tv"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/uhours"
@@ -48,7 +48,7 @@
             android:gravity="center"
             android:scaleType="centerInside"
             android:backgroundTint="#0CED10"
-            android:src="@drawable/editicon" />
+            android:src="@drawable/ic_baseline_edit_note_blue" />
 
         <ImageView
             android:id="@+id/deletelist"
@@ -60,7 +60,7 @@
             android:gravity="center"
             android:backgroundTint="#F10909"
             android:scaleType="centerInside"
-            android:src="@drawable/dellist" />
+            android:src="@drawable/ic_baseline_delete_outline_24" />
 
 
     </LinearLayout>

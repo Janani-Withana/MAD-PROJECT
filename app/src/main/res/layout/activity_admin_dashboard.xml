@@ -9,8 +9,8 @@
     tools:layout_editor_absoluteY="0dp">
 
 
-    <!--support button-->
 
+    <!--users button-->
 
     <ImageView
         android:id="@+id/imageView9"
@@ -51,6 +51,8 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.6" />
 
+    <!--add range-->
+
     <ImageView
         android:id="@+id/imageView16"
         android:layout_width="177dp"
@@ -65,30 +67,30 @@
 
     <ImageButton
         android:id="@+id/btnAdminSupport"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="111dp"
+        android:layout_height="103dp"
         android:backgroundTint="#295389"
         android:scaleType="fitStart"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.794"
+        app:layout_constraintHorizontal_bias="0.84"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.53"
-        app:srcCompat="@drawable/ic_baseline_support_agent_24" />
+        app:srcCompat="@drawable/ic_baseline_edit_note_24" />
 
     <TextView
         android:id="@+id/textView14"
         android:layout_width="120dp"
         android:layout_height="29dp"
-        android:text="Support Service"
+        android:text="Cost Range"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.865"
+        app:layout_constraintHorizontal_bias="0.924"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.601" />
+        app:layout_constraintVertical_bias="0.603" />
 
     <ImageView
         android:id="@+id/imageView17"
