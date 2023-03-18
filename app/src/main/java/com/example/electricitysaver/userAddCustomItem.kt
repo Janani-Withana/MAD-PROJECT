@@ -35,9 +35,15 @@ class userAddCustomItem : AppCompatActivity() {
         arrayAdapter2.setDropDownViewResource(R.layout.brand_spinner)
         bradspinner.adapter = arrayAdapter2
 
-        val button6 = findViewById<Button>(R.id.btnadd)
-        button6.setOnClickListener {
+        val customAdd = findViewById<Button>(R.id.btnadd)
+        customAdd.setOnClickListener {
             val intent = Intent(this, User_addItems::class.java)
+            startActivity(intent)
+        }
+
+        val buttonList = findViewById<Button>(R.id.btnlist)
+        buttonList.setOnClickListener {
+            val intent = Intent(this@userAddCustomItem, ListView::class.java)
             startActivity(intent)
         }
 

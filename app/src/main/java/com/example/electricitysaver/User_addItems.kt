@@ -21,6 +21,10 @@ class User_addItems : AppCompatActivity() {
             window.navigationBarColor =
                 Color.parseColor("#133B5C") // Replace with your desired color
         }
-
+        val buttonList = findViewById<Button>(R.id.btnlist)
+        buttonList.setOnClickListener {
+            val intent = Intent(this@User_addItems, ListView::class.java)
+            startActivity(intent)
+        }
     }
 }
