@@ -1,7 +1,9 @@
 package com.example.electricitysaver
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -9,8 +11,6 @@ class ListView : AppCompatActivity() {
 
     private lateinit var recyclerView: RecyclerView
     private lateinit var adapter: ListAdapter
-
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,6 +34,12 @@ class ListView : AppCompatActivity() {
         adapter.setItems(items)
         adapter.notifyDataSetChanged()
 
+        val btnListView = findViewById<Button>(R.id.submit_btn)
+        btnListView.setOnClickListener {
+            val mainIntent = Intent(this, expectedUnitList::class.java)
+            startActivity(mainIntent)
+            //finish()
+        }
     }
 
 }
