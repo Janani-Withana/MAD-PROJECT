@@ -14,16 +14,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        
-
-
-
-
-
-
-
-
-
         // Hide the status bar
         //window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
 
