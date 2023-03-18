@@ -1,6 +1,5 @@
 package com.example.electricitysaver
 
-import android.content.Intent
 import android.graphics.Color
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
@@ -28,6 +27,23 @@ class AdminDashboard : AppCompatActivity() {
 
             // on below line we are inflating a layout file which we have created.
             val view = layoutInflater.inflate(R.layout.users_bottomsheet_layout, null)
+
+            // below line is use to set cancelable to avoid closing of dialog box when clicking on the screen.
+            dialog.setCancelable(true)
+
+            // on below line we are setting content view to our view.
+            dialog.setContentView(view)
+
+            // on below line we are calling a show method to display a dialog.
+            dialog.show()
+        }
+        val btnAdminAddDevices= findViewById<ImageButton>(R.id.btnAdminAddDevices)
+        btnAdminAddDevices.setOnClickListener {
+            // on below line we are creating a new bottom sheet dialog.
+            val dialog = BottomSheetDialog(this)
+
+            // on below line we are inflating a layout file which we have created.
+            val view = layoutInflater.inflate(R.layout.admin_add_devices_bottomsheet, null)
 
             // below line is use to set cancelable to avoid closing of dialog box when clicking on the screen.
             dialog.setCancelable(true)

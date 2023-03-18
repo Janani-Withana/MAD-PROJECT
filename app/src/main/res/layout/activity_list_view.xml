@@ -8,17 +8,18 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/itemreview"
-        android:layout_width="match_parent"
-        android:layout_height="421dp"
+        android:layout_width="338dp"
+        android:layout_height="419dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="130dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="160dp"
+        android:background="@drawable/border"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.585"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:background="@drawable/border">
+        app:layout_constraintTop_toTopOf="parent">
 
     </androidx.recyclerview.widget.RecyclerView>
 
@@ -54,8 +55,8 @@
 
     <TextView
         android:id="@+id/textView19"
-        android:layout_width="230dp"
-        android:layout_height="30dp"
+        android:layout_width="339dp"
+        android:layout_height="64dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/border"
@@ -67,10 +68,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.575"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.022" />
+        app:layout_constraintVertical_bias="0.098" />
 
     <TextView
         android:id="@+id/textView15"
@@ -91,8 +92,8 @@
 
     <TextView
         android:id="@+id/textView17"
-        android:layout_width="123dp"
-        android:layout_height="27dp"
+        android:layout_width="121dp"
+        android:layout_height="29dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="11dp"
         android:gravity="center"
@@ -141,11 +142,11 @@
 
     <Button
         android:id="@+id/button10"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
+        android:layout_width="103dp"
+        android:layout_height="48dp"
         android:layout_marginStart="162dp"
         android:layout_marginEnd="162dp"
-        android:backgroundTint="#05970A"
+        android:backgroundTint="@color/purple_700"
         android:text="@string/Submit"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
