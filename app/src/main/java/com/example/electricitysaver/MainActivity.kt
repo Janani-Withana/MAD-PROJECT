@@ -23,5 +23,11 @@ class MainActivity : AppCompatActivity() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             window.navigationBarColor = Color.parseColor("#133B5C") // Replace with your desired color
         }
+        val button5 = findViewById<Button>(R.id.button3)
+        button5.setOnClickListener {
+            val intent = Intent(this, userAddCustomItem::class.java)
+            startActivity(intent)
+        }
+
     }
 }

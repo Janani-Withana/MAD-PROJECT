@@ -30,6 +30,12 @@ class userAddCustomItem : AppCompatActivity() {
             val intent = Intent(this, User_addItems::class.java)
             startActivity(intent)
         }
+        val button5 = findViewById<Button>(R.id.btnlist)
+        button5.setOnClickListener {
+            val intent = Intent(this, ListView::class.java)
+            startActivity(intent)
+        }
+
 
 
     }
