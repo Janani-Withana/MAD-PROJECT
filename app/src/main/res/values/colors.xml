@@ -12,4 +12,5 @@
     <color name="topicColor">#8CC2DA</color>
     <color name="hintColorBlue">#80D8FF</color>
     <color name="signupLink_color">#EDC00C</color>
+    <color name="tvUsersColor">#05288F</color>
 </resources>

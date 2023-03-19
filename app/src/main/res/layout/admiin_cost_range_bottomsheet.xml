@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/edtstartUnit"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#666666">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="590dp"
+        android:layout_margin="2dp"
+        tools:ignore="MissingConstraints">
+
+
+        <ImageView
+            android:id="@+id/bottomSheet"
+            android:layout_width="match_parent"
+            android:layout_height="541dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="58dp"
+            android:layout_marginBottom="1dp"
+            android:src="@drawable/admin_bottom_sheet"
+            tools:ignore="ImageContrastCheck" />
+
+        <ImageView
+            android:id="@+id/imageView11"
+            android:layout_width="210dp"
+            android:layout_height="211dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="104dp"
+            android:layout_marginTop="-40dp"
+            android:layout_marginEnd="94dp"
+            android:layout_marginBottom="419dp"
+            app:srcCompat="@drawable/consumptioncost" />
+
+        <EditText
+            android:id="@+id/editTextNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="56dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="87dp"
+            android:layout_marginTop="273dp"
+            android:layout_marginEnd="79dp"
+            android:layout_marginBottom="271dp"
+            android:autofillHints=""
+            android:ems="10"
+            android:hint="Starting Unit Range"
+            android:inputType="number"
+            android:textColorHint="#757575"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="98dp"
+            android:layout_marginTop="146dp"
+            android:layout_marginEnd="52dp"
+            android:layout_marginBottom="404dp"
+            android:text="Consumption Cost"
+            android:textColor="@color/purple_700"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/edtCharge"
+            android:layout_width="wrap_content"
+            android:layout_height="51dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="89dp"
+            android:layout_marginTop="380dp"
+            android:layout_marginEnd="76dp"
+            android:layout_marginBottom="169dp"
+            android:ems="10"
+            android:hint="Energy Charge (LKR/kWh)"
+            android:inputType="number"
+            android:textColorHint="#757575"
+            tools:ignore="TouchTargetSizeCheck" />
+
+
+        <EditText
+            android:id="@+id/edtEndUnit3"
+            android:layout_width="wrap_content"
+            android:layout_height="59dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="89dp"
+            android:layout_marginTop="425dp"
+            android:layout_marginEnd="74dp"
+            android:layout_marginBottom="116dp"
+            android:ems="10"
+            android:hint="Fixed Charge (LKR/Month)"
+            android:inputType="number"
+            android:textColorHint="#757575"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <EditText
+            android:id="@+id/edtEndUnit"
+            android:layout_width="245dp"
+            android:layout_height="53dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="88dp"
+            android:layout_marginTop="331dp"
+            android:layout_marginEnd="75dp"
+            android:layout_marginBottom="216dp"
+            android:ems="10"
+            android:hint="Ending Unit Range"
+            android:inputType="number"
+            android:textColorHint="#757575"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/btnlist"
+            android:layout_width="wrap_content"
+            android:layout_height="53dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="215dp"
+            android:layout_marginTop="491dp"
+            android:layout_marginEnd="65dp"
+            android:layout_marginBottom="46dp"
+            android:backgroundTint="#15A4E6"
+            android:text="@string/ViewList"
+            android:textColor="@color/black"
+            app:cornerRadius="30dp" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="wrap_content"
+            android:layout_height="53dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="75dp"
+            android:layout_marginTop="491dp"
+            android:layout_marginEnd="208dp"
+            android:layout_marginBottom="46dp"
+            android:backgroundTint="@color/btnColorYellow"
+            android:text="@string/Add"
+            android:textColor="@color/black"
+            app:cornerRadius="30dp" />
+
+        <Spinner
+            android:id="@+id/spinner2"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="85dp"
+            android:layout_marginTop="235dp"
+            android:layout_marginEnd="70dp"
+            android:layout_marginBottom="320dp"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="138dp"
+            android:layout_height="37dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="87dp"
+            android:layout_marginTop="200dp"
+            android:layout_marginEnd="183dp"
+            android:layout_marginBottom="353dp"
+            android:text="Tariff Category"
+            android:textSize="18sp" />
+
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
