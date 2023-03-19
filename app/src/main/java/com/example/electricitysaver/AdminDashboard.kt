@@ -5,7 +5,6 @@ import android.graphics.Color
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
 import android.widget.ImageButton
 import com.google.android.material.bottomsheet.BottomSheetDialog
 
@@ -22,7 +21,7 @@ class AdminDashboard : AppCompatActivity() {
                 Color.parseColor("#133B5C") // Replace with your desired color
         }
 
-        val btnViewUsers = findViewById<ImageButton>(R.id.btnUser)
+        val btnViewUsers = findViewById<ImageButton>(R.id.HomeAddItems)
         btnViewUsers.setOnClickListener {
             // on below line we are creating a new bottom sheet dialog.
             val dialog = BottomSheetDialog(this)
@@ -39,7 +38,7 @@ class AdminDashboard : AppCompatActivity() {
             // on below line we are calling a show method to display a dialog.
             dialog.show()
         }
-        val btnAdminAddDevices= findViewById<ImageButton>(R.id.btnAdminAddDevices)
+        val btnAdminAddDevices= findViewById<ImageButton>(R.id.HomeDeviceList)
         btnAdminAddDevices.setOnClickListener {
             // on below line we are creating a new bottom sheet dialog.
             val dialog = BottomSheetDialog(this)
@@ -76,7 +75,7 @@ class AdminDashboard : AppCompatActivity() {
             dialog.show()
         }
 
-        val btnAdminPanel = findViewById<ImageButton>(R.id.AdminViewList)
+        val btnAdminPanel = findViewById<ImageButton>(R.id.HomeBtnPay)
         btnAdminPanel.setOnClickListener {
             val mainIntent = Intent(this, AdminListView::class.java)
             startActivity(mainIntent)
