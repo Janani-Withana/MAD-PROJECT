@@ -7,4 +7,10 @@
     <string name="ending_unit_range">Ending Unit Range</string>
     <string name="btnViewList">ViewList</string>
     <string name="tariff_category">Tariff Category</string>
+    <string name="tv_users">Users</string>
+    <string name="cost_range">Cost Range</string>
+    <string name="add_devices">Add Devices</string>
+    <string name="device_list">Device List</string>
+    <string name="admin_dashboard">Admin Dashboard</string>
+    <string name="tv_add_devices">Add Devices</string>
 </resources>

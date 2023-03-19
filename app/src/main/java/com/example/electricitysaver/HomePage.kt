@@ -8,6 +8,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageButton
+import android.widget.ImageView
+
 
 class HomePage : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
@@ -22,25 +24,40 @@ class HomePage : AppCompatActivity() {
                 Color.parseColor("#133B5C") // Replace with your desired color
         }
 
-       val btnPay = findViewById<ImageButton>(R.id.paybills)
+
+        val btnPay = findViewById<Button>(R.id.HomeBtnPay)
         btnPay.setOnClickListener {
             val mainIntent = Intent(this@HomePage, pamitha_payment::class.java)
             startActivity(mainIntent)
             //finish()
         }
-        val btnAddItems = findViewById<ImageButton>(R.id.btnUser)
+
+
+        val btnPay = findViewById<ImageButton>(R.id.HomeBtnPay)
+        btnPay.setOnClickListener {
+            val mainIntent = Intent(this@HomePage, pamitha_payment::class.java)
+            startActivity(mainIntent)
+            //finish()
+        }
+        
+        val btnAddItems = findViewById<ImageButton>(R.id.HomeAddItems)
         btnAddItems.setOnClickListener {
             val mainIntent = Intent(this@HomePage, expectedUnitList::class.java)
             startActivity(mainIntent)
             //finish()
         }
-        val btnAdminPanel = findViewById<ImageButton>(R.id.listdevice)
+
+        val btnDeviceList = findViewById<ImageButton>(R.id.HomeDeviceList)
+        btnDeviceList.setOnClickListener {
+            val mainIntent = Intent(this@HomePage, expectedUnitList::class.java)
+            startActivity(mainIntent)
+            //finish()
+        }
+        val btnAdminPanel = findViewById<ImageView>(R.id.HomeAdmin)
         btnAdminPanel.setOnClickListener {
             val mainIntent = Intent(this@HomePage, AdminDashboard::class.java)
             startActivity(mainIntent)
             //finish()
         }
-
-
     }
 }

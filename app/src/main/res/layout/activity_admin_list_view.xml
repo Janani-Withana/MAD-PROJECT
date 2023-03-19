@@ -88,25 +88,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.378" />
 
-    <TextView
-        android:id="@+id/textView19"
-        android:layout_width="184dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:background="@drawable/border"
-        android:backgroundTint="@color/btnColorYellow"
-        android:gravity="center"
-        android:text="@string/AddedItemList"
-        android:textColor="@color/black"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.309" />
+
 
     <ImageView
         android:id="@+id/imageView21"
@@ -121,7 +103,7 @@
         app:srcCompat="@drawable/ic_baseline_home_24" />
 
     <ImageView
-        android:id="@+id/imageView22"
+        android:id="@+id/HomeAdmin"
         android:layout_width="30dp"
         android:layout_height="31dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -143,4 +125,38 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.057"
         app:srcCompat="@drawable/action_bar" />
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="206dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/border"
+        android:backgroundTint="@color/btnColorYellow"
+        android:gravity="center"
+        android:text="@string/AddedItemList"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.861"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.256" />
+
+    <ImageView
+        android:id="@+id/imageView20"
+        android:layout_width="229dp"
+        android:layout_height="225dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.162"
+        app:srcCompat="@drawable/electric" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

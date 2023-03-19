@@ -49,7 +49,7 @@
             android:layout_marginTop="108dp"
             android:layout_marginEnd="181dp"
             android:layout_marginBottom="399dp"
-            android:text="Add Devices"
+            android:text="@string/tv_add_devices"
             android:textColor="@color/purple_700"
             android:textSize="28sp"
             android:textStyle="bold"

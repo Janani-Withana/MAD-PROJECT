@@ -25,7 +25,7 @@
         app:srcCompat="@drawable/shadow_5" />
 
     <ImageButton
-        android:id="@+id/btnUser"
+        android:id="@+id/HomeAddItems"
         android:layout_width="107dp"
         android:layout_height="103dp"
         android:backgroundTint="#ECB21E"
@@ -44,7 +44,7 @@
         android:id="@+id/textView2"
         android:layout_width="61dp"
         android:layout_height="25dp"
-        android:text="Users"
+        android:text="@string/tv_users"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -83,7 +83,7 @@
         android:id="@+id/textView14"
         android:layout_width="120dp"
         android:layout_height="29dp"
-        android:text="Cost Range"
+        android:text="@string/cost_range"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -108,7 +108,7 @@
         android:id="@+id/textView15"
         android:layout_width="86dp"
         android:layout_height="32dp"
-        android:text="Add Devices"
+        android:text="@string/add_devices"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -118,7 +118,7 @@
         app:layout_constraintVertical_bias="0.812" />
 
     <ImageButton
-        android:id="@+id/listdevice"
+        android:id="@+id/HomeDeviceList"
         android:layout_width="107dp"
         android:layout_height="101dp"
         android:backgroundTint="#295389"
@@ -144,7 +144,7 @@
         app:srcCompat="@drawable/shadow_5" />
 
     <ImageButton
-        android:id="@+id/paybills"
+        android:id="@+id/HomeBtnPay"
         android:layout_width="109dp"
         android:layout_height="109dp"
         android:backgroundTint="#ECB21E"
@@ -161,7 +161,7 @@
         android:id="@+id/Wadmin"
         android:layout_width="89dp"
         android:layout_height="32dp"
-        android:text="Device List"
+        android:text="@string/device_list"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -197,7 +197,7 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Admin Dashboard"
+        android:text="@string/admin_dashboard"
         android:textColor="@color/purple_700"
         android:textSize="34sp"
         android:textStyle="bold"
@@ -222,7 +222,7 @@
         app:srcCompat="@drawable/ic_baseline_home_24" />
 
     <ImageView
-        android:id="@+id/imageView22"
+        android:id="@+id/HomeAdmin"
         android:layout_width="30dp"
         android:layout_height="31dp"
         app:layout_constraintBottom_toBottomOf="parent"
