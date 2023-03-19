@@ -18,5 +18,7 @@
     <string name="Submit">Submit</string>
     <string name="Home">Home</string>
     <string name="Billcalculator">Bill Calculator</string>
+    <string name="Update">Update</string>
+    <string name="UpdateDevices">Update Device</string>
 
 </resources>
