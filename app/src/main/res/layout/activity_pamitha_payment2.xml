@@ -22,8 +22,8 @@
 
     <ImageView
         android:id="@+id/imageView7"
-        android:layout_width="413dp"
-        android:layout_height="344dp"
+        android:layout_width="@dimen/imageView1Width1"
+        android:layout_height="@dimen/imageView1Height"
         android:contentDescription="TODO"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -35,8 +35,8 @@
 
     <ImageView
         android:id="@+id/imageView4"
-        android:layout_width="376dp"
-        android:layout_height="573dp"
+        android:layout_width="@dimen/imageView2width"
+        android:layout_height="@dimen/imageView2height"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.542"
@@ -48,8 +48,8 @@
 
     <Button
         android:id="@+id/button3"
-        android:layout_width="158dp"
-        android:layout_height="61dp"
+        android:layout_width="@dimen/btn1width"
+        android:layout_height="@dimen/btn1Height"
         android:backgroundTint="#00668B"
         android:text="@string/add_to_favourites"
         app:cornerRadius="15dp"
@@ -62,7 +62,7 @@
 
     <ImageView
         android:id="@+id/imageView8"
-        android:layout_width="317dp"
+        android:layout_width="@dimen/imageView3Width"
         android:layout_height="193dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -73,8 +73,8 @@
 
     <EditText
         android:id="@+id/editTextTextPersonName2"
-        android:layout_width="230dp"
-        android:layout_height="48dp"
+        android:layout_width="@dimen/edithText1width"
+        android:layout_height="@dimen/editText1Height"
         android:ems="10"
         android:hint="@string/account_number"
         android:importantForAutofill="no"
@@ -90,10 +90,10 @@
 
     <TextView
         android:id="@+id/tvSelectPayee"
-        android:layout_width="116dp"
-        android:layout_height="25dp"
+        android:layout_width="@dimen/textView1Width"
+        android:layout_height="@dimen/textView1Height"
         android:text="Select Payee"
-        android:textSize="18sp"
+        android:textSize="@dimen/textView1TSize"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.308"
@@ -103,8 +103,8 @@
 
     <Spinner
         android:id="@+id/payeeCat"
-        android:layout_width="237dp"
-        android:layout_height="45dp"
+        android:layout_width="@dimen/spinner1Width"
+        android:layout_height="@dimen/spinner1Height"
         android:entries="@array/payee"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -115,8 +115,8 @@
 
     <EditText
         android:id="@+id/ptAccountNo"
-        android:layout_width="230dp"
-        android:layout_height="48dp"
+        android:layout_width="@dimen/editText2Width"
+        android:layout_height="@dimen/editText2Height"
         android:ems="10"
         android:hint="@string/account_name"
         android:importantForAutofill="no"
@@ -132,8 +132,8 @@
 
     <EditText
         android:id="@+id/editTextTextPersonName3"
-        android:layout_width="230dp"
-        android:layout_height="48dp"
+        android:layout_width="@dimen/editText3Width"
+        android:layout_height="@dimen/editText3Height"
         android:layout_marginStart="2dp"
         android:ems="10"
         android:hint="Amount"
@@ -150,11 +150,11 @@
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="154dp"
-        android:layout_height="60dp"
+        android:layout_width="@dimen/btn2Width"
+        android:layout_height="@dimen/btn2Height"
         android:backgroundTint="@color/purple_700"
         android:text="@string/view_favourites"
-        app:cornerRadius="15dp"
+        app:cornerRadius="@dimen/btn2CornerRadi"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.882"
@@ -164,12 +164,12 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="165dp"
-        android:layout_height="56dp"
+        android:layout_width="@dimen/btnWidth"
+        android:layout_height="@dimen/btnHeight"
         android:backgroundTint="@color/btnColorYellow"
         android:text="Pay"
         android:textColor="#616161"
-        android:textSize="20sp"
+        android:textSize="@dimen/btnTSize"
         app:cornerRadius="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

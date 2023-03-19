@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="imageView1Width1">413dp</dimen>
+    <dimen name="imageView1Height">344dp</dimen>
+    <dimen name="imageView2width">376dp</dimen>
+    <dimen name="imageView2height" />
+    <dimen name="btn1width">158dp</dimen>
+    <dimen name="btn1Height" />
+    <dimen name="imageView3Width" />
+    <dimen name="edithText1width">230dp</dimen>
+    <dimen name="editText1Height" />
+    <dimen name="textView1Width">116dp</dimen>
+    <dimen name="textView1Height" />
+    <dimen name="textView1TSize" />
+    <dimen name="spinner1Width">237dp</dimen>
+    <dimen name="spinner1Height">45dp</dimen>
+    <dimen name="editText2Width">230dp</dimen>
+    <dimen name="editText2Height">48dp</dimen>
+    <dimen name="editText3Width">230dp</dimen>
+    <dimen name="editText3Height" />
+    <dimen name="btn2Width">154dp</dimen>
+    <dimen name="btn2Height">60dp</dimen>
+    <dimen name="btn2CornerRadi">15dp</dimen>
+    <dimen name="btnWidth">165dp</dimen>
+    <dimen name="btnHeight">56dp</dimen>
+    <dimen name="btnTSize">20sp</dimen>
+</resources>
