@@ -8,8 +8,8 @@
 
     <ImageView
         android:id="@+id/imageView6"
-        android:layout_width="372dp"
-        android:layout_height="567dp"
+        android:layout_width="@dimen/ImageView4Width"
+        android:layout_height="@dimen/ImageView4Height"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.589"
@@ -20,8 +20,8 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="221dp"
-        android:layout_height="189dp"
+        android:layout_width="@dimen/ImageView5Width"
+        android:layout_height="@dimen/ImageView5Height"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.963"
@@ -32,8 +32,8 @@
 
     <TextView
         android:id="@+id/adbrand"
-        android:layout_width="169dp"
-        android:layout_height="43dp"
+        android:layout_width="@dimen/TextView8Width"
+        android:layout_height="@dimen/TextView8Height"
         android:text="Add Items"
         android:textColor="@color/purple_700"
         android:textSize="28sp"
@@ -47,8 +47,8 @@
 
     <LinearLayout
         android:id="@+id/linearLayout6"
-        android:layout_width="301dp"
-        android:layout_height="48dp"
+        android:layout_width="@dimen/linearLayout2Width"
+        android:layout_height="@dimen/linearLayout2Height"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.536"
@@ -57,7 +57,7 @@
         app:layout_constraintVertical_bias="0.769">
 
         <TextView
-            android:layout_width="257dp"
+            android:layout_width="@dimen/TextView9Width"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="16dp"
@@ -67,8 +67,8 @@
             android:textSize="16sp" />
 
         <NumberPicker
-            android:layout_width="324dp"
-            android:layout_height="25dp"
+            android:layout_width="@dimen/NumPicker4width"
+            android:layout_height="@dimen/NumPicker4Height"
             android:layout_marginTop="16dp"
             android:layout_marginRight="16dp"
             android:layout_weight="9"
@@ -80,8 +80,8 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="309dp"
-        android:layout_height="59dp"
+        android:layout_width="@dimen/linearLayout2Width"
+        android:layout_height="@dimen/linearLayout3Height"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.578"
@@ -91,7 +91,7 @@
         tools:ignore="MissingConstraints">
 
         <TextView
-            android:layout_width="316dp"
+            android:layout_width="@dimen/TextView10Width"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="16dp"
@@ -102,7 +102,7 @@
 
         <EditText
             android:id="@+id/ccat"
-            android:layout_width="293dp"
+            android:layout_width="@dimen/linearLayout3Width"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:layout_marginRight="16dp"
@@ -113,8 +113,8 @@
 
     <LinearLayout
         android:id="@+id/linearLayout5"
-        android:layout_width="307dp"
-        android:layout_height="64dp"
+        android:layout_width="@dimen/linearLayout4Width"
+        android:layout_height="@dimen/linearLayout4Height"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.567"
@@ -123,7 +123,7 @@
         app:layout_constraintVertical_bias="0.465">
 
         <TextView
-            android:layout_width="326dp"
+            android:layout_width="@dimen/TextView11Width"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="16dp"
@@ -146,8 +146,8 @@
 
     <LinearLayout
         android:id="@+id/linearLayout3"
-        android:layout_width="305dp"
-        android:layout_height="52dp"
+        android:layout_width="@dimen/linearLayout5Width"
+        android:layout_height="@dimen/linearLayout5Height"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.556"
@@ -156,7 +156,7 @@
         app:layout_constraintVertical_bias="0.552">
 
         <TextView
-            android:layout_width="525dp"
+            android:layout_width="@dimen/TextView12Width"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="16dp"
@@ -166,8 +166,8 @@
             android:textSize="16sp" />
 
         <NumberPicker
-            android:layout_width="390dp"
-            android:layout_height="23dp"
+            android:layout_width="@dimen/NumPicker2width"
+            android:layout_height="@dimen/NumPicker4Height"
             android:layout_marginTop="16dp"
             android:layout_marginRight="16dp"
             android:layout_weight="3"
@@ -179,7 +179,7 @@
 
     <LinearLayout
         android:id="@+id/linearLayout2"
-        android:layout_width="305dp"
+        android:layout_width="@dimen/linearLayout5Width"
         android:layout_height="53dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -189,8 +189,8 @@
         app:layout_constraintVertical_bias="0.63">
 
         <TextView
-            android:layout_width="345dp"
-            android:layout_height="45dp"
+            android:layout_width="@dimen/TextView13Width"
+            android:layout_height="@dimen/TextView13Height"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="16dp"
             android:layout_weight="4"
@@ -199,8 +199,8 @@
             android:textSize="16sp" />
 
         <NumberPicker
-            android:layout_width="395dp"
-            android:layout_height="24dp"
+            android:layout_width="@dimen/NumPicker3width"
+            android:layout_height="@dimen/NumPicker4Height"
             android:layout_marginTop="16dp"
             android:layout_marginRight="16dp"
             android:layout_weight="6"
@@ -212,8 +212,8 @@
 
     <LinearLayout
         android:id="@+id/linearLayout4"
-        android:layout_width="302dp"
-        android:layout_height="45dp"
+        android:layout_width="@dimen/linearLayout6Width"
+        android:layout_height="@dimen/linearLayout6Height"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.541"
@@ -222,7 +222,7 @@
         app:layout_constraintVertical_bias="0.7">
 
         <TextView
-            android:layout_width="257dp"
+            android:layout_width="@dimen/TextView14Width"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="16dp"
@@ -232,8 +232,8 @@
             android:textSize="16sp" />
 
         <NumberPicker
-            android:layout_width="324dp"
-            android:layout_height="25dp"
+            android:layout_width="@dimen/NumPicker4width"
+            android:layout_height="@dimen/NumPicker4Height"
             android:layout_marginTop="16dp"
             android:layout_marginRight="16dp"
             android:layout_weight="9"
@@ -247,7 +247,7 @@
         android:id="@+id/btnlist"
         android:layout_width="115dp"
         android:layout_height="50dp"
-        android:backgroundTint="#15A4E6"
+        android:backgroundTint="@color/additmeviewlistcolor"
         android:text="@string/ViewList"
         android:textColor="@color/black"
         app:cornerRadius="30dp"
