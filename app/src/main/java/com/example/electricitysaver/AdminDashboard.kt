@@ -54,5 +54,41 @@ class AdminDashboard : AppCompatActivity() {
             // on below line we are calling a show method to display a dialog.
             dialog.show()
         }
+
+        val adminViewList= findViewById<ImageButton>(R.id.AdminViewList)
+        adminViewList.setOnClickListener {
+            // on below line we are creating a new bottom sheet dialog.
+            val dialog = BottomSheetDialog(this)
+
+            // on below line we are inflating a layout file which we have created.
+            val view = layoutInflater.inflate(R.layout.device_list_bottomsheet, null)
+
+            // below line is use to set cancelable to avoid closing of dialog box when clicking on the screen.
+            dialog.setCancelable(true)
+
+            // on below line we are setting content view to our view.
+            dialog.setContentView(view)
+
+            // on below line we are calling a show method to display a dialog.
+            dialog.show()
+        }
+
+        val consumptionCost= findViewById<ImageButton>(R.id.EditCostRange)
+        consumptionCost.setOnClickListener {
+            // on below line we are creating a new bottom sheet dialog.
+            val dialog = BottomSheetDialog(this)
+
+            // on below line we are inflating a layout file which we have created.
+            val view = layoutInflater.inflate(R.layout.admiin_cost_range_bottomsheet, null)
+
+            // below line is use to set cancelable to avoid closing of dialog box when clicking on the screen.
+            dialog.setCancelable(true)
+
+            // on below line we are setting content view to our view.
+            dialog.setContentView(view)
+
+            // on below line we are calling a show method to display a dialog.
+            dialog.show()
+        }
     }
 }

@@ -25,10 +25,12 @@ class ListAdapter(private var items: ArrayList<ListItem>) :
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = items[position]
-        holder.textView.text = item.category //data class variables
-        holder.textView1.text = item.hours //data class variables
-        holder.imageView1.setImageResource(R.drawable.editicon)
-        holder.imageView2.setImageResource(R.drawable.dellist)
+
+        holder.textView.text = item.category
+        holder.textView1.text = item.hours
+        holder.imageView1.setImageResource(R.drawable.ic_baseline_edit_note_blue)
+        holder.imageView2.setImageResource(R.drawable.ic_baseline_delete_outline_24)
+
     }
 
     override fun getItemCount(): Int {
@@ -38,6 +40,7 @@ class ListAdapter(private var items: ArrayList<ListItem>) :
     fun setItems(items: ArrayList<ListItem>) {
         this.items = items
     }
+
 }
 
 

@@ -38,6 +38,8 @@
         app:layout_constraintVertical_bias="0.542"
         app:srcCompat="@drawable/ic_baseline_supervisor_account_24" />
 
+    <!--add range-->
+
     <TextView
         android:id="@+id/textView2"
         android:layout_width="61dp"
@@ -46,12 +48,10 @@
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.322"
+        app:layout_constraintHorizontal_bias="0.291"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.6" />
-
-    <!--add range-->
+        app:layout_constraintVertical_bias="0.599" />
 
     <ImageView
         android:id="@+id/imageView16"
@@ -66,7 +66,7 @@
         app:srcCompat="@drawable/shadow_4" />
 
     <ImageButton
-        android:id="@+id/btnAdminSupport"
+        android:id="@+id/EditCostRange"
         android:layout_width="111dp"
         android:layout_height="103dp"
         android:backgroundTint="#295389"

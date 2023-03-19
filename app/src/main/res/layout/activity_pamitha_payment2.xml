@@ -22,8 +22,9 @@
 
     <ImageView
         android:id="@+id/imageView7"
-        android:layout_width="412dp"
-        android:layout_height="358dp"
+        android:layout_width="413dp"
+        android:layout_height="344dp"
+        android:contentDescription="TODO"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.533"
@@ -41,8 +42,23 @@
         app:layout_constraintHorizontal_bias="0.542"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.772"
-        app:srcCompat="@drawable/shadow_1" />
+        app:layout_constraintVertical_bias="0.696"
+        app:srcCompat="@drawable/shadow_1"
+        android:contentDescription="TODO" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="158dp"
+        android:layout_height="61dp"
+        android:backgroundTint="#00668B"
+        android:text="@string/add_to_favourites"
+        app:cornerRadius="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.142"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.959" />
 
     <ImageView
         android:id="@+id/imageView8"
@@ -51,109 +67,117 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.356"
+        app:layout_constraintVertical_bias="0.351"
         app:srcCompat="@drawable/rectangle" />
 
     <EditText
         android:id="@+id/editTextTextPersonName2"
-        android:layout_width="189dp"
+        android:layout_width="230dp"
         android:layout_height="48dp"
         android:ems="10"
-        android:hint="Account Number"
+        android:hint="@string/account_number"
+        android:importantForAutofill="no"
         android:inputType="textPersonName"
         android:minHeight="48dp"
+        android:textColorHint="#757575"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.676" />
+        app:layout_constraintVertical_bias="0.639" />
+
+    <TextView
+        android:id="@+id/tvSelectPayee"
+        android:layout_width="116dp"
+        android:layout_height="25dp"
+        android:text="Select Payee"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.308"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.451" />
 
     <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="239dp"
-        android:layout_height="50dp"
+        android:id="@+id/payeeCat"
+        android:layout_width="237dp"
+        android:layout_height="45dp"
         android:entries="@array/payee"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.517"
+        app:layout_constraintHorizontal_bias="0.522"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.534" />
+        app:layout_constraintVertical_bias="0.501" />
 
     <EditText
         android:id="@+id/ptAccountNo"
-        android:layout_width="189dp"
+        android:layout_width="230dp"
         android:layout_height="48dp"
         android:ems="10"
-        android:hint="Account Name"
+        android:hint="@string/account_name"
+        android:importantForAutofill="no"
         android:inputType="textPersonName"
         android:minHeight="48dp"
+        android:textColorHint="#757575"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.606" />
-
-    <TextView
-        android:id="@+id/tvSelect"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:text="Select Payee"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.303"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.491" />
+        app:layout_constraintVertical_bias="0.569" />
 
     <EditText
         android:id="@+id/editTextTextPersonName3"
-        android:layout_width="188dp"
-        android:layout_height="46dp"
+        android:layout_width="230dp"
+        android:layout_height="48dp"
         android:layout_marginStart="2dp"
         android:ems="10"
         android:hint="Amount"
+        android:importantForAutofill="no"
         android:inputType="textPersonName"
         android:minHeight="48dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.398"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.744" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="217dp"
-        android:layout_height="45dp"
-        android:backgroundTint="@color/purple_700"
-        android:text="View Favourite List"
-        app:cornerRadius="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.947" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="180dp"
-        android:layout_height="67dp"
-        android:backgroundTint="@color/btnColorYellow"
-        android:text="Pay"
-        android:textSize="20sp"
-        app:cornerRadius="30dp"
+        android:textColorHint="#757575"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.867" />
+        app:layout_constraintVertical_bias="0.71" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="154dp"
+        android:layout_height="60dp"
+        android:backgroundTint="@color/purple_700"
+        android:text="@string/view_favourites"
+        app:cornerRadius="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.882"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.958" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="165dp"
+        android:layout_height="56dp"
+        android:backgroundTint="@color/btnColorYellow"
+        android:text="Pay"
+        android:textColor="#616161"
+        android:textSize="20sp"
+        app:cornerRadius="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.544"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.856"
+        tools:ignore="TextContrastCheck" />
 
     <ImageView
         android:id="@+id/imageView3"
@@ -164,8 +188,27 @@
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.228"
-        app:srcCompat="@drawable/asset_paybill" />
+        app:layout_constraintVertical_bias="0.173"
+        app:srcCompat="@drawable/asset_paybill"
+        tools:ignore="ImageContrastCheck"
+        android:contentDescription="TODO" />
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="244dp"
+        android:layout_height="50dp"
+        android:text="@string/pay_your_bill"
+        android:textAlignment="center"
+        android:textColor="@color/tvUsersColor"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.365" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
