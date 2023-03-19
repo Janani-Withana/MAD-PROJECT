@@ -18,47 +18,47 @@
         <TextView
             android:id="@+id/icategory"
             android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
+            android:layout_height="@dimen/R_V_L_texthight"
+            android:layout_marginTop="@dimen/layoutMargin_T_B"
+            android:layout_marginBottom="@dimen/layoutMargin_T_B"
             android:layout_weight="3"
             android:gravity="center"
             android:text="LG 32 inch Tv"
-            android:textSize="16sp" />
+            android:textSize="@dimen/R_V_L_textsize" />
 
         <TextView
             android:id="@+id/uhours"
             android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
+            android:layout_height="@dimen/R_V_L_texthight"
+            android:layout_marginTop="@dimen/layoutMargin_T_B"
+            android:layout_marginBottom="@dimen/layoutMargin_T_B"
             android:layout_weight="2"
             android:gravity="center"
             android:text="8"
-            android:textSize="16sp" />
+            android:textSize="@dimen/R_V_L_textsize" />
 
         <ImageView
-            android:id="@+id/editlist"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="5dp"
+            android:id="@+id/editlistwaren1"
+            android:layout_width="@dimen/recycleviewlayoutIV_H_W"
+            android:layout_height="@dimen/recycleviewlayoutIV_H_W"
+            android:layout_marginLeft="@dimen/recycleviewlayoutMargin_L_R"
+            android:layout_marginTop="@dimen/layoutMargin_T_B"
+            android:layout_marginRight="@dimen/recycleviewlayoutMargin_L_R"
             android:layout_weight="1"
             android:gravity="center"
             android:scaleType="centerInside"
-            android:backgroundTint="#0CED10"
+            android:backgroundTint="@color/RVLIV_backgroundTint2"
             android:src="@drawable/ic_baseline_edit_note_blue" />
 
         <ImageView
             android:id="@+id/deletelist"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="5dp"
+            android:layout_width="@dimen/recycleviewlayoutIV_H_W"
+            android:layout_height="@dimen/recycleviewlayoutIV_H_W"
+            android:layout_marginTop="@dimen/layoutMargin_T_B"
+            android:layout_marginRight="@dimen/recycleviewlayoutMargin_L_R"
             android:layout_weight="1"
             android:gravity="center"
-            android:backgroundTint="#F10909"
+            android:backgroundTint="@color/RVLIV_backgroundTint1"
             android:scaleType="centerInside"
             android:src="@drawable/ic_baseline_delete_outline_24" />
 

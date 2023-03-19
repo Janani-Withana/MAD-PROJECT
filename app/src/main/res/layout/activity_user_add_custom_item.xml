@@ -140,7 +140,6 @@
             android:backgroundTint="@color/black"
             android:entries="@array/Brands"
             android:textAlignment="center" />
-
     </LinearLayout>
 
     <LinearLayout

@@ -63,8 +63,13 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/review2"
+
         android:layout_width="331dp"
         android:layout_height="454dp"
+
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/RecyclerView2Height"
+
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/border"
@@ -79,8 +84,8 @@
 
     <TextView
         android:id="@+id/adbrand"
-        android:layout_width="91dp"
-        android:layout_height="32dp"
+        android:layout_width="@dimen/TextView1width"
+        android:layout_height="@dimen/TextView1height"
         android:gravity="center"
         android:text="@string/Catergory"
         android:textColor="@color/black"
@@ -93,9 +98,9 @@
         app:layout_constraintVertical_bias="0.23" />
 
     <TextView
-        android:id="@+id/textView2"
-        android:layout_width="96dp"
-        android:layout_height="57dp"
+        android:id="@+id/Wadmin"
+        android:layout_width="@dimen/TextView2width"
+        android:layout_height="@dimen/TextView2height"
         android:gravity="center"
         android:text="@string/DailyUsage"
         android:textColor="@color/black"
@@ -108,9 +113,10 @@
         app:layout_constraintVertical_bias="0.227" />
 
     <TextView
-        android:id="@+id/Wadmin"
-        android:layout_width="96dp"
-        android:layout_height="57dp"
+
+        android:id="@+id/textView2"
+        android:layout_width="@dimen/TextView2width"
+        android:layout_height="@dimen/TextView7Height"
         android:gravity="center"
         android:text="@string/MonthlyUsage"
         android:textColor="@color/black"
@@ -123,19 +129,23 @@
         app:layout_constraintVertical_bias="0.227" />
 
     <Button
-        android:id="@+id/button12"
         android:layout_width="207dp"
-        android:layout_height="52dp"
         android:layout_marginEnd="8dp"
-        android:backgroundTint="@color/tvUsersColor"
         android:text="@string/Billcalculator"
         app:cornerRadius="20dp"
+        android:id="@+id/button11"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/Button2height"
+        android:layout_marginStart="8dp"
+        android:backgroundTint="#9C27B0"
+        android:text="@string/Home"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.515"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.976" />
+
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -159,7 +169,15 @@
     <ImageView
         android:id="@+id/imageView22"
         android:layout_width="30dp"
-        android:layout_height="31dp"
+        android:layout_height="31dp"/>
+
+    <Button
+        android:id="@+id/button12"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/Button2height"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="#FF5722"
+        android:text="@string/Billcalculator"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.931"
