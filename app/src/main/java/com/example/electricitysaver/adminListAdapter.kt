@@ -13,7 +13,7 @@ class adminListAdapter(private var items: ArrayList<adminList>):
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val textView: TextView = itemView.findViewById(R.id.icategory)
         val textView1: TextView = itemView.findViewById(R.id.uhours)
-        val imageView1: ImageView = itemView.findViewById(R.id.editlist)
+        val imageView1: ImageView = itemView.findViewById(R.id.editlistwaren1)
         val imageView2: ImageView = itemView.findViewById(R.id.deletelist)
     }
 
