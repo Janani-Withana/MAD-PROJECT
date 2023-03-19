@@ -7,16 +7,14 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageButton
-import android.widget.TextView
-import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.bottomsheet.BottomSheetDialog
 
 class AdminDashboard : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         setContentView(R.layout.activity_admin_dashboard)
+
         supportActionBar?.hide()
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
@@ -60,7 +58,6 @@ class AdminDashboard : AppCompatActivity() {
         }
 
 
-
         val consumptionCost= findViewById<ImageButton>(R.id.EditCostRange)
         consumptionCost.setOnClickListener {
             // on below line we are creating a new bottom sheet dialog.
@@ -85,8 +82,5 @@ class AdminDashboard : AppCompatActivity() {
             startActivity(mainIntent)
             //finish()
         }
-
     }
-
-
 }
