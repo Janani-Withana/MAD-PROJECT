@@ -7,11 +7,9 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="login_txt_color">#E2EDFF</color>
+    <color name="RVLIV_backgroundTint1">#F10909</color>
+    <color name="RVLIV_backgroundTint2">#0CED10</color>
     <color name="btnColorYellow">#ECB21E</color>
-    <color name="topicColor">#8CC2DA</color>
-    <color name="hintColorBlue">#80D8FF</color>
-    <color name="signupLink_color">#EDC00C</color>
-    <color name="tvUsersColor">#05288F</color>
+    <color name="additmeviewlistcolor">#15A4E6</color>
 
 </resources>

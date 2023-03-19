@@ -9,7 +9,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/review2"
         android:layout_width="match_parent"
-        android:layout_height="500dp"
+        android:layout_height="@dimen/RecyclerView2Height"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/border"
@@ -24,8 +24,8 @@
 
     <TextView
         android:id="@+id/adbrand"
-        android:layout_width="91dp"
-        android:layout_height="32dp"
+        android:layout_width="@dimen/TextView1width"
+        android:layout_height="@dimen/TextView1height"
         android:gravity="center"
         android:text="@string/Catergory"
         android:textColor="@color/black"
@@ -39,8 +39,8 @@
 
     <TextView
         android:id="@+id/Wadmin"
-        android:layout_width="96dp"
-        android:layout_height="57dp"
+        android:layout_width="@dimen/TextView2width"
+        android:layout_height="@dimen/TextView2height"
         android:gravity="center"
         android:text="@string/MonthlyUsage"
         android:textColor="@color/black"
@@ -54,8 +54,8 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="96dp"
-        android:layout_height="57dp"
+        android:layout_width="@dimen/TextView2width"
+        android:layout_height="@dimen/TextView7Height"
         android:gravity="center"
         android:text="@string/DailyUsage"
         android:textColor="@color/black"
@@ -70,7 +70,7 @@
     <Button
         android:id="@+id/button11"
         android:layout_width="wrap_content"
-        android:layout_height="50dp"
+        android:layout_height="@dimen/Button2height"
         android:layout_marginStart="8dp"
         android:backgroundTint="#9C27B0"
         android:text="@string/Home"
@@ -84,7 +84,7 @@
     <Button
         android:id="@+id/button12"
         android:layout_width="wrap_content"
-        android:layout_height="50dp"
+        android:layout_height="@dimen/Button2height"
         android:layout_marginEnd="8dp"
         android:backgroundTint="#FF5722"
         android:text="@string/Billcalculator"
