@@ -21,7 +21,7 @@ class HomePage : AppCompatActivity() {
                 Color.parseColor("#133B5C") // Replace with your desired color
         }
 
-        val btnPay = findViewById<Button>(R.id.HomeBtnPay)
+      /*  val btnPay = findViewById<Button>(R.id.HomeBtnPay)
         btnPay.setOnClickListener {
             val mainIntent = Intent(this@HomePage, pamitha_payment::class.java)
             startActivity(mainIntent)
@@ -38,7 +38,7 @@ class HomePage : AppCompatActivity() {
             val mainIntent = Intent(this@HomePage, AdminDashboard::class.java)
             startActivity(mainIntent)
             //finish()
-        }
+        }*/
 
 
     }
