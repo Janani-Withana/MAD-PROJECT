@@ -23,7 +23,7 @@
     </androidx.recyclerview.widget.RecyclerView>
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/adbrand"
         android:layout_width="91dp"
         android:layout_height="32dp"
         android:gravity="center"
@@ -38,7 +38,7 @@
         app:layout_constraintVertical_bias="0.165" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/Wadmin"
         android:layout_width="96dp"
         android:layout_height="57dp"
         android:gravity="center"

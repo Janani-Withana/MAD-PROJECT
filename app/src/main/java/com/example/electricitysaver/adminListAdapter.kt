@@ -7,8 +7,8 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class ListAdapter(private var items: ArrayList<ListItem>) :
-    RecyclerView.Adapter<ListAdapter.ViewHolder>() {
+class adminListAdapter(private var items: ArrayList<adminList>):
+    RecyclerView.Adapter<adminListAdapter.ViewHolder>(){
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val textView: TextView = itemView.findViewById(R.id.icategory)
@@ -25,22 +25,17 @@ class ListAdapter(private var items: ArrayList<ListItem>) :
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = items[position]
-
-        holder.textView.text = item.category
-        holder.textView1.text = item.hours
-        holder.imageView1.setImageResource(R.drawable.ic_baseline_edit_note_blue)
-        holder.imageView2.setImageResource(R.drawable.ic_baseline_delete_outline_24)
-
+        holder.textView.text = item.brand //data class variables
+        holder.textView1.text = item.watt //data class variables
+        holder.imageView1.setImageResource(R.drawable.editicon)
+        holder.imageView2.setImageResource(R.drawable.dellist)
     }
 
     override fun getItemCount(): Int {
         return items.size
     }
 
-    fun setItems(items: ArrayList<ListItem>) {
+    fun setItems(items: ArrayList<adminList>) {
         this.items = items
     }
-
 }
-
-

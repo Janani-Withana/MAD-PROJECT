@@ -158,7 +158,7 @@
         app:srcCompat="@drawable/ic_baseline_list_24" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/Wadmin"
         android:layout_width="89dp"
         android:layout_height="32dp"
         android:text="Device List"
