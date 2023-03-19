@@ -38,6 +38,7 @@ class AdminDashboard : AppCompatActivity() {
             // on below line we are calling a show method to display a dialog.
             dialog.show()
         }
+
         val btnAdminAddDevices= findViewById<ImageButton>(R.id.HomeDeviceList)
         btnAdminAddDevices.setOnClickListener {
             // on below line we are creating a new bottom sheet dialog.
@@ -74,6 +75,7 @@ class AdminDashboard : AppCompatActivity() {
             // on below line we are calling a show method to display a dialog.
             dialog.show()
         }
+
 
         val btnAdminPanel = findViewById<ImageButton>(R.id.HomeBtnPay)
         btnAdminPanel.setOnClickListener {
