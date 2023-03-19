@@ -1,18 +1,22 @@
 package com.example.electricitysaver
 
+import android.content.Intent
 import android.graphics.Color
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ImageButton
+import android.widget.TextView
+import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.bottomsheet.BottomSheetDialog
 
 class AdminDashboard : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_admin_dashboard)
 
+        setContentView(R.layout.activity_admin_dashboard)
         supportActionBar?.hide()
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
@@ -55,23 +59,7 @@ class AdminDashboard : AppCompatActivity() {
             dialog.show()
         }
 
-        val adminViewList= findViewById<ImageButton>(R.id.AdminViewList)
-        adminViewList.setOnClickListener {
-            // on below line we are creating a new bottom sheet dialog.
-            val dialog = BottomSheetDialog(this)
 
-            // on below line we are inflating a layout file which we have created.
-            val view = layoutInflater.inflate(R.layout.device_list_bottomsheet, null)
-
-            // below line is use to set cancelable to avoid closing of dialog box when clicking on the screen.
-            dialog.setCancelable(true)
-
-            // on below line we are setting content view to our view.
-            dialog.setContentView(view)
-
-            // on below line we are calling a show method to display a dialog.
-            dialog.show()
-        }
 
         val consumptionCost= findViewById<ImageButton>(R.id.EditCostRange)
         consumptionCost.setOnClickListener {
@@ -90,5 +78,15 @@ class AdminDashboard : AppCompatActivity() {
             // on below line we are calling a show method to display a dialog.
             dialog.show()
         }
+
+        val btnAdminPanel = findViewById<ImageButton>(R.id.AdminViewList)
+        btnAdminPanel.setOnClickListener {
+            val mainIntent = Intent(this, AdminListView::class.java)
+            startActivity(mainIntent)
+            //finish()
+        }
+
     }
+
+
 }

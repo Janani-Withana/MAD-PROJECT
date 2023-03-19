@@ -18,17 +18,16 @@ class adminListAdapter(private var items: ArrayList<adminList>):
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.list_recycler_view_layout, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.list_recycler_view_layout, parent, false)
         return ViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = items[position]
         holder.textView.text = item.brand //data class variables
-        holder.textView1.text = item.watt //data class variables
-        holder.imageView1.setImageResource(R.drawable.editicon)
-        holder.imageView2.setImageResource(R.drawable.dellist)
+        holder.textView1.text = item.watt.toString() //data class variables
+        holder.imageView1.setImageResource(R.drawable.ic_baseline_edit_note_blue)
+        holder.imageView2.setImageResource(R.drawable.ic_baseline_delete_outline_24)
     }
 
     override fun getItemCount(): Int {
