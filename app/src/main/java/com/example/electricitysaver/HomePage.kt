@@ -39,5 +39,7 @@ class HomePage : AppCompatActivity() {
             startActivity(mainIntent)
             //finish()
         }
+
+
     }
 }

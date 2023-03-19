@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ListView">
+    tools:context=".AdminListView">
 
     <ImageView
         android:id="@+id/imageView7"
@@ -43,7 +43,7 @@
         app:srcCompat="@drawable/rectangle" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/itemreview"
+        android:id="@+id/adminitemreview"
         android:layout_width="288dp"
         android:layout_height="384dp"
         android:layout_marginStart="16dp"
@@ -65,7 +65,7 @@
         android:layout_width="91dp"
         android:layout_height="32dp"
         android:gravity="center"
-        android:text="@string/Catergory"
+        android:text="@string/Brand"
         android:textColor="@color/black"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -80,7 +80,7 @@
         android:layout_width="96dp"
         android:layout_height="60dp"
         android:gravity="center"
-        android:text="@string/MonthlyUsage"
+        android:text="@string/WattCount"
         android:textColor="@color/black"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -110,56 +110,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.137" />
 
-    <TextView
-        android:id="@+id/textView17"
-        android:layout_width="121dp"
-        android:layout_height="29dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="11dp"
-        android:gravity="center"
-        android:text="@string/TotalUnits"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.04"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.876" />
-
-    <TextView
-        android:id="@+id/textView18"
-        android:layout_width="64dp"
-        android:layout_height="39dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="11dp"
-        android:gravity="center"
-        android:text="120"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.35"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.881" />
-
-    <EditText
-        android:id="@+id/editTextTextPersonName"
-        android:layout_width="157dp"
-        android:layout_height="48dp"
-        android:ems="10"
-        android:gravity="center"
-        android:hint="Expecting units"
-        android:inputType="textPersonName"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.826"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.88" />
-
     <Button
         android:id="@+id/submit_btn"
         android:layout_width="103dp"
@@ -175,6 +125,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.97" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
