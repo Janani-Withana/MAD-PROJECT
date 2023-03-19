@@ -63,13 +63,8 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/review2"
-
-        android:layout_width="331dp"
-        android:layout_height="454dp"
-
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/RecyclerView2Height"
-
+        android:layout_width="329dp"
+        android:layout_height="488dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/border"
@@ -129,7 +124,6 @@
         app:layout_constraintVertical_bias="0.227" />
 
     <Button
-        android:layout_width="207dp"
         android:layout_marginEnd="8dp"
         android:text="@string/Billcalculator"
         app:cornerRadius="20dp"
@@ -137,8 +131,7 @@
         android:layout_width="wrap_content"
         android:layout_height="@dimen/Button2height"
         android:layout_marginStart="8dp"
-        android:backgroundTint="#9C27B0"
-        android:text="@string/Home"
+        android:backgroundTint="@color/tvUsersColor"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.515"
@@ -168,22 +161,14 @@
 
     <ImageView
         android:id="@+id/imageView22"
-        android:layout_width="30dp"
-        android:layout_height="31dp"/>
-
-    <Button
-        android:id="@+id/button12"
-        android:layout_width="wrap_content"
-        android:layout_height="@dimen/Button2height"
-        android:layout_marginEnd="8dp"
-        android:backgroundTint="#FF5722"
-        android:text="@string/Billcalculator"
+        android:layout_width="36dp"
+        android:layout_height="34dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.931"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imageView6"
+        app:layout_constraintHorizontal_bias="0.93"
+        app:layout_constraintStart_toStartOf="@+id/imageView6"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.017"
+        app:layout_constraintVertical_bias="0.011"
         app:srcCompat="@drawable/ic_baseline_menu_24" />
 
     <ImageView
