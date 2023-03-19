@@ -118,7 +118,7 @@
         app:layout_constraintVertical_bias="0.812" />
 
     <ImageButton
-        android:id="@+id/btnAdminAddDevices"
+        android:id="@+id/listdevice"
         android:layout_width="107dp"
         android:layout_height="101dp"
         android:backgroundTint="#295389"
@@ -144,7 +144,7 @@
         app:srcCompat="@drawable/shadow_5" />
 
     <ImageButton
-        android:id="@+id/AdminViewList"
+        android:id="@+id/paybills"
         android:layout_width="109dp"
         android:layout_height="109dp"
         android:backgroundTint="#ECB21E"
