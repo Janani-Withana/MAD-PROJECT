@@ -20,20 +20,6 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".listRecyclerViewLayout"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".recycleviewlayo"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
             android:name=".UserUpdateEditItems"
             android:exported="false">
             <meta-data
