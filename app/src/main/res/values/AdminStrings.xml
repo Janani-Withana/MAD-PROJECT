@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="starting_unit_range">Starting Unit Range</string>
+    <string name="consumption_cost">Consumption Cost</string>
+    <string name="energy_charge_lkr_kwh">Energy Charge (LKR/kWh)</string>
+    <string name="fixed_charge_lkr_month">Fixed Charge (LKR/Month)</string>
+    <string name="ending_unit_range">Ending Unit Range</string>
+    <string name="btnViewList">ViewList</string>
+    <string name="tariff_category">Tariff Category</string>
+</resources>

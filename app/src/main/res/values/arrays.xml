@@ -21,4 +21,20 @@
         <item>Panasonic</item>
         <item>Samsung</item>
     </string-array>
+
+    <string-array name="Tarrif">
+        <item></item>
+        <item>Domestic</item>
+        <item>Industrial</item>
+    </string-array>
+
+    <string-array name="Range">
+        <item></item>
+        <item>0-30kWh</item>
+        <item>31-60kWh</item>
+        <item>61-90kWh</item>
+        <item>91-120kWh</item>
+        <item>121-180kWh</item>
+        <item>181kWh and above</item>
+    </string-array>
 </resources>
