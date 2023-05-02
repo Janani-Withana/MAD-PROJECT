@@ -128,13 +128,12 @@
         app:layout_constraintVertical_bias="0.876" />
 
     <TextView
-        android:id="@+id/textView18"
+        android:id="@+id/totalUnit"
         android:layout_width="@dimen/TextView5width"
         android:layout_height="@dimen/TextView5height"
         android:layout_marginStart="16dp"
         android:layout_marginTop="11dp"
         android:gravity="center"
-        android:text="120"
         android:textColor="@color/black"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -145,7 +144,7 @@
         app:layout_constraintVertical_bias="0.881" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/exUnit"
         android:layout_width="@dimen/TextView6width"
         android:layout_height="@dimen/TextView6height"
         android:ems="10"

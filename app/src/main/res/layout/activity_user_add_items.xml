@@ -90,15 +90,17 @@
             android:textColor="@color/black"
             android:textSize="16sp" />
 
-        <NumberPicker
-            android:layout_width="@dimen/NumPicker4width"
-            android:layout_height="@dimen/NumPicker4Height"
-            android:layout_marginTop="16dp"
+        <EditText
+            android:id="@+id/nw"
+            android:layout_width="390dp"
+            android:layout_height="52dp"
+
             android:layout_marginRight="16dp"
-            android:layout_weight="9"
+            android:layout_weight="10"
             android:backgroundTint="@color/black"
-            android:entries="@array/Brands"
-            android:textAlignment="center" />
+            android:inputType="number"
+            android:textAlignment="center"
+            android:textSize="17sp" />
 
     </LinearLayout>
 
@@ -189,15 +191,17 @@
             android:textColor="@color/black"
             android:textSize="16sp" />
 
-        <NumberPicker
-            android:layout_width="@dimen/NumPicker2width"
-            android:layout_height="@dimen/NumPicker4Height"
-            android:layout_marginTop="16dp"
+        <EditText
+            android:id="@+id/qty"
+            android:layout_width="390dp"
+            android:layout_height="52dp"
+
             android:layout_marginRight="16dp"
             android:layout_weight="3"
             android:backgroundTint="@color/black"
-            android:entries="@array/Brands"
-            android:textAlignment="center" />
+            android:inputType="number"
+            android:textAlignment="center"
+            android:textSize="17sp" />
 
     </LinearLayout>
 
@@ -222,15 +226,18 @@
             android:textColor="@color/black"
             android:textSize="16sp" />
 
-        <NumberPicker
-            android:layout_width="@dimen/NumPicker3width"
-            android:layout_height="@dimen/NumPicker4Height"
-            android:layout_marginTop="16dp"
+        <EditText
+            android:id="@+id/du"
+            android:layout_width="390dp"
+            android:layout_height="52dp"
+
             android:layout_marginRight="16dp"
             android:layout_weight="6"
             android:backgroundTint="@color/black"
-            android:entries="@array/Brands"
-            android:textAlignment="center" />
+            android:inputType="number"
+            android:textAlignment="center"
+            android:textSize="17sp" />
+
 
     </LinearLayout>
 
@@ -249,21 +256,22 @@
             android:layout_width="@dimen/TextView14Width"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="10dp"
             android:layout_weight="4"
             android:text="@string/MonthlyUsage"
             android:textColor="@color/black"
             android:textSize="16sp" />
 
-        <NumberPicker
-            android:layout_width="@dimen/NumPicker4width"
-            android:layout_height="@dimen/NumPicker4Height"
-            android:layout_marginTop="16dp"
+        <EditText
+            android:id="@+id/mu"
+            android:layout_width="390dp"
+            android:layout_height="52dp"
             android:layout_marginRight="16dp"
-            android:layout_weight="9"
+            android:layout_weight="10"
             android:backgroundTint="@color/black"
-            android:entries="@array/Brands"
-            android:textAlignment="center" />
+            android:inputType="number"
+            android:textAlignment="center"
+            android:textSize="17sp" />
 
     </LinearLayout>
 
@@ -283,7 +291,7 @@
         app:layout_constraintVertical_bias="0.86" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/btnCusAdd"
         android:layout_width="116dp"
         android:layout_height="48dp"
         android:backgroundTint="@color/btnColorYellow"
