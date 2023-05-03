@@ -7,13 +7,10 @@ import android.graphics.Color
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.EditText
-import android.widget.Spinner
 import androidx.appcompat.app.AlertDialog
 import com.example.electricitysaver.databaseHelper.UserItemDbHelper
-import java.util.Locale.Category
 
 class User_addItems : AppCompatActivity() {
 
@@ -40,7 +37,7 @@ class User_addItems : AppCompatActivity() {
         }
 
         val btnCusAdd = findViewById<Button>(R.id.btnCusAdd)
-        ccat = findViewById(R.id.ccat)
+        ccat = findViewById(R.id.cat)
         brand = findViewById(R.id.brand)
         qty = findViewById(R.id.qty)
         du = findViewById(R.id.du)

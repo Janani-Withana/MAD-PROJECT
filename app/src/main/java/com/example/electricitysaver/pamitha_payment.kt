@@ -2,6 +2,7 @@ package com.example.electricitysaver
 
 import android.content.ContentValues
 import android.content.DialogInterface
+import android.content.Intent
 import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.graphics.Color
@@ -36,37 +37,27 @@ class pamitha_payment : AppCompatActivity() {
         }
         val favourites= findViewById<Button>(R.id.viewFavourites)
         favourites.setOnClickListener {
-            // on below line we are creating a new bottom sheet dialog.
-            val dialog = BottomSheetDialog(this)
 
-            // on below line we are inflating a layout file which we have created.
-            val view = layoutInflater.inflate(R.layout.favourite_list, null)
-
-            // below line is use to set cancelable to avoid closing of dialog box when clicking on the screen.
-            dialog.setCancelable(true)
-
-            // on below line we are setting content view to our view.
-            dialog.setContentView(view)
-
-            // on below line we are calling a show method to display a dialog.
-            dialog.show()
-        }
-
-        AddFav.setOnClickListener {
-            var cv = ContentValues()
-            cv.put("PAYEE",payeeCat.selectedItem.toString())
-            cv.put("NAME",ptAccountName.text.toString())
-            cv.put("ACCOUNT",ActNumber.text.toString())
-            cv.put("AMOUNT",etAmount.text.toString())
-            db.insert("PAYMENT",null,cv)
-
-            var ad = AlertDialog.Builder(this)
-            ad.setTitle("Add To Favourite")
-            ad.setMessage("Record Added to Favourite List Successflly ....!")
-            ad.setPositiveButton("OK", DialogInterface.OnClickListener{ dialog: DialogInterface?, i->
-            })
-            ad.show()
+            val mainIntent = Intent(this@pamitha_payment, Favourites::class.java)
+            startActivity(mainIntent)
+            //finish()
 
         }
+
+//        AddFav.setOnClickListener {
+//            var cv = ContentValues()
+//            cv.put("PAYEE",payeeCat.selectedItem.toString())
+//            cv.put("NAME",ptAccountName.text.toString())
+//            cv.put("ACCOUNT",ActNumber.text.toString())
+//            cv.put("AMOUNT",etAmount.text.toString())
+//            db.insert("PAYMENT",null,cv)
+//
+//            var ad = AlertDialog.Builder(this)
+//            ad.setTitle("Add To Favourite")
+//            ad.setMessage("Record Added to Favourite List Successflly ....!")
+//            ad.setPositiveButton("OK", DialogInterface.OnClickListener{ dialog: DialogInterface?, i->
+//            })
+//            ad.show()
+//        }
     }
 }
