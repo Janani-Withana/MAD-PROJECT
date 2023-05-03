@@ -26,9 +26,9 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="172dp"
-            android:layout_marginEnd="-2dp"
-            android:layout_marginBottom="381dp"
+            android:layout_marginStart="180dp"
+            android:layout_marginEnd="-4dp"
+            android:layout_marginBottom="368dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.963"
@@ -61,47 +61,6 @@
             app:layout_constraintVertical_bias="0.3" />
 
         <LinearLayout
-            android:id="@+id/linearLayout6"
-            android:layout_width="301dp"
-            android:layout_height="48dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="54dp"
-            android:layout_marginTop="382dp"
-            android:layout_marginEnd="53dp"
-            android:layout_marginBottom="120dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.536"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.769">
-
-            <TextView
-                android:layout_width="257dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="16dp"
-                android:layout_weight="4"
-                android:text="@string/WattCount"
-                android:textColor="@color/black"
-                android:textSize="16sp" />
-
-            <NumberPicker
-                android:layout_width="324dp"
-                android:layout_height="25dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginRight="16dp"
-                android:layout_weight="9"
-                android:backgroundTint="@color/black"
-                android:entries="@array/Brands"
-                android:textAlignment="center" />
-
-        </LinearLayout>
-
-        <LinearLayout
             android:id="@+id/linearLayout"
             android:layout_width="309dp"
             android:layout_height="59dp"
@@ -109,10 +68,10 @@
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="57dp"
-            android:layout_marginTop="163dp"
-            android:layout_marginEnd="42dp"
-            android:layout_marginBottom="328dp"
+            android:layout_marginStart="59dp"
+            android:layout_marginTop="193dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginBottom="298dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.578"
@@ -132,7 +91,7 @@
                 android:textSize="16sp" />
 
             <EditText
-                android:id="@+id/ccat"
+                android:id="@+id/cat"
                 android:layout_width="293dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
@@ -142,6 +101,70 @@
                 android:textAlignment="center" />
         </LinearLayout>
 
+        <Button
+            android:id="@+id/btnlist"
+            android:layout_width="129dp"
+            android:layout_height="52dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="228dp"
+            android:layout_marginTop="408dp"
+            android:layout_marginEnd="52dp"
+            android:layout_marginBottom="90dp"
+            android:backgroundTint="#15A4E6"
+            android:text="@string/ViewList"
+            android:textColor="@color/black"
+            app:cornerRadius="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.736"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.86" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout6"
+            android:layout_width="301dp"
+            android:layout_height="48dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="61dp"
+            android:layout_marginTop="324dp"
+            android:layout_marginEnd="46dp"
+            android:layout_marginBottom="178dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.536"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.769">
+
+            <TextView
+                android:layout_width="146dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_weight="4"
+                android:text="@string/WattCount"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/edtWatts"
+                android:layout_width="158dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_weight="3"
+                android:backgroundTint="@color/black"
+                android:textAlignment="center" />
+
+        </LinearLayout>
+
         <LinearLayout
             android:id="@+id/linearLayout5"
             android:layout_width="307dp"
@@ -149,9 +172,9 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="56dp"
-            android:layout_marginEnd="46dp"
-            android:layout_marginBottom="247dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginEnd="42dp"
+            android:layout_marginBottom="232dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.567"
@@ -165,7 +188,7 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_weight="4"
-                android:text="@string/Brand"
+                android:text="@string/brand"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
@@ -181,70 +204,6 @@
 
         </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/linearLayout3"
-            android:layout_width="305dp"
-            android:layout_height="52dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="54dp"
-            android:layout_marginTop="319dp"
-            android:layout_marginEnd="48dp"
-            android:layout_marginBottom="179dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.556"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.552">
-
-            <TextView
-                android:layout_width="521dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="16dp"
-                android:layout_weight="4"
-                android:text="@string/Quantity"
-                android:textColor="@color/black"
-                android:textSize="16sp" />
-
-            <NumberPicker
-                android:layout_width="390dp"
-                android:layout_height="23dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginRight="16dp"
-                android:layout_weight="3"
-                android:backgroundTint="@color/black"
-                android:entries="@array/Brands"
-                android:textAlignment="center" />
-
-        </LinearLayout>
-
-        <Button
-            android:id="@+id/btnlist"
-            android:layout_width="129dp"
-            android:layout_height="52dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="216dp"
-            android:layout_marginTop="471dp"
-            android:layout_marginEnd="63dp"
-            android:layout_marginBottom="27dp"
-            android:backgroundTint="#15A4E6"
-            android:text="@string/ViewList"
-            android:textColor="@color/black"
-            app:cornerRadius="30dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.736"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.86" />
-
         <Button
             android:id="@+id/button4"
             android:layout_width="wrap_content"
@@ -253,10 +212,10 @@
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="73dp"
-            android:layout_marginTop="472dp"
-            android:layout_marginEnd="209dp"
-            android:layout_marginBottom="27dp"
+            android:layout_marginStart="70dp"
+            android:layout_marginTop="410dp"
+            android:layout_marginEnd="213dp"
+            android:layout_marginBottom="89dp"
             android:backgroundTint="@color/btnColorYellow"
             android:text="@string/Add"
             android:textColor="@color/black"

@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import kotlinx.android.synthetic.main.favourite_list.*
+import kotlinx.android.synthetic.main.fav_list.*
 
 class Favourites : AppCompatActivity() {
 
@@ -15,7 +15,7 @@ class Favourites : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.favourite_list)
+        setContentView(R.layout.fav_list)
 
         supportActionBar?.hide()
 
