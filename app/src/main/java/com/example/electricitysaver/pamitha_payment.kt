@@ -44,20 +44,20 @@ class pamitha_payment : AppCompatActivity() {
 
         }
 
-//        AddFav.setOnClickListener {
-//            var cv = ContentValues()
-//            cv.put("PAYEE",payeeCat.selectedItem.toString())
-//            cv.put("NAME",ptAccountName.text.toString())
-//            cv.put("ACCOUNT",ActNumber.text.toString())
-//            cv.put("AMOUNT",etAmount.text.toString())
-//            db.insert("PAYMENT",null,cv)
-//
-//            var ad = AlertDialog.Builder(this)
-//            ad.setTitle("Add To Favourite")
-//            ad.setMessage("Record Added to Favourite List Successflly ....!")
-//            ad.setPositiveButton("OK", DialogInterface.OnClickListener{ dialog: DialogInterface?, i->
-//            })
-//            ad.show()
-//        }
+        AddFav.setOnClickListener {
+            var cv = ContentValues()
+            cv.put("PAYEE",payeeCat.selectedItem.toString())
+            cv.put("NAME",ptAccountName.text.toString())
+            cv.put("ACCOUNT",ActNumber.text.toString())
+            cv.put("AMOUNT",etAmount.text.toString())
+            db.insert("PAYMENT",null,cv)
+
+            var ad = AlertDialog.Builder(this)
+            ad.setTitle("Add To Favourite")
+            ad.setMessage("Record Added to Favourite List Successflly ....!")
+            ad.setPositiveButton("OK", DialogInterface.OnClickListener{ dialog: DialogInterface?, i->
+            })
+            ad.show()
+        }
     }
 }
