@@ -15,7 +15,7 @@
         android:orientation="horizontal">
 
         <LinearLayout
-            android:layout_width="186dp"
+            android:layout_width="149dp"
             android:layout_height="match_parent"
             android:orientation="vertical">
 
@@ -39,10 +39,10 @@
                 style="@style/TextAppearance.AppCompat.Large"
                 android:layout_width="141dp"
                 android:layout_height="41dp"
+                android:layout_marginLeft="5dp"
                 android:gravity="center"
                 android:text="Account Number:"
                 android:textSize="14dp"
-                android:layout_marginLeft="5dp"
                 app:layout_constraintBottom_toTopOf="@+id/button2"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.129"
@@ -52,9 +52,9 @@
                 android:id="@+id/button2"
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
+                android:layout_marginLeft="30dp"
                 android:backgroundTint="#007FAC"
                 android:text="Pay"
-                android:layout_marginLeft="30dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.121"
@@ -101,7 +101,7 @@
                 android:layout_width="100dp"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
-                android:layout_marginLeft="85dp">
+                android:layout_marginLeft="60dp">
 
                 <ImageView
                     android:id="@+id/editlistwaren1"
