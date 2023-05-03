@@ -1,6 +1,5 @@
 <resources>
     <color name="submitBtnColor">#008000</color>
-    <string name="app_name">Power Pilot</string>
     <string name="costCalculator">Cost Calculator</string>
     <string name="previousReading">Previous Reading</string>
     <string name="edtPreReading">Enter Previous Reading</string>
