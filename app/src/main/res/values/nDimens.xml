@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="tvTopicWidth">230dp</dimen>
+    <dimen name="tvTopicHeight">42dp</dimen>
+    <dimen name="spnWidth">250dp</dimen>
+    <dimen name="spnHeight">48dp</dimen>
+    <dimen name="marginTop">16dp</dimen>
+    <dimen name="imageViewH">90dp</dimen>
+    <dimen name="imageViewW">300dp</dimen>
+    <dimen name="tv_white_H">30dp</dimen>
+    <dimen name="calendar">40dp</dimen>
+    <dimen name="rBtn_H">41dp</dimen>
+    <dimen name="edtText_W">200dp</dimen>
+    <dimen name="edtText_H">48dp</dimen>
+</resources>

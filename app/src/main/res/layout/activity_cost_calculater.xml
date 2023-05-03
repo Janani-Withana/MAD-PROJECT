@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/costCalculator2"
+            android:layout_width="@dimen/tvTopicWidth"
+            android:layout_height="@dimen/tvTopicHeight"
+            android:background="@drawable/rounded_corner_bg"
+            android:gravity="center"
+            android:text="@string/costCalculator"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Spinner
+            android:id="@+id/spinner2"
+            android:layout_width="@dimen/spnWidth"
+            android:layout_height="@dimen/spnHeight"
+            android:layout_marginTop="@dimen/marginTop"
+            android:background="@drawable/button_background"
+            android:contentDescription="@string/spn_Category"
+            android:entries="@array/tariffCategory"
+            android:foregroundGravity="center"
+            android:gravity="center"
+            android:minHeight="48dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/costCalculator2" />
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="@dimen/imageViewW"
+            android:layout_height="@dimen/imageViewH"
+            android:layout_marginTop="@dimen/marginTop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spinner2"
+            app:srcCompat="@drawable/button_background" />
+
+        <TextView
+            android:id="@+id/tvEDate"
+            android:layout_width="106dp"
+            android:layout_height="28dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/rounded_corner_bg"
+            android:gravity="center"
+            android:text="@string/endingDate"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView"
+            app:layout_constraintEnd_toEndOf="@+id/imageView"
+            app:layout_constraintTop_toTopOf="@+id/imageView"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/tvSDate"
+            android:layout_width="106dp"
+            android:layout_height="@dimen/tv_white_H"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/rounded_corner_bg"
+            android:gravity="center"
+            android:text="@string/startingDate"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView"
+            app:layout_constraintStart_toStartOf="@+id/imageView"
+            app:layout_constraintTop_toTopOf="@+id/imageView"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="@dimen/calendar"
+            android:layout_height="@dimen/calendar"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView"
+            app:layout_constraintEnd_toStartOf="@+id/imageView7"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvSDate"
+            app:srcCompat="@drawable/calender_icon" />
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="@dimen/calendar"
+            android:layout_height="@dimen/calendar"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/imageView3"
+            app:layout_constraintTop_toBottomOf="@+id/tvEDate"
+            app:srcCompat="@drawable/calender_icon" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="250dp"
+            android:layout_height="@dimen/rBtn_H"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/button_background"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView">
+
+            <RadioButton
+                android:id="@+id/radioButton2"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/rBtn_H"
+                android:buttonTint="@color/black"
+                android:text="@string/rbtn_units"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <RadioButton
+                android:id="@+id/radioButton4"
+                android:layout_width="150dp"
+                android:layout_height="@dimen/rBtn_H"
+                android:buttonTint="@color/black"
+                android:text="@string/rbtn_reading"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+        </RadioGroup>
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="301dp"
+            android:layout_height="214dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView5"
+            app:srcCompat="@drawable/button_background" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="@dimen/imageViewW"
+            android:layout_height="112dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.47"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+            app:srcCompat="@drawable/button_background" />
+
+        <TextView
+            android:id="@+id/tvPreReading2"
+            android:layout_width="139dp"
+            android:layout_height="@dimen/tv_white_H"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/rounded_corner_bg"
+            android:gravity="center"
+            android:text="@string/previousReading"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/imageView4"
+            app:layout_constraintStart_toStartOf="@+id/imageView4"
+            app:layout_constraintTop_toTopOf="@+id/imageView4" />
+
+        <EditText
+            android:id="@+id/edtPreReading2"
+            android:layout_width="@dimen/edtText_W"
+            android:layout_height="@dimen/edtText_H"
+            android:layout_marginTop="12dp"
+            android:autofillHints=""
+            android:ems="10"
+            android:gravity="center"
+            android:hint="@string/edtPreReading"
+            android:inputType="number"
+            android:textColor="#000000"
+            android:textColorHint="#212121"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/imageView4"
+            app:layout_constraintStart_toStartOf="@+id/imageView4"
+            app:layout_constraintTop_toBottomOf="@+id/tvPreReading2" />
+
+        <TextView
+            android:id="@+id/tvCurrReading2"
+            android:layout_width="156dp"
+            android:layout_height="31dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/rounded_corner_bg"
+            android:gravity="center"
+            android:text="@string/currentReading"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/imageView4"
+            app:layout_constraintStart_toStartOf="@+id/imageView4"
+            app:layout_constraintTop_toBottomOf="@+id/edtPreReading2" />
+
+        <EditText
+            android:id="@+id/edtCurrReading2"
+            android:layout_width="@dimen/edtText_W"
+            android:layout_height="@dimen/edtText_H"
+            android:layout_marginTop="12dp"
+            android:autofillHints=""
+            android:ems="10"
+            android:gravity="center"
+            android:hint="@string/edtCurrReading"
+            android:inputType="number"
+            android:textColor="#000000"
+            android:textColorHint="#212121"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/imageView4"
+            app:layout_constraintStart_toStartOf="@+id/imageView4"
+            app:layout_constraintTop_toBottomOf="@+id/tvCurrReading2" />
+
+        <TextView
+            android:id="@+id/tvUnits2"
+            android:layout_width="106dp"
+            android:layout_height="28dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/rounded_corner_bg"
+            android:gravity="center"
+            android:text="@string/inputUnits"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/imageView5"
+            app:layout_constraintStart_toStartOf="@+id/imageView5"
+            app:layout_constraintTop_toTopOf="@+id/imageView5" />
+
+        <EditText
+            android:id="@+id/edtUnits2"
+            android:layout_width="@dimen/edtText_W"
+            android:layout_height="@dimen/edtText_H"
+            android:layout_marginTop="12dp"
+            android:autofillHints=""
+            android:ems="10"
+            android:gravity="center"
+            android:hint="@string/edtUnits"
+            android:inputType="number"
+            android:textColor="#000000"
+            android:textColorHint="#212121"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/imageView5"
+            app:layout_constraintStart_toStartOf="@+id/imageView5"
+            app:layout_constraintTop_toBottomOf="@+id/tvUnits2" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="404dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="8dp"
+            android:scaleX="2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.52"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnCal2"
+            app:srcCompat="@drawable/bg_sqr" />
+
+        <TextView
+            android:id="@+id/tvCost2"
+            android:layout_width="144dp"
+            android:layout_height="@dimen/tv_white_H"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/rounded_corner_bg"
+            android:gravity="center"
+            android:text="@string/tvCost"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/imageView2"
+            app:layout_constraintStart_toStartOf="@+id/imageView2"
+            app:layout_constraintTop_toTopOf="@+id/imageView2" />
+
+        <Button
+            android:id="@+id/btnCal2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/submitBtnColor"
+            android:text="@string/btnCalculate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="94dp"
+            android:layout_height="71dp"
+            android:layout_weight="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/calculator_bg" />
+
+        <TextView
+            android:id="@+id/tvDisplayCost3"
+            android:layout_width="247dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="4dp"
+            android:gravity="center"
+            android:hint="Rs. 1508.50"
+            android:text="@string/tvDisplayCost"
+            android:textColor="#000000"
+            android:textColorHint="#283593"
+            android:textSize="34sp"
+            app:layout_constraintEnd_toEndOf="@+id/imageView2"
+            app:layout_constraintHorizontal_bias="0.557"
+            app:layout_constraintStart_toStartOf="@+id/imageView2"
+            app:layout_constraintTop_toBottomOf="@+id/tvCost2" />
+
+        <TextView
+            android:id="@+id/btn_seeHistory"
+            android:layout_width="156dp"
+            android:layout_height="31dp"
+            android:layout_marginTop="@dimen/marginTop"
+            android:background="@drawable/rounded_corner_bg"
+            android:gravity="center"
+            android:text="@string/See_history"
+            android:textColor="#FFA000"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvDisplayCost3" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
