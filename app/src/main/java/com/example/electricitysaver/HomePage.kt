@@ -44,6 +44,13 @@ class HomePage : AppCompatActivity() {
             startActivity(mainIntent)
             //finish()
         }
+
+        val btnCostCal = findViewById<ImageButton>(R.id.btnCostCal)
+        btnCostCal.setOnClickListener {
+            val mainIntent = Intent(this@HomePage, cost_calculater::class.java)
+            startActivity(mainIntent)
+            //finish()
+        }
         val btnAdminPanel = findViewById<ImageView>(R.id.HomeAdmin)
         btnAdminPanel.setOnClickListener {
             val mainIntent = Intent(this@HomePage, AdminDashboard::class.java)

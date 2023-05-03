@@ -28,15 +28,10 @@ class AdminListView : AppCompatActivity() {
         recyclerView.layoutManager = LinearLayoutManager(this)
 
         val items = ArrayList<adminList>()
-        items.add(adminList("brand 1", 32.01))
-        items.add(adminList("brand 2", 40.65))
-        items.add(adminList("brand 3", 100.2))
-        items.add(adminList("brand 4", 120.9))
-        items.add(adminList("brand 5", 12.67))
-        items.add(adminList("brand 6", 18.09))
-        items.add(adminList("brand 7", 5.145))
-        items.add(adminList("brand 8", 45.23))
-        items.add(adminList("brand 9", 60.98))
+        items.add(adminList("32 inch TV", "LG", 32.01))
+        items.add(adminList("Cat 2", "HP", 40.65))
+        items.add(adminList("cat 3", "SISIL", 100.2))
+
 
         adapter.setItems(items)
         adapter.notifyDataSetChanged()
