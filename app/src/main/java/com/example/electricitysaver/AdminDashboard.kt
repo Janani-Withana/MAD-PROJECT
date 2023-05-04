@@ -5,7 +5,6 @@ import android.graphics.Color
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
 import android.widget.ImageButton
 import com.google.android.material.bottomsheet.BottomSheetDialog
 
@@ -42,7 +41,7 @@ class AdminDashboard : AppCompatActivity() {
         }
 
         //Cost Range
-        val consumptionCost= findViewById<ImageButton>(R.id.EditCostRange)
+        val consumptionCost= findViewById<ImageButton>(R.id.btnCostCal)
         consumptionCost.setOnClickListener {
             // on below line we are creating a new bottom sheet dialog.
             val dialog = BottomSheetDialog(this)
@@ -63,26 +62,9 @@ class AdminDashboard : AppCompatActivity() {
         //Admin Add Device
         val btnAdminAddDevices= findViewById<ImageButton>(R.id.AdminAddDevice)
         btnAdminAddDevices.setOnClickListener {
-            // on below line we are creating a new bottom sheet dialog.
-            val dialog = BottomSheetDialog(this)
-
-            // on below line we are inflating a layout file which we have created.
-            val view = layoutInflater.inflate(R.layout.admin_add_devices_bottomsheet, null)
-
-            val viewList = view.findViewById<Button>(R.id.btnlist)
-            viewList.setOnClickListener {
-                val mainIntent = Intent(this, AdminListView::class.java)
-                startActivity(mainIntent)
-            }
-
-            // below line is use to set cancelable to avoid closing of dialog box when clicking on the screen.
-            dialog.setCancelable(true)
-
-            // on below line we are setting content view to our view.
-            dialog.setContentView(view)
-
-            // on below line we are calling a show method to display a dialog.
-            dialog.show()
+            val mainIntent = Intent(this, AdminAddDevices::class.java)
+            startActivity(mainIntent)
+            //finish()
         }
 
         //Device List

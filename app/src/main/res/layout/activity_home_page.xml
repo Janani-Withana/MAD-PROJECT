@@ -63,7 +63,7 @@
         app:srcCompat="@drawable/shadow_4" />
 
     <ImageButton
-        android:id="@+id/EditCostRange"
+        android:id="@+id/btnCostCal"
         android:layout_width="94dp"
         android:layout_height="91dp"
         android:backgroundTint="#295389"
