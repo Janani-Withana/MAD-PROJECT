@@ -87,13 +87,13 @@ class UpdateAdminItemList : AppCompatActivity() {
                 ad.show()
             }else {
                 // Show an error message
-                var ad = AlertDialog.Builder(this)
-                    ad.setTitle("Error")
-                    ad.setMessage("Failed to update record")
-                    ad.setPositiveButton("OK") { dialog, which ->
+                var adErr = AlertDialog.Builder(this)
+                    adErr.setTitle("Error")
+                    adErr.setMessage("Failed to update record")
+                    adErr.setPositiveButton("OK") { dialog, which ->
                         dialog.dismiss()
                     }
-                ad.show()
+                adErr.show()
             }
         }
 
