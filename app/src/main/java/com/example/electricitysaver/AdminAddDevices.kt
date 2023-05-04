@@ -46,6 +46,7 @@ class AdminAddDevices : AppCompatActivity() {
         db = helper.readableDatabase
         rs = db.rawQuery("SELECT * FROM Admin_Add_Item", null)
 
+        //Add Item
         btnAdd.setOnClickListener {
             var cv = ContentValues()
             cv.put("CATEGORY", cat.text.toString())

@@ -7,8 +7,12 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class adminListAdapter(private var items: ArrayList<adminList>):
+class adminListAdapter(private var items: ArrayList<adminList>,private val editListener: EditListener):
     RecyclerView.Adapter<adminListAdapter.ViewHolder>(){
+
+    interface EditListener {
+        fun onEditClicked(item: adminList)
+    }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val textView: TextView = itemView.findViewById(R.id.category)
@@ -29,6 +33,9 @@ class adminListAdapter(private var items: ArrayList<adminList>):
         holder.textView1.text = item.brand //data class variables
         holder.textView2.text = item.watt.toString() //data class variables
         holder.imageView1.setImageResource(R.drawable.ic_baseline_edit_note_blue)
+        holder.imageView1.setOnClickListener {
+            editListener.onEditClicked(item)
+        }
         holder.imageView2.setImageResource(R.drawable.ic_baseline_delete_outline_24)
     }
 
