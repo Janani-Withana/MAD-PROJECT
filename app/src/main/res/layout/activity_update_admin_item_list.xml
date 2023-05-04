@@ -66,6 +66,7 @@
             android:textSize="16sp" />
 
         <EditText
+            android:id="@+id/updWatts"
             android:layout_width="@dimen/NumPicker4width"
             android:layout_height="50dp"
             android:layout_marginTop="5dp"
@@ -99,7 +100,7 @@
             android:textSize="16sp" />
 
         <EditText
-            android:id="@+id/cat"
+            android:id="@+id/updCat"
             android:layout_width="@dimen/linearLayout3Width"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -131,7 +132,7 @@
             android:textSize="16sp" />
 
         <EditText
-            android:id="@+id/brand"
+            android:id="@+id/updBrand"
             android:layout_width="297dp"
             android:layout_height="50dp"
             android:layout_marginTop="16dp"
@@ -143,7 +144,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/btnlist"
+        android:id="@+id/btnAdminViewList"
         android:layout_width="115dp"
         android:layout_height="50dp"
         android:backgroundTint="@color/additmeviewlistcolor"
@@ -158,7 +159,7 @@
         app:layout_constraintVertical_bias="0.86" />
 
     <Button
-        android:id="@+id/btnAdminAdd"
+        android:id="@+id/btnItemUpdate"
         android:layout_width="116dp"
         android:layout_height="48dp"
         android:backgroundTint="@color/btnColorYellow"
