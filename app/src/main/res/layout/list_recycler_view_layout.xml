@@ -38,7 +38,7 @@
             android:textSize="@dimen/R_V_L_textsize" />
 
         <ImageView
-            android:id="@+id/editlistwaren1"
+            android:id="@+id/editPayment"
             android:layout_width="@dimen/recycleviewlayoutIV_H_W"
             android:layout_height="@dimen/recycleviewlayoutIV_H_W"
             android:layout_marginLeft="@dimen/recycleviewlayoutMargin_L_R"

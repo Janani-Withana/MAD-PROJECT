@@ -7,12 +7,14 @@ import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.graphics.Color
 import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.SimpleCursorAdapter
 import androidx.appcompat.app.AlertDialog
-import com.google.android.material.bottomsheet.BottomSheetDialog
+import androidx.appcompat.app.AppCompatActivity
+import com.android.volley.Response
+import com.android.volley.toolbox.StringRequest
+import com.android.volley.toolbox.Volley
 import kotlinx.android.synthetic.main.activity_pamitha_payment2.*
 
 
@@ -26,6 +28,7 @@ class pamitha_payment : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_pamitha_payment2)
+
 
         var helper = paymentHelper(applicationContext)
         db = helper.readableDatabase
@@ -44,6 +47,7 @@ class pamitha_payment : AppCompatActivity() {
 
         }
 
+
         AddFav.setOnClickListener {
             var cv = ContentValues()
             cv.put("PAYEE",payeeCat.selectedItem.toString())
@@ -60,4 +64,5 @@ class pamitha_payment : AppCompatActivity() {
             ad.show()
         }
     }
+
 }
