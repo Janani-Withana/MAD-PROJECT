@@ -18,6 +18,7 @@ class UpdateAdminItemList : AppCompatActivity() {
     private lateinit var edtCat : EditText
     private lateinit var edtBrand : EditText
     private lateinit var edtWatts : EditText
+    private lateinit var btnUpdate : Button
 
     private lateinit var helper: AdminItemDbHelper
     private lateinit var db: SQLiteDatabase
@@ -44,6 +45,7 @@ class UpdateAdminItemList : AppCompatActivity() {
         edtCat = findViewById(R.id.updCat)
         edtBrand = findViewById(R.id.updBrand)
         edtWatts = findViewById(R.id.updWatts)
+        btnUpdate = findViewById(R.id.btnItemUpdate)
 
         if(edtCat!=null){ edtCat.setText(getCategory) }
         if(edtBrand!=null){ edtBrand.setText(getBrand) }
@@ -53,36 +55,46 @@ class UpdateAdminItemList : AppCompatActivity() {
         helper = AdminItemDbHelper(this)
         db = helper.writableDatabase
         // Get the record with the specified itemId
-        rs = db.query("Admin_Add_Item", arrayOf("_id", "CATEGORY", "BRAND", "WATTS"), "_id = ?",
-                      arrayOf(itemId.toString()),null, null, null)
+        rs = db.rawQuery("SELECT _id, CATEGORY, BRAND, WATTS FROM Admin_Add_Item WHERE _id = ?", arrayOf(itemId.toString()))
 
         //Update Item
-        val btnUpdate = findViewById<Button>(R.id.btnItemUpdate)
         btnUpdate.setOnClickListener {
+            val category = edtCat.text.toString()
+            val brand = edtBrand.text.toString()
+            val watts = edtWatts.text.toString().toDouble()
 
-            // Create a ContentValues object with the new values
-            var cv = ContentValues()
-            cv.put("CATEGORY",edtCat.text.toString())
-            cv.put("BRAND",edtBrand.text.toString())
-            cv.put("WATTS",edtWatts.text.toString())
-            db.update("Admin_Add_Item", cv, "_id = ?", arrayOf(rs.getLong(0).toString()) )
-            rs.requery()
+            // Update the record with the new data
+            val values = ContentValues().apply {
+                put("CATEGORY", category)
+                put("BRAND", brand)
+                put("WATTS", watts)
+            }
+            val selection = "_id = ?"
+            val selectionArgs = arrayOf(itemId.toString())
 
-            try {
-            var ad = AlertDialog.Builder(this)
-            ad.setTitle("Update Record")
-            ad.setMessage("Record Updated Successfully....")
-            ad.setPositiveButton("OK", DialogInterface.OnClickListener{ dialogInterface, i ->
-                if(rs.moveToFirst()){
+            val count = db.update("Admin_Add_Item", values, selection, selectionArgs)
+
+            if (count > 0) {
+                // Show a success message and finish the activity
+                var ad = AlertDialog.Builder(this)
+                ad.setTitle("Add Record")
+                ad.setMessage("Record Inserted Successfully....")
+                ad.setPositiveButton("OK",DialogInterface.OnClickListener{ dialogInterface, i ->
                     edtCat.setText(rs.getString(1))
                     edtBrand.setText(rs.getString(2))
                     edtWatts.setText(rs.getString(3))
-                }
-            })
-            ad.show()
-            } catch (e: Exception) {
-            e.printStackTrace()
-        }
+                })
+                ad.show()
+            }else {
+                // Show an error message
+                var ad = AlertDialog.Builder(this)
+                    ad.setTitle("Error")
+                    ad.setMessage("Failed to update record")
+                    ad.setPositiveButton("OK") { dialog, which ->
+                        dialog.dismiss()
+                    }
+                ad.show()
+            }
         }
 
     }
