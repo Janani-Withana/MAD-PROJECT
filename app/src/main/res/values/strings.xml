@@ -8,5 +8,7 @@
     <string name="add_to_favourites">Add to Favourites</string>
     <string name="view_favourites">View Favourites</string>
     <string name="tvRange">Range</string>
+    <string name="sDate">Starting Date</string>
+    <string name="eDate">Ending Date</string>
 
 </resources>
