@@ -132,10 +132,9 @@
             android:textSize="16sp" />
 
         <EditText
-            android:id="@+id/editTextNumber1"
+            android:id="@+id/editqty"
             android:layout_width="390dp"
             android:layout_height="52dp"
-
             android:layout_marginRight="16dp"
             android:layout_weight="3"
             android:backgroundTint="@color/black"
@@ -167,10 +166,9 @@
             android:textSize="16sp" />
 
         <EditText
-            android:id="@+id/editTextNumber2"
+            android:id="@+id/editdu"
             android:layout_width="390dp"
             android:layout_height="52dp"
-
             android:layout_marginRight="16dp"
             android:layout_weight="6"
             android:backgroundTint="@color/black"
@@ -202,7 +200,7 @@
             android:textSize="16sp" />
 
         <EditText
-            android:id="@+id/editTextNumber4"
+            android:id="@+id/editmu"
             android:layout_width="390dp"
             android:layout_height="52dp"
 
@@ -231,7 +229,7 @@
         app:layout_constraintVertical_bias="0.792" />
 
     <Button
-        android:id="@+id/btnAdminAdd"
+        android:id="@+id/btnuserAdd"
         android:layout_width="116dp"
         android:layout_height="48dp"
         android:backgroundTint="@color/btnColorYellow"

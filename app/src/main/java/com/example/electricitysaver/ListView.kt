@@ -59,13 +59,14 @@ class ListView : AppCompatActivity() {
 
 
         while (rs.moveToNext()) {
+            var id = rs.getString(0).toInt()
             var category = rs.getString(1)
             var duration = rs.getString(5).toDouble()
             var watt = rs.getString(6).toDouble()
             var qty = rs.getString(3).toDouble()
 
             // Add the item to the list
-            items.add(ListItem(category, duration.toString()))
+            items.add(ListItem(category, duration.toString(),id))
 
             // Calculate monthly unit
             var munit = calculateMonthlyUnit(duration, watt, qty)
