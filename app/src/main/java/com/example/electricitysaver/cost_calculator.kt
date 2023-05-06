@@ -277,7 +277,7 @@ class cost_calculator : AppCompatActivity() {
         }
     }
 
-    private fun calculateElectricityCost(days: Double, units: Double): Triple<Double, Double, Double> {
+    fun calculateElectricityCost(days: Double, units: Double): Triple<Double, Double, Double> {
         val fixedRate: Double = if (units / (days / 30.0) in 0.0..60.0) {
             650.0
         } else if (units / (days / 30.0) in 61.0..90.0) {
