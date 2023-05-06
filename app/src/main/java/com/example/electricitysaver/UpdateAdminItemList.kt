@@ -1,5 +1,6 @@
 package com.example.electricitysaver
 
+import android.annotation.SuppressLint
 import android.content.ContentValues
 import android.content.DialogInterface
 import android.database.Cursor
@@ -25,6 +26,7 @@ class UpdateAdminItemList : AppCompatActivity() {
     private lateinit var rs: Cursor
 
 
+    @SuppressLint("SuspiciousIndentation")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_update_admin_item_list)
@@ -77,8 +79,8 @@ class UpdateAdminItemList : AppCompatActivity() {
             if (count > 0) {
                 // Show a success message and finish the activity
                 var ad = AlertDialog.Builder(this)
-                ad.setTitle("Add Record")
-                ad.setMessage("Record Inserted Successfully....")
+                ad.setTitle("Update Record")
+                ad.setMessage("Record Updated Successfully....")
                 ad.setPositiveButton("OK",DialogInterface.OnClickListener{ dialogInterface, i ->
                     edtCat.setText(rs.getString(1))
                     edtBrand.setText(rs.getString(2))
@@ -87,13 +89,13 @@ class UpdateAdminItemList : AppCompatActivity() {
                 ad.show()
             }else {
                 // Show an error message
-                var adErr = AlertDialog.Builder(this)
-                    adErr.setTitle("Error")
-                    adErr.setMessage("Failed to update record")
-                    adErr.setPositiveButton("OK") { dialog, which ->
+                 AlertDialog.Builder(this)
+                    .setTitle("Error")
+                    .setMessage("Failed to update record")
+                    .setPositiveButton("OK") { dialog, which ->
                         dialog.dismiss()
                     }
-                adErr.show()
+                .show()
             }
         }
 

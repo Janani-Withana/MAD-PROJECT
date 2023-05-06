@@ -48,6 +48,7 @@
             android:layout_marginBottom="60dp"
             android:backgroundTint="@color/btnColorYellow"
             android:text="@string/btnSignUp"
+            android:textColor="@color/white"
             android:textColorHint="@color/white"
             android:textSize="16sp"
             app:cornerRadius="50dp"
