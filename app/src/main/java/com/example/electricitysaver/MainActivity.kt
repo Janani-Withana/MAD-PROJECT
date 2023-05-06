@@ -21,16 +21,17 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // Initialize views and database helper
-        edtEmail = findViewById(R.id.edt_Email)
-        edtPassword = findViewById(R.id.edt_Password)
-        db = UserItemDbHelper(applicationContext).readableDatabase
-
         // Hide action bar and set navigation bar color
         supportActionBar?.hide()
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             window.navigationBarColor = Color.parseColor("#133B5C")
         }
+
+        // Initialize views and database helper
+        edtEmail = findViewById(R.id.edt_Email)
+        edtPassword = findViewById(R.id.edt_Password)
+        db = UserItemDbHelper(applicationContext).readableDatabase
+
 
         // Set click listener for sign up link
         val tvSignUp = findViewById<TextView>(R.id.signUp_link)
@@ -75,3 +76,4 @@ class MainActivity : AppCompatActivity() {
         }
     }
 }
+
