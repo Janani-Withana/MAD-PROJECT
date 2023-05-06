@@ -1,8 +1,10 @@
 package com.example.electricitysaver
 
+import PaymentUpdateDelete
 import android.annotation.SuppressLint
 import android.content.ContentValues
 import android.content.DialogInterface
+import android.content.Intent
 import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.graphics.Color
@@ -20,7 +22,7 @@ import com.example.electricitysaver.databaseHelper.UserItemDbHelper
 import kotlinx.android.synthetic.main.fav_card_view.*
 import kotlinx.android.synthetic.main.fav_list.*
 
-class Favourites : AppCompatActivity() , PaymentRecyclerAdapter.UpdateListner{
+class Favourites : AppCompatActivity() , PaymentRecyclerAdapter.UpdateListner,PaymentRecyclerAdapter.DeleteListener{
 
     lateinit var adapter: RecyclerView.Adapter<PaymentRecyclerAdapter.ViewHolder>
     lateinit var layoutManager: RecyclerView.LayoutManager
@@ -31,8 +33,6 @@ class Favourites : AppCompatActivity() , PaymentRecyclerAdapter.UpdateListner{
 
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
-
-
         super.onCreate(savedInstanceState)
         setContentView(R.layout.fav_list)
 
@@ -43,8 +43,6 @@ class Favourites : AppCompatActivity() , PaymentRecyclerAdapter.UpdateListner{
                 Color.parseColor("#133B5C") // Replace with your desired color
         }
 
-
-
         var helper = paymentHelper(applicationContext)
          db = helper.readableDatabase
          rs = db.rawQuery("SELECT * FROM PAYMENT", null)
@@ -52,17 +50,19 @@ class Favourites : AppCompatActivity() , PaymentRecyclerAdapter.UpdateListner{
         layoutManager = LinearLayoutManager(this)
         pRecycler.layoutManager = layoutManager
 
-        adapter = PaymentRecyclerAdapter(ArrayList(),this)
+        adapter = PaymentRecyclerAdapter(ArrayList(),this,this)
         pRecycler.adapter = adapter
 
         val items = ArrayList<Payment>()
 
         while (rs.moveToNext()) {
+            var id = rs.getLong(0)
+           // var type = rs.getString(1)
             var name = rs.getString(2)
             var account = rs.getString(3)
             //Log.d("Pamitha",name)
             // Add the item to the list
-            items.add(Payment(name, account))
+            items.add(Payment(id,name, account))
 
         }
 
@@ -71,31 +71,45 @@ class Favourites : AppCompatActivity() , PaymentRecyclerAdapter.UpdateListner{
 
     override fun onEditClick(payment: Payment) {
 
-        val update = findViewById<ImageView>(R.id.editPayment)
 
-        update.setOnClickListener{
-
-            var cv = ContentValues().apply {
-                put("NAME",edtCardName.text.toString())
-                put("ACCOUNT",edtCardNo.text.toString())
-            }
-
-            val selection = "_id=?"
-            val count = db.update("PAYMENT",cv,selection, arrayOf(rs.getString(0)))
-            if (count>0){
-                var ad = AlertDialog.Builder(this)
-                ad.setTitle("Update Record")
-                ad.setMessage("Record Updated Successflly ....!")
-                ad.setPositiveButton(
-                    "OK",
-                    DialogInterface.OnClickListener { dialog: DialogInterface?, i ->
-
-                    })
-                ad.show()
-            }
-
+        val intent = Intent(this,PaymentUpdateDelete::class.java).apply {
+            putExtra("NAME", payment.name)
+            putExtra("ACCOUNT", payment.account)
+            //putExtra("PAYEE",payment.type)
+            putExtra("ID", payment.id)
+        }
+        startActivity(intent)
 
 
         }
+
+    override fun onDeleteClick(payment: Payment) {
+
+        val alertDialogBuilder = AlertDialog.Builder(this)
+        alertDialogBuilder.setMessage("Are you sure you want to delete this record?")
+        alertDialogBuilder.setPositiveButton("Yes") { _, _ ->
+// User confirmed, proceed with deletion
+            db.delete("PAYMENT", "_id = ?", arrayOf(payment.id.toString()))
+            rs.requery()
+            adapter.notifyDataSetChanged()
+
+// Show a success message
+            val ad = AlertDialog.Builder(this)
+            ad.setTitle("Delete Record")
+            ad.setMessage("Record Deleted Successfully....")
+            ad.setPositiveButton("OK", DialogInterface.OnClickListener{ dialogInterface, i ->
+
+// Redirect the user to the AdminListView page
+                val intent = Intent(this, Favourites::class.java)
+                startActivity(intent)
+                finish()
+            })
+            ad.show()
+        }
+        alertDialogBuilder.setNegativeButton("No", null)
+        val alertDialog = alertDialogBuilder.create()
+        alertDialog.show()
     }
+
+
 }
