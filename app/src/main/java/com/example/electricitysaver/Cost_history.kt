@@ -13,7 +13,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.example.electricitysaver.databaseHelper.CostCalculationDbHelper
 
-class cost_history : AppCompatActivity() {
+class Cost_history : AppCompatActivity() {
 
     lateinit var db : SQLiteDatabase
     lateinit var rs : Cursor

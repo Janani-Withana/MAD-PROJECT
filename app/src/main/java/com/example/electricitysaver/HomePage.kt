@@ -6,7 +6,6 @@ import android.graphics.Color
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
 import android.widget.ImageButton
 import android.widget.ImageView
 
@@ -47,7 +46,7 @@ class HomePage : AppCompatActivity() {
 
         val btnCostCal = findViewById<ImageButton>(R.id.btnCostCal)
         btnCostCal.setOnClickListener {
-            val mainIntent = Intent(this@HomePage, cost_calculator::class.java)
+            val mainIntent = Intent(this@HomePage, Cost_calculator::class.java)
             startActivity(mainIntent)
             //finish()
         }

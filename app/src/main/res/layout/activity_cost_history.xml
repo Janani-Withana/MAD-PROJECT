@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#FFFFFF"
     android:backgroundTint="#FFFFFF"
-    tools:context=".cost_history">
+    tools:context=".Cost_history">
 
     <ImageView
         android:id="@+id/imgHistory"

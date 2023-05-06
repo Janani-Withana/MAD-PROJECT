@@ -2,7 +2,6 @@ package com.example.electricitysaver
 
 import android.app.DatePickerDialog
 import android.content.ContentValues
-import android.content.DialogInterface
 import android.content.Intent
 import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
@@ -10,9 +9,6 @@ import android.graphics.Color
 import android.graphics.Typeface
 import android.os.Build
 import android.os.Bundle
-import android.view.ContextMenu
-import android.view.MenuItem
-import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import java.text.SimpleDateFormat
@@ -23,10 +19,9 @@ import android.widget.CompoundButton.OnCheckedChangeListener;
 import androidx.appcompat.app.AlertDialog
 import androidx.core.widget.addTextChangedListener
 import com.example.electricitysaver.databaseHelper.CostCalculationDbHelper
-import kotlinx.android.synthetic.main.cost_calculator.*
 
 
-class cost_calculator : AppCompatActivity() {
+class Cost_calculator : AppCompatActivity() {
 
     lateinit var db : SQLiteDatabase
     lateinit var rs : Cursor
@@ -70,7 +65,7 @@ class cost_calculator : AppCompatActivity() {
 
         val historyButton = findViewById<TextView>(R.id.btnViewHistory)
         historyButton.setOnClickListener {
-            val intent = Intent(this, cost_history::class.java)
+            val intent = Intent(this, Cost_history::class.java)
             startActivity(intent)
         }
 
