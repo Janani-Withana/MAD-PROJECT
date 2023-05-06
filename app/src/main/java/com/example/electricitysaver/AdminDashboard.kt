@@ -24,20 +24,10 @@ class AdminDashboard : AppCompatActivity() {
         //View Users Count
         val btnViewUsers = findViewById<ImageButton>(R.id.AdminUsers)
         btnViewUsers.setOnClickListener {
-            // on below line we are creating a new bottom sheet dialog.
-            val dialog = BottomSheetDialog(this)
 
-            // on below line we are inflating a layout file which we have created.
-            val view = layoutInflater.inflate(R.layout.users_bottomsheet_layout, null)
+            val bottomSheetDialogFragment = ViewUsers()
+            bottomSheetDialogFragment.show(supportFragmentManager, bottomSheetDialogFragment.tag)
 
-            // below line is use to set cancelable to avoid closing of dialog box when clicking on the screen.
-            dialog.setCancelable(true)
-
-            // on below line we are setting content view to our view.
-            dialog.setContentView(view)
-
-            // on below line we are calling a show method to display a dialog.
-            dialog.show()
         }
 
         //Cost Range

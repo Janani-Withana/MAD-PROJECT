@@ -89,6 +89,7 @@
             android:ems="10"
             android:hint="@string/hintName"
             android:inputType="textPersonName"
+            android:textColor="@color/hintColorBlue"
             android:textColorHint="@color/hintColorBlue" />
 
         <EditText
@@ -106,6 +107,7 @@
             android:ems="10"
             android:hint="@string/hintPassword"
             android:inputType="textPassword"
+            android:textColor="@color/hintColorBlue"
             android:textColorHint="@color/hintColorBlue" />
 
         <EditText
@@ -123,6 +125,7 @@
             android:ems="10"
             android:hint="@string/hint_Email"
             android:inputType="textEmailAddress"
+            android:textColor="@color/hintColorBlue"
             android:textColorHint="@color/hintColorBlue" />
 
         <EditText
@@ -140,6 +143,7 @@
             android:ems="10"
             android:hint="@string/hint_reEnter_password"
             android:inputType="textPassword"
+            android:textColor="@color/hintColorBlue"
             android:textColorHint="@color/hintColorBlue" />
 
 

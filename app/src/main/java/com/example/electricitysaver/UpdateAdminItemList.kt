@@ -3,6 +3,7 @@ package com.example.electricitysaver
 import android.annotation.SuppressLint
 import android.content.ContentValues
 import android.content.DialogInterface
+import android.content.Intent
 import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.graphics.Color
@@ -12,14 +13,19 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import com.example.electricitysaver.databaseHelper.AdminItemDbHelper
+import kotlinx.android.synthetic.main.admin_add_devices.*
+import kotlinx.android.synthetic.main.admin_list_recycler_view.*
+import kotlinx.android.synthetic.main.admin_list_recycler_view.brand
 
 class UpdateAdminItemList : AppCompatActivity() {
     private lateinit var edtCat : EditText
     private lateinit var edtBrand : EditText
     private lateinit var edtWatts : EditText
     private lateinit var btnUpdate : Button
+    private lateinit var btnViewList : Button
 
     private lateinit var helper: AdminItemDbHelper
     private lateinit var db: SQLiteDatabase
@@ -48,6 +54,7 @@ class UpdateAdminItemList : AppCompatActivity() {
         edtBrand = findViewById(R.id.updBrand)
         edtWatts = findViewById(R.id.updWatts)
         btnUpdate = findViewById(R.id.btnItemUpdate)
+        btnViewList = findViewById(R.id.btnAdminViewList)
 
         if(edtCat!=null){ edtCat.setText(getCategory) }
         if(edtBrand!=null){ edtBrand.setText(getBrand) }
@@ -61,6 +68,7 @@ class UpdateAdminItemList : AppCompatActivity() {
 
         //Update Item
         btnUpdate.setOnClickListener {
+
             val category = edtCat.text.toString()
             val brand = edtBrand.text.toString()
             val watts = edtWatts.text.toString().toDouble()
@@ -71,6 +79,7 @@ class UpdateAdminItemList : AppCompatActivity() {
                 put("BRAND", brand)
                 put("WATTS", watts)
             }
+
             val selection = "_id = ?"
             val selectionArgs = arrayOf(itemId.toString())
 
@@ -97,6 +106,12 @@ class UpdateAdminItemList : AppCompatActivity() {
                     }
                 .show()
             }
+        }
+
+        btnViewList.setOnClickListener {
+            val mainIntent = Intent(this, AdminListView::class.java)
+            startActivity(mainIntent)
+            //finish()
         }
 
     }
