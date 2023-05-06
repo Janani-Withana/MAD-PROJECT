@@ -46,7 +46,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".cost_calculater"
+            android:name=".cost_calculator"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
