@@ -57,7 +57,7 @@ class ListView : AppCompatActivity() {
             // Use the userInt variable for any necessary operations
         }
 
-            ////////////////////////////////////
+        ////////////////////////////////////
         while (rs.moveToNext()) {
             var id = rs.getString(0).toInt()
             var category = rs.getString(1)
