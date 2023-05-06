@@ -15,8 +15,6 @@ class CostCalculationDbHelper (context: Context) : SQLiteOpenHelper(context, "CO
         db?.execSQL("INSERT INTO COST_CALCULATION(DATE, DAYS, UNITS, TOTAL_COST, FIXED_CHARGE, IMPORT_CHARGE) VALUES('2023-02-12', 49, 250, 12824, 1500, 11324)")
     }
 
-
-
     override fun onUpgrade(p0: SQLiteDatabase?, p1: Int, p2: Int) {
 
     }

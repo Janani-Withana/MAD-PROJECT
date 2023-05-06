@@ -19,6 +19,8 @@ class CostRange : AppCompatActivity() {
     lateinit var db : SQLiteDatabase
     lateinit var rs : Cursor
     lateinit var adapter : SimpleCursorAdapter
+    lateinit var edtCharge: EditText
+    private lateinit var btnUpdate: Button
 
     @SuppressLint("Range")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,14 +33,9 @@ class CostRange : AppCompatActivity() {
         // Find the button in your layout
         val viewListButton: Button = findViewById(R.id.btnViewList)
         val categorySpinner: Spinner = findViewById(R.id.category_spinner)
-
-//        CATEGORY
-//        BLOCK1_RATE
-//        BLOCK2_RATE
-//        BLOCK3_RATE
-//        BLOCK4_RATE
-//        BLOCK5_RATE
-
+        val rangeSpinner: Spinner = findViewById(R.id.range_spinner)
+        edtCharge = findViewById(R.id.edtCharge)
+        btnUpdate =findViewById(R.id.btnUpdate)
 
         // Set a click listener on the button
         viewListButton.setOnClickListener {
@@ -72,7 +69,57 @@ class CostRange : AppCompatActivity() {
                 alertDialog.show()
             } catch (e: Exception) {
                 // Show an error message if there was an error retrieving the data
-                Toast.makeText(this, "Error retrieving data: ${e.message}", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Error retrieving data for all: ${e.message}", Toast.LENGTH_SHORT).show()
+            }
+        }
+
+        // Set an OnItemSelectedListener on both spinners to update the value of edtCharge
+        categorySpinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+                try {
+                    val selectedCategory = categorySpinner.selectedItem.toString()
+                    val selectedRange = rangeSpinner.selectedItem.toString()
+                    val cursor = db.rawQuery("SELECT $selectedRange FROM RATE_TABLE WHERE CATEGORY = ?", arrayOf(selectedCategory))
+                    if (cursor.moveToFirst()) {
+                        val rate = cursor.getFloat(0)
+                        edtCharge.setText(rate.toString())
+                    }
+                    cursor.close()
+                } catch (e: Exception) {
+                    // Show an error message if there was an error retrieving the data
+                    //Toast.makeText(this@CostRange, "Error retrieving data category spinner: ${e.message}", Toast.LENGTH_SHORT).show()
+                }
+            }
+            override fun onNothingSelected(parent: AdapterView<*>?) {}
+        }
+        rangeSpinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+                try {
+                    val selectedCategory = categorySpinner.selectedItem.toString()
+                    val selectedRange = rangeSpinner.selectedItem.toString()
+                    val cursor = db.rawQuery("SELECT $selectedRange FROM RATE_TABLE WHERE CATEGORY = ?", arrayOf(selectedCategory))
+                    if (cursor.moveToFirst()) {
+                        val rate = cursor.getFloat(0)
+                        edtCharge.setText(rate.toString())
+                    }
+                    cursor.close()
+                } catch (e: Exception) {
+                    // Show an error message if there was an error retrieving the data
+                    //Toast.makeText(this@CostRange, "Error retrieving data range spinner: ${e.message}", Toast.LENGTH_SHORT).show()
+                }
+            }
+            override fun onNothingSelected(parent: AdapterView<*>?) {}
+        }
+
+        btnUpdate.setOnClickListener {
+            try {
+                val selectedCategory = categorySpinner.selectedItem.toString()
+                val selectedRange = rangeSpinner.selectedItem.toString()
+                val newCharge = edtCharge.text.toString().toFloat()
+                db.execSQL("UPDATE RATE_TABLE SET $selectedRange = $newCharge WHERE CATEGORY = ?", arrayOf(selectedCategory))
+                Toast.makeText(this@CostRange, "Charge updated successfully", Toast.LENGTH_SHORT).show()
+            } catch (e: Exception) {
+                Toast.makeText(this@CostRange, "Error updating charge: ${e.message}", Toast.LENGTH_SHORT).show()
             }
         }
 
