@@ -7,7 +7,7 @@ class CostCalculatorUnitTest {
 
     @Test
     fun calELE() {
-        val costCalculator = cost_calculator()
+        val costCalculator = Cost_calculator()
         val days = 30.0
         val units = 15.0
         val (fixedCharge, importCharge, totalCost) = costCalculator.calculateElectricityCost(days, units)

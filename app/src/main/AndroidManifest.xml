@@ -42,7 +42,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".cost_history"
+            android:name=".Cost_history"
             android:exported="false"
             android:screenOrientation="portrait">
             <meta-data
@@ -50,7 +50,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".cost_calculator"
+            android:name=".Cost_calculator"
             android:exported="false"
             android:screenOrientation="portrait">
 
