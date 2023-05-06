@@ -8,6 +8,7 @@ import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.graphics.Color
 import android.graphics.Typeface
+import android.os.Build
 import android.os.Bundle
 import android.view.ContextMenu
 import android.view.MenuItem
@@ -51,6 +52,13 @@ class cost_calculator : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.cost_calculator)
+
+        supportActionBar?.hide()
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            window.navigationBarColor =
+                Color.parseColor("#133B5C") // Replace with your desired color
+        }
 
         var helper = CostCalculationDbHelper(applicationContext)
         db = helper.readableDatabase
