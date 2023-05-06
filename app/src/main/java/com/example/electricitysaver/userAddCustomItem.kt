@@ -1,6 +1,7 @@
 package com.example.electricitysaver
 
 import android.content.ContentValues
+import android.content.DialogInterface
 import android.content.Intent
 import android.graphics.Color
 import android.os.Build
@@ -9,6 +10,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.*
+import androidx.appcompat.app.AlertDialog
 import com.example.electricitysaver.databaseHelper.AdminItemDbHelper
 import com.example.electricitysaver.databaseHelper.UserItemDbHelper
 
@@ -91,8 +93,16 @@ class userAddCustomItem : AppCompatActivity() {
             cv.put("MONUSE",editmu.text.toString().toInt())
             cv.put("NOW",watts.toInt())
             val rowsAffected = db.insert("USER_ADD_ITEM",null,cv)
+
             if (rowsAffected > 0) {
-                Toast.makeText(this, "Insert successful", Toast.LENGTH_SHORT).show()
+                val alertDialog = AlertDialog.Builder(this).apply {
+                    setTitle("Insert record")
+                    setMessage("Item Insert successfully")
+                    setPositiveButton("OK") { _, _ ->
+                        // do something after the user clicks the OK button
+                    }
+                }
+                alertDialog.show()
             }else{
                 Toast.makeText(this, "Insert Not successful", Toast.LENGTH_SHORT).show()
             }

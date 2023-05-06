@@ -1,6 +1,7 @@
 package com.example.electricitysaver
 
 import android.content.ContentValues
+import android.content.DialogInterface
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -9,6 +10,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.NumberPicker
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import com.example.electricitysaver.databaseHelper.UserItemDbHelper
 
 class UserUpdateEditItems : AppCompatActivity() {
@@ -69,7 +71,14 @@ class UserUpdateEditItems : AppCompatActivity() {
             cv.put("NOW",unw.text.toString().toInt())
             val rowsAffected = db.update("USER_ADD_ITEM", cv, "_id = ?", arrayOf(id.toString()))
             if (rowsAffected > 0) {
-                Toast.makeText(this, "Update successful", Toast.LENGTH_SHORT).show()
+                val alertDialog = AlertDialog.Builder(this).apply {
+                    setTitle("Update record")
+                    setMessage("Record updated successfully")
+                    setPositiveButton("OK") { _, _ ->
+                        // do something after the user clicks the OK button
+                    }
+                }
+                alertDialog.show()
             }else{
                 Toast.makeText(this, "Update Not successful", Toast.LENGTH_SHORT).show()
             }

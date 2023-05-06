@@ -125,9 +125,9 @@
 
     <Button
         android:layout_marginEnd="8dp"
-        android:text="@string/Billcalculator"
+        android:text="Home"
         app:cornerRadius="20dp"
-        android:id="@+id/button11"
+        android:id="@+id/btnHome"
         android:layout_width="wrap_content"
         android:layout_height="@dimen/Button2height"
         android:layout_marginStart="8dp"

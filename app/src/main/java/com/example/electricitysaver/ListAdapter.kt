@@ -1,5 +1,6 @@
 package com.example.electricitysaver
 
+import android.content.DialogInterface
 import android.content.Intent
 import android.util.Log
 import android.view.LayoutInflater
@@ -8,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.RecyclerView
 import com.example.electricitysaver.databaseHelper.UserItemDbHelper
 
@@ -54,6 +56,15 @@ class ListAdapter(private var items: ArrayList<ListItem>) :
             if (rowsAffected > 0) {
                 items.removeAt(position)
                 notifyItemRemoved(position)
+
+                val alertDialog = AlertDialog.Builder(holder.itemView.context).apply {
+                    setTitle("Delete record")
+                    setMessage("Record Deleted successfully")
+                    setPositiveButton("OK") { _, _ ->
+                        // do something after the user clicks the OK button
+                    }
+                }
+                alertDialog.show()
             }
         }
 
