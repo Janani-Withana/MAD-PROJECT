@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.graphics.Color
+import android.graphics.Typeface
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -83,6 +84,7 @@ class CostRange : AppCompatActivity() {
                     if (cursor.moveToFirst()) {
                         val rate = cursor.getFloat(0)
                         edtCharge.setText(rate.toString())
+                        edtCharge.setTypeface(null, Typeface.BOLD)
                     }
                     cursor.close()
                 } catch (e: Exception) {
@@ -101,6 +103,7 @@ class CostRange : AppCompatActivity() {
                     if (cursor.moveToFirst()) {
                         val rate = cursor.getFloat(0)
                         edtCharge.setText(rate.toString())
+                        edtCharge.setTypeface(null, Typeface.BOLD)
                     }
                     cursor.close()
                 } catch (e: Exception) {
@@ -122,7 +125,6 @@ class CostRange : AppCompatActivity() {
                 Toast.makeText(this@CostRange, "Error updating charge: ${e.message}", Toast.LENGTH_SHORT).show()
             }
         }
-
 
     }
 }
