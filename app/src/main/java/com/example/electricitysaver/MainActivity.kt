@@ -18,10 +18,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // Hide the status bar
-        //window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
-
-        // If you want to make the action bar (title bar) disappear as well, add this code:
         supportActionBar?.hide()
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
@@ -32,8 +28,9 @@ class MainActivity : AppCompatActivity() {
         // initializing our variable for textView with its id.
         val tvSignUp = findViewById<TextView>(R.id.signUp_link)
         tvSignUp.setOnClickListener {
-
-            // on below line we are creating a new bottom sheet dialog.
+            val bottomSheetDialogFragment = SignUp()
+            bottomSheetDialogFragment.show(supportFragmentManager, bottomSheetDialogFragment.tag)
+        /*    // on below line we are creating a new bottom sheet dialog.
             val dialog = BottomSheetDialog(this)
 
             // on below line we are inflating a layout file which we have created.
@@ -46,7 +43,7 @@ class MainActivity : AppCompatActivity() {
             dialog.setContentView(view)
 
             // on below line we are calling a show method to display a dialog.
-            dialog.show()
+            dialog.show()*/
         }
 
         val btnLogin = findViewById<Button>(R.id.btn_login)

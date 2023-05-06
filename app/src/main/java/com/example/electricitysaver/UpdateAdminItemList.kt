@@ -79,8 +79,8 @@ class UpdateAdminItemList : AppCompatActivity() {
             if (count > 0) {
                 // Show a success message and finish the activity
                 var ad = AlertDialog.Builder(this)
-                ad.setTitle("Add Record")
-                ad.setMessage("Record Inserted Successfully....")
+                ad.setTitle("Update Record")
+                ad.setMessage("Record Updated Successfully....")
                 ad.setPositiveButton("OK",DialogInterface.OnClickListener{ dialogInterface, i ->
                     edtCat.setText(rs.getString(1))
                     edtBrand.setText(rs.getString(2))
