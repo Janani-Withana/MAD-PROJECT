@@ -6,7 +6,6 @@
     android:layout_height="match_parent">
 
 
-
     <TextView
         android:id="@+id/tvDisplayCost"
         android:layout_width="247dp"
@@ -38,43 +37,6 @@
 
 
     <ImageView
-        android:id="@+id/imageView21"
-        android:layout_width="36dp"
-        android:layout_height="34dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.824"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.011"
-        app:srcCompat="@drawable/ic_baseline_home_24" />
-
-    <ImageView
-        android:id="@+id/HomeAdmin"
-        android:layout_width="30dp"
-        android:layout_height="31dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.931"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.017"
-        app:srcCompat="@drawable/ic_baseline_menu_24" />
-
-    <ImageView
-        android:id="@+id/imageView23"
-        android:layout_width="419dp"
-        android:layout_height="5dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.057"
-        app:srcCompat="@drawable/action_bar" />
-
-
-    <ImageView
         android:id="@+id/imageView26"
         android:layout_width="465dp"
         android:layout_height="541dp"
@@ -82,7 +44,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.394"
+        app:layout_constraintVertical_bias="0.289"
         app:srcCompat="@drawable/shadow_2" />
 
     <Button
@@ -167,7 +129,6 @@
         app:layout_constraintVertical_bias="0.552" />
 
 
-
     <ImageView
         android:id="@+id/imageView8"
         android:layout_width="323dp"
@@ -176,9 +137,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.157"
+        app:layout_constraintVertical_bias="0.166"
         app:srcCompat="@drawable/rectangle" />
-
 
     <TextView
         android:id="@+id/tvEDate2"
@@ -220,8 +180,8 @@
         android:autofillHints=""
         android:ems="10"
         android:gravity="center"
-        android:hint="Starting Date"
-        android:inputType="number"
+        android:hint="@string/startingDate"
+        android:inputType="date"
         android:textColor="#000000"
         android:textColorHint="#212121"
         android:textSize="14sp"
@@ -233,14 +193,14 @@
         app:layout_constraintVertical_bias="0.349" />
 
     <EditText
-        android:id="@+id/edtSDate2"
+        android:id="@+id/edtEDate"
         android:layout_width="156dp"
         android:layout_height="48dp"
         android:autofillHints=""
         android:ems="10"
         android:gravity="center"
-        android:hint="Ending Date"
-        android:inputType="number"
+        android:hint="@string/eDate"
+        android:inputType="date"
         android:textColor="#000000"
         android:textColorHint="#212121"
         android:textSize="14sp"
@@ -255,7 +215,7 @@
         android:id="@+id/radioButton3"
         android:layout_width="150dp"
         android:layout_height="48dp"
-        android:layout_marginEnd="60dp"
+        android:layout_marginEnd="64dp"
         android:buttonTint="@color/black"
         android:text="@string/rbtn_reading"
         android:textColor="@color/black"
@@ -263,7 +223,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.478" />
+        app:layout_constraintVertical_bias="0.472" />
 
     <RadioButton
         android:id="@+id/radioButton"
@@ -275,17 +235,17 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/radioButton3"
-        app:layout_constraintHorizontal_bias="0.927"
+        app:layout_constraintHorizontal_bias="0.902"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.478"
+        app:layout_constraintVertical_bias="0.472"
         tools:ignore="TouchTargetSizeCheck" />
 
     <ImageView
         android:id="@+id/imageView25"
         android:layout_width="192dp"
         android:layout_height="142dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
         android:layout_weight="1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -301,19 +261,20 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
+        android:gravity="center"
         android:text="Cost Calculator"
         android:textColor="@color/purple_700"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.612"
+        app:layout_constraintHorizontal_bias="0.46"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.219" />
+        app:layout_constraintVertical_bias="0.209" />
 
     <Spinner
-        android:id="@+id/spinner"
+        android:id="@+id/tariffSpinner"
         android:layout_width="208dp"
         android:layout_height="49dp"
         android:contentDescription="@string/spn_Category"
@@ -414,7 +375,7 @@
 
     <Button
         android:id="@+id/btnViewHistory"
-        android:layout_width="156dp"
+        android:layout_width="141dp"
         android:layout_height="48dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
@@ -426,9 +387,8 @@
         app:cornerRadius="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.978" />
+        app:layout_constraintVertical_bias="0.986" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
