@@ -57,7 +57,7 @@ class ListView : AppCompatActivity() {
             // Use the userInt variable for any necessary operations
         }
 
-
+        ////////////////////////////////////
         while (rs.moveToNext()) {
             var id = rs.getString(0).toInt()
             var category = rs.getString(1)
@@ -73,36 +73,6 @@ class ListView : AppCompatActivity() {
 
             // Update total unit
             unit += munit
-
-            // Calculate expected unit amounts
-            var MExUnit = calculateMonthlyExpectedUnitAmount(munit, exunit, unit)
-            var DExUnit = calculateDailyExpectedUnitAmount(MExUnit)
-
-            // Calculate expected daily and monthly hours
-
-
-
-            var ExDailyHours = calculateExpectedDailyHours(DExUnit, watt)
-            var ExMonthlyHours = calculateExpectedMonthlyHours(ExDailyHours)
-            val df = DecimalFormat("#.##")
-            df.roundingMode = RoundingMode.CEILING
-            var formattedExDailyHours = df.format(ExDailyHours)
-            var formattedExMonthlyHours = df.format(ExMonthlyHours)
-
-
-            Log.d("TAG7", ExDailyHours.toString())
-            Log.d("TAG8", ExMonthlyHours.toString())
-
-
-            // Insert data to the database
-            var cv = ContentValues().apply {
-                put("CATEGORY", category)
-                put("DAYLYUSE", formattedExDailyHours.toString())
-                put("MONTHLYUSE", formattedExMonthlyHours.toString())
-            }
-            db.insert("USER_EXPECTED_ITEM", null, cv)
-
-
         }
         rs.close()
         totalUnit.text = unit.toString()
@@ -112,6 +82,61 @@ class ListView : AppCompatActivity() {
 
         val btnExpectListView = findViewById<Button>(R.id.submit_btn)
         btnExpectListView.setOnClickListener {
+
+            var exunit = 100.0
+            //var exunit = 100.0
+            Log.e("Total units",unit.toString())
+            var helper = UserItemDbHelper(applicationContext)
+            var db = helper.readableDatabase
+            val rs = db.rawQuery("SELECT * FROM USER_ADD_ITEM", null)
+
+
+            while (rs.moveToNext()) {
+
+                var category = rs.getString(1)
+                var duration = rs.getString(5).toDouble()
+                var watt = rs.getString(6).toDouble()
+                var qty = rs.getString(3).toDouble()
+
+
+
+                // Calculate monthly unit
+                var munit = calculateMonthlyUnit(duration, watt, qty)
+
+
+                // Calculate expected unit amounts
+                var MExUnit = calculateMonthlyExpectedUnitAmount(munit, exunit, unit)
+                var DExUnit = calculateDailyExpectedUnitAmount(MExUnit)
+
+                // Calculate expected daily and monthly hours
+
+
+
+                var ExDailyHours = calculateExpectedDailyHours(DExUnit, watt)
+                var ExMonthlyHours = calculateExpectedMonthlyHours(ExDailyHours)
+                val df = DecimalFormat("#.##")
+                df.roundingMode = RoundingMode.CEILING
+                var formattedExDailyHours = df.format(ExDailyHours)
+                var formattedExMonthlyHours = df.format(ExMonthlyHours)
+
+
+                Log.d("TAG7", ExDailyHours.toString())
+                Log.d("TAG8", ExMonthlyHours.toString())
+
+
+                // Insert data to the database
+                var cv = ContentValues().apply {
+                    put("CATEGORY", category)
+                    put("DAYLYUSE", formattedExDailyHours.toString())
+                    put("MONTHLYUSE", formattedExMonthlyHours.toString())
+                }
+                db.insert("USER_EXPECTED_ITEM", null, cv)
+
+
+            }
+            rs.close()
+
+
             val mainIntent = Intent(this, expectedUnitList::class.java)
             startActivity(mainIntent)
             finish()
@@ -122,33 +147,33 @@ class ListView : AppCompatActivity() {
     private fun calculateMonthlyUnit(duration: Double, watt: Double, qty: Double): Double {
         var month = duration
         var watt = watt * qty
-        Log.d("TAG", month.toString())
-        Log.d("TAG1", watt.toString())
-        Log.d("TAG2", ((month * watt) / 1000).toString())
+        Log.d("TAG Monthly Usage Hours", month.toString())
+        Log.d("TAG1 Item watte", watt.toString())
+        Log.d("TAG2 Total Monthly unit", ((month * watt) / 1000).toString())
         return (month * watt) / 1000
     }
 
     // Define a function to calculate monthly expected unit amount
     private fun calculateMonthlyExpectedUnitAmount(munit: Double, exunit: Double, unit: Double): Double {
-        Log.d("TAG3", ((munit * exunit) / unit).toString())
+        Log.d("expectedmonthlyunit", ((munit * exunit) / unit).toString())
         return (munit * exunit) / unit
     }
 
     // Define a function to calculate daily expected unit amount
     private fun calculateDailyExpectedUnitAmount(MExUnit: Double): Double {
-        Log.d("TAG4", (MExUnit / 30).toString())
+        Log.d("dailyExpectedUnitAmount", (MExUnit / 30).toString())
         return MExUnit / 30
     }
 
     // Define a function to calculate expected daily hours
     private fun calculateExpectedDailyHours(DExUnit: Double, watt: Double): Double {
-        Log.d("TAG5", ((DExUnit * 1000) / watt).toString())
+        Log.d("ExpectedDailyHours", ((DExUnit * 1000) / watt).toString())
         return (DExUnit * 1000) / watt
     }
 
     // Define a function to calculate expected monthly hours
     private fun calculateExpectedMonthlyHours(ExDailyHours: Double): Double {
-        Log.d("TAG6", (ExDailyHours * 30).toString())
+        Log.d("ExpectedMonthlyHours", (ExDailyHours * 30).toString())
         return ExDailyHours * 30
     }
 

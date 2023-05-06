@@ -12,6 +12,9 @@ class UserItemDbHelper(context: Context):SQLiteOpenHelper(context,"UserItem",nul
         db?.execSQL("CREATE TABLE USER_EXPECTED_ITEM(_id INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 "CATEGORY TEXT, DAYLYUSE INTEGER, MONTHLYUSE INTEGER, USER_ID INTEGER)")
 
+        db?.execSQL("CREATE TABLE USERS(_id INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                "USERNAME TEXT, EMAIL INTEGER, PASSWORD TEXT)")
+
 
 
 

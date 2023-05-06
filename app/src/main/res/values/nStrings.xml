@@ -24,13 +24,20 @@
     <string name="See_history">See History</string>
     <string name="tvunits">Units:</string>
     <string name="tvcategory">Category:</string>
+    <string name="range_hint">Select Block</string>
 
     <string-array name="tariffCategory">
         <item>Select Tariff Category</item>
-        <item>Domestic</item>
-        <item>Domestic TOU</item>
-        <item>Industrial</item>
-        <item>General</item>
-        <item>Government</item>
+        <item>domestic</item>
+        <item>industry</item>
+        <item>general</item>
     </string-array>
+
+        <string-array name="categories">
+            <item>Select Category</item>
+            <item>domestic</item>
+            <item>industry</item>
+            <item>general</item>
+        </string-array>
+
 </resources>
