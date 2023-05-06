@@ -1,6 +1,9 @@
+package com.example.electricitysaver
+
 import android.annotation.SuppressLint
 import android.content.ContentValues
 import android.content.DialogInterface
+import android.content.Intent
 import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.graphics.Color
@@ -11,20 +14,19 @@ import android.widget.Button
 import android.widget.EditText
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import com.example.electricitysaver.R
-import com.example.electricitysaver.paymentHelper
 
-class PaymentUpdateDelete: AppCompatActivity() {
+class Payment_Update :AppCompatActivity(){
 
     private  lateinit var helper: paymentHelper
     private lateinit var edtname : EditText
     private lateinit var edtnumber : EditText
     private lateinit var btnUpdate : Button
+    private lateinit var btnfavList : Button
 
     private lateinit var db: SQLiteDatabase
     private lateinit var rs: Cursor
 
-    @SuppressLint("SuspiciousIndentation")
+    @SuppressLint("SuspiciousIndentation", "MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.payment_update_delete)
@@ -38,10 +40,12 @@ class PaymentUpdateDelete: AppCompatActivity() {
         val getNumber = intent.getStringExtra("ACCOUNT")
         val id = intent.getLongExtra("ID", -1)
 
+
         Log.d("Pamitha", "Name: $getName, Account: $getNumber, ID: $id")
         edtname= findViewById(R.id.updName)
         edtnumber = findViewById(R.id.updActNo)
         btnUpdate = findViewById(R.id.btnPaymentUpdate)
+        btnfavList = findViewById(R.id.btnFavList)
 
         if(edtname!=null){ edtname.setText(getName) }
         if(edtnumber!=null){ edtnumber.setText(getNumber) }
@@ -50,6 +54,7 @@ class PaymentUpdateDelete: AppCompatActivity() {
         db = helper.writableDatabase
         // Get the record with the specified itemId
         rs = db.rawQuery("SELECT _id, NAME, ACCOUNT FROM PAYMENT WHERE _id = ?", arrayOf(id.toString()))
+
 
         btnUpdate.setOnClickListener{
             val acname = edtname.text.toString()
@@ -86,6 +91,12 @@ class PaymentUpdateDelete: AppCompatActivity() {
                         dialog.dismiss()
                     }
                     .show()
+            }
+
+            btnfavList.setOnClickListener {
+                val mainIntent = Intent(this, Favourites::class.java)
+                startActivity(mainIntent)
+//finish()
             }
 
         }

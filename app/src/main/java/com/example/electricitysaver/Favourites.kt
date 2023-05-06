@@ -1,8 +1,6 @@
 package com.example.electricitysaver
 
-import PaymentUpdateDelete
 import android.annotation.SuppressLint
-import android.content.ContentValues
 import android.content.DialogInterface
 import android.content.Intent
 import android.database.Cursor
@@ -12,13 +10,10 @@ import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.widget.EditText
-import android.widget.ImageView
-import android.widget.SimpleCursorAdapter
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.electricitysaver.databaseHelper.UserItemDbHelper
 import kotlinx.android.synthetic.main.fav_card_view.*
 import kotlinx.android.synthetic.main.fav_list.*
 
@@ -72,16 +67,19 @@ class Favourites : AppCompatActivity() , PaymentRecyclerAdapter.UpdateListner,Pa
     override fun onEditClick(payment: Payment) {
 
 
-        val intent = Intent(this,PaymentUpdateDelete::class.java).apply {
-            putExtra("NAME", payment.name)
-            putExtra("ACCOUNT", payment.account)
-            //putExtra("PAYEE",payment.type)
-            putExtra("ID", payment.id)
+        try {
+            val intent = Intent(this, Payment_Update::class.java).apply {
+                putExtra("NAME", payment.name)
+                putExtra("ACCOUNT", payment.account)
+                putExtra("ID", payment.id)
+            }
+            startActivity(intent)
+        } catch (e: Exception) {
+            Log.e("Favourites", "Error opening edit payment activity", e)
+            // Show an error message to the user
+            Toast.makeText(this, "Failed to open edit payment activity", Toast.LENGTH_SHORT).show()
         }
-        startActivity(intent)
-
-
-        }
+    }
 
     override fun onDeleteClick(payment: Payment) {
 
