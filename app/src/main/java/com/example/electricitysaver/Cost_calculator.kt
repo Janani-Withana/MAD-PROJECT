@@ -65,7 +65,7 @@ class Cost_calculator : AppCompatActivity() {
 
         val historyButton = findViewById<TextView>(R.id.btnViewHistory)
         historyButton.setOnClickListener {
-            val intent = Intent(this, Cost_history::class.java)
+            val intent = Intent(this, cost_history::class.java)
             startActivity(intent)
         }
 
