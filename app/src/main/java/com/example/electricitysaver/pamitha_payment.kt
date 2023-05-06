@@ -1,5 +1,6 @@
 package com.example.electricitysaver
 
+import android.annotation.SuppressLint
 import android.content.ContentValues
 import android.content.DialogInterface
 import android.content.Intent
@@ -12,9 +13,7 @@ import android.widget.Button
 import android.widget.SimpleCursorAdapter
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import com.android.volley.Response
-import com.android.volley.toolbox.StringRequest
-import com.android.volley.toolbox.Volley
+import androidx.appcompat.app.AppCompatDelegate
 import kotlinx.android.synthetic.main.activity_pamitha_payment2.*
 
 
@@ -24,7 +23,9 @@ class pamitha_payment : AppCompatActivity() {
     lateinit var rs: Cursor
     lateinit var adapter: SimpleCursorAdapter
 
+    var isNightModeOn = false
 
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_pamitha_payment2)
@@ -63,6 +64,32 @@ class pamitha_payment : AppCompatActivity() {
             })
             ad.show()
         }
+
+
+        val button = findViewById<Button>(R.id.btnDark)
+        if (AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_NO) {
+            isNightModeOn = false
+            button.text = "Enable Dark Mode"
+        } else if (AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES) {
+            isNightModeOn = true
+            button.text = "Disable Dark Mode"
+        } else {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+        }
+
+        button.setOnClickListener {
+            if (isNightModeOn) {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+                button.text = "Enable Dark Mode"
+                isNightModeOn = false
+            } else {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+                isNightModeOn = true
+                button.text = "Disable Dark Mode"
+            }
+        }
+
+
     }
 
 }
