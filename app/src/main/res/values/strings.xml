@@ -10,5 +10,6 @@
     <string name="tvRange">Range</string>
     <string name="sDate">Starting Date</string>
     <string name="eDate">Ending Date</string>
+    <string name="Days">Days</string>
 
 </resources>

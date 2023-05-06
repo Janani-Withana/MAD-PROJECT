@@ -80,7 +80,7 @@
         android:hint="@string/edtCurrReading"
         android:inputType="number"
         android:textColor="#000000"
-        android:textColorHint="#212121"
+        android:textColorHint="#616161"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -100,7 +100,7 @@
         android:hint="@string/edtPreReading"
         android:inputType="number"
         android:textColor="#000000"
-        android:textColorHint="#212121"
+        android:textColorHint="#616161"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -115,11 +115,12 @@
         android:layout_height="48dp"
         android:autofillHints=""
         android:ems="10"
+        android:enabled="false"
         android:gravity="center"
         android:hint="@string/edtUnits"
         android:inputType="number"
-        android:textColor="#000000"
-        android:textColorHint="#212121"
+        android:textColor="#616161"
+        android:textColorHint="#616161"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -140,6 +141,7 @@
         app:layout_constraintVertical_bias="0.166"
         app:srcCompat="@drawable/rectangle" />
 
+
     <TextView
         android:id="@+id/tvEDate2"
         android:layout_width="106dp"
@@ -151,10 +153,10 @@
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.163"
+        app:layout_constraintHorizontal_bias="0.173"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.405" />
+        app:layout_constraintVertical_bias="0.379" />
 
     <TextView
         android:id="@+id/tvSDate2"
@@ -170,10 +172,9 @@
         app:layout_constraintHorizontal_bias="0.083"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.349" />
+        app:layout_constraintVertical_bias="0.316" />
 
-
-    <EditText
+    <TextView
         android:id="@+id/edtSDate"
         android:layout_width="156dp"
         android:layout_height="48dp"
@@ -183,16 +184,17 @@
         android:hint="@string/startingDate"
         android:inputType="date"
         android:textColor="#000000"
-        android:textColorHint="#212121"
+        android:textColorHint="#616161"
         android:textSize="14sp"
+        android:textStyle="normal|bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.764"
+        app:layout_constraintHorizontal_bias="0.76"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.349" />
+        app:layout_constraintVertical_bias="0.313" />
 
-    <EditText
+    <TextView
         android:id="@+id/edtEDate"
         android:layout_width="156dp"
         android:layout_height="48dp"
@@ -202,44 +204,54 @@
         android:hint="@string/eDate"
         android:inputType="date"
         android:textColor="#000000"
-        android:textColorHint="#212121"
+        android:textColorHint="#616161"
         android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.764"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.397" />
-
-    <RadioButton
-        android:id="@+id/radioButton3"
-        android:layout_width="150dp"
-        android:layout_height="48dp"
-        android:layout_marginEnd="64dp"
-        android:buttonTint="@color/black"
-        android:text="@string/rbtn_reading"
-        android:textColor="@color/black"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.76"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.472" />
+        app:layout_constraintVertical_bias="0.379" />
 
-    <RadioButton
-        android:id="@+id/radioButton"
+    <RadioGroup
+        android:id="@+id/radioGroup"
         android:layout_width="wrap_content"
-        android:layout_height="@dimen/rBtn_H"
-        android:buttonTint="@color/black"
-        android:text="@string/rbtn_units"
-        android:textColor="@color/black"
-        android:textStyle="bold"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/radioButton3"
-        app:layout_constraintHorizontal_bias="0.902"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.472"
-        tools:ignore="TouchTargetSizeCheck" />
+        app:layout_constraintVertical_bias="0.472">
+
+        <RadioButton
+            android:id="@+id/radioButton3"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/rBtn_H"
+            android:buttonTint="@color/black"
+            android:checked="true"
+            android:text="@string/rbtn_reading"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <RadioButton
+            android:id="@+id/radioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/rBtn_H"
+            android:buttonTint="@color/black"
+            android:text="@string/rbtn_units"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/radioButton3"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/radioButton3"
+            tools:ignore="TouchTargetSizeCheck" />
+
+    </RadioGroup>
+
 
     <ImageView
         android:id="@+id/imageView25"
@@ -268,10 +280,9 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.46"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.209" />
+        app:layout_constraintVertical_bias="0.187" />
 
     <Spinner
         android:id="@+id/tariffSpinner"
@@ -287,40 +298,40 @@
         app:layout_constraintHorizontal_bias="0.783"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.344" />
+        app:layout_constraintVertical_bias="0.316" />
 
     <TextView
         android:id="@+id/tvCat"
-        android:layout_width="106dp"
-        android:layout_height="28dp"
-        android:layout_marginTop="12dp"
+        android:layout_width="102dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="30dp"
         android:gravity="center"
         android:text="@string/tvcategory"
         android:textColor="#000000"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.163"
+        app:layout_constraintHorizontal_bias="0.161"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.274" />
+        app:layout_constraintVertical_bias="0.223" />
 
     <TextView
         android:id="@+id/tvUnits3"
-        android:layout_width="106dp"
-        android:layout_height="28dp"
+        android:layout_width="64dp"
+        android:layout_height="23dp"
         android:layout_marginTop="12dp"
         android:gravity="center"
         android:text="@string/tvunits"
         android:textAlignment="gravity"
-        android:textColor="#000000"
+        android:textColor="#616161"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.088"
+        app:layout_constraintHorizontal_bias="0.16"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.536" />
+        app:layout_constraintVertical_bias="0.54" />
 
     <TextView
         android:id="@+id/tvPreReading"
@@ -331,12 +342,14 @@
         android:text="@string/previousReading"
         android:textColor="#000000"
         android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.183"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.605" />
+
 
     <TextView
         android:id="@+id/tvCurrReading"
@@ -347,12 +360,13 @@
         android:text="@string/currentReading"
         android:textColor="#000000"
         android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.149"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.662" />
+        app:layout_constraintVertical_bias="0.674" />
 
     <TextView
         android:id="@+id/tvCost3"
@@ -390,5 +404,35 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.986" />
+
+    <TextView
+        android:id="@+id/tvCalDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="176dp"
+        android:gravity="center"
+        android:text="00"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.428" />
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:gravity="center"
+        android:text="@string/Days"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tvCalDate"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.428" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

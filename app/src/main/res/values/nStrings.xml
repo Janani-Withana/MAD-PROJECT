@@ -33,4 +33,12 @@
         <item>General</item>
         <item>Government</item>
     </string-array>
+
+        <string-array name="categories">
+            <item>Select Category</item>
+            <item>domestic</item>
+            <item>industry</item>
+            <item>general</item>
+        </string-array>
+
 </resources>
