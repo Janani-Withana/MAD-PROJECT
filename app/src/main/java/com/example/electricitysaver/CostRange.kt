@@ -28,83 +28,17 @@ class CostRange : AppCompatActivity() {
         var dbHelper = CalculationRatesDbHelper(applicationContext)
         db = dbHelper.readableDatabase
 
-//        // Define the spinners and their listeners
-//        val categorySpinner = findViewById<Spinner>(R.id.category_spinner)
-//        val rangeSpinner = findViewById<Spinner>(R.id.range_spinner)
-//
-//        categorySpinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-//            override fun onItemSelected(parent: AdapterView<*>, view: View?, position: Int, id: Long) {
-//                // Retrieve the selected category
-//                val selectedCategory = parent.getItemAtPosition(position) as String
-//
-//                // Retrieve the selected block
-//                val selectedBlock = rangeSpinner.selectedItem as String
-//
-//                // Retrieve the relevant block rate from the database
-//                val blockRate = dbHelper.use {
-//                    val cursor = query(
-//                        "RATE_TABLE",
-//                        arrayOf("BLOCK1_RATE", "BLOCK2_RATE", "BLOCK3_RATE", "BLOCK4_RATE", "BLOCK5_RATE"),
-//                        "CATEGORY = ?",
-//                        arrayOf(selectedCategory),
-//                        null,
-//                        null,
-//                        null
-//                    )
-//                    cursor.moveToFirst()
-//                    cursor.getDouble(cursor.getColumnIndex(selectedBlock))
-//                }
-//
-//                // Display the block rate in the EditText
-//                edtCharge.setText(blockRate.toString())
-//            }
-//
-//            override fun onNothingSelected(parent: AdapterView<*>) {}
-//        }
-//
-//        rangeSpinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-//            override fun onItemSelected(parent: AdapterView<*>, view: View?, position: Int, id: Long) {
-//                // Retrieve the selected category
-//                val selectedCategory = categorySpinner.selectedItem as String
-//
-//                // Retrieve the selected block
-//                val selectedBlock = parent.getItemAtPosition(position) as String
-//
-//                // Retrieve the relevant block rate from the database
-//                val blockRate = dbHelper.use {
-//                    val cursor = query(
-//                        "RATE_TABLE",
-//                        arrayOf("BLOCK1_RATE", "BLOCK2_RATE", "BLOCK3_RATE", "BLOCK4_RATE", "BLOCK5_RATE"),
-//                        "CATEGORY = ?",
-//                        arrayOf(selectedCategory),
-//                        null,
-//                        null,
-//                        null
-//                    )
-//                    cursor.moveToFirst()
-//                    cursor.getDouble(cursor.getColumnIndex(selectedBlock))
-//                }
-//
-//                // Display the block rate in the EditText
-//                edtCharge.setText(blockRate.toString())
-//            }
-//
-//            override fun onNothingSelected(parent: AdapterView<*>) {}
-//        }
-
         // Find the button in your layout
         val viewListButton: Button = findViewById(R.id.btnViewList)
         val categorySpinner: Spinner = findViewById(R.id.category_spinner)
 
-        // Create an ArrayAdapter for the Spinner
-        val categoryAdapter = ArrayAdapter.createFromResource(
-            this,
-            R.array.categories,
-            android.R.layout.simple_spinner_item
-        ).also { adapter ->
-            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-            categorySpinner.adapter = adapter
-        }
+//        CATEGORY
+//        BLOCK1_RATE
+//        BLOCK2_RATE
+//        BLOCK3_RATE
+//        BLOCK4_RATE
+//        BLOCK5_RATE
+
 
         // Set a click listener on the button
         viewListButton.setOnClickListener {

@@ -27,11 +27,9 @@
 
     <string-array name="tariffCategory">
         <item>Select Tariff Category</item>
-        <item>Domestic</item>
-        <item>Domestic TOU</item>
-        <item>Industrial</item>
-        <item>General</item>
-        <item>Government</item>
+        <item>domestic</item>
+        <item>industry</item>
+        <item>general</item>
     </string-array>
 
         <string-array name="categories">

@@ -307,32 +307,47 @@ class cost_calculator : AppCompatActivity() {
         var remainingUnits: Double = units
         var cost: Double = 0.0
 
-        // Calculate cost for block 1
-        val block1: Double = minOf(block1Units, remainingUnits)
-        remainingUnits -= block1
-        cost += block1 * block1Rate
+        if(units <= 60){
+            // Calculate cost for block 1
+            val block1: Double = minOf(block1Units, remainingUnits)
+            remainingUnits -= block1
+            cost += block1 * block1Rate
 
-        // Calculate cost for block 2
-        val block2: Double = minOf(block2Units, remainingUnits)
-        remainingUnits -= block2
-        cost += block2 * block2Rate
+            // Calculate cost for block 2
+            val block2: Double = minOf(block2Units, remainingUnits)
+            remainingUnits -= block2
+            cost += block2 * block2Rate
 
-        // Calculate cost for block 3
-        val block3: Double = minOf(block3Units, remainingUnits)
-        remainingUnits -= block3
-        cost += block3 * block3Rate
+            // Add fixed charge
+            cost += fixedCharge
+        }else {
+            // Calculate cost for block 1
+            val block1: Double = minOf(block1Units, remainingUnits)
+            remainingUnits -= block1
+            cost += block1 * block1Rate
 
-        // Calculate cost for block 4
-        val block4: Double = minOf(block4Units, remainingUnits)
-        remainingUnits -= block4
-        cost += block4 * block4Rate
+            // Calculate cost for block 2
+            val block2: Double = minOf(block2Units, remainingUnits)
+            remainingUnits -= block2
+            cost += block2 * block2Rate
 
-        // Calculate cost for block 5
-        val block5: Double = remainingUnits
-        cost += block5 * block5Rate
+            // Calculate cost for block 3
+            val block3: Double = minOf(block3Units, remainingUnits)
+            remainingUnits -= block3
+            cost += block3 * block3Rate
 
-        // Add fixed charge
-        cost += fixedCharge
+            // Calculate cost for block 4
+            val block4: Double = minOf(block4Units, remainingUnits)
+            remainingUnits -= block4
+            cost += block4 * block4Rate
+
+            // Calculate cost for block 5
+            val block5: Double = remainingUnits
+            cost += block5 * block5Rate
+
+            // Add fixed charge
+            cost += fixedCharge
+        }
 
         var importCharge = if(days == 0.0){
             fixedCharge
