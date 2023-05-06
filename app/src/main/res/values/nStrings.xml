@@ -24,6 +24,7 @@
     <string name="See_history">See History</string>
     <string name="tvunits">Units:</string>
     <string name="tvcategory">Category:</string>
+    <string name="range_hint">Select Block</string>
 
     <string-array name="tariffCategory">
         <item>Select Tariff Category</item>
