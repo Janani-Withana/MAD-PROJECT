@@ -50,12 +50,7 @@ class ListView : AppCompatActivity() {
         // Map the cursor to a list of items and calculate the expected values
         val items = ArrayList<ListItem>()
         var unit = 0.0
-        var exunit1 = exUnit.text.toString()
-        var exunit = 100.0
-        if (exunit1.matches(Regex("\\d+"))) {
-            exunit = exunit1.toDouble()
-            // Use the userInt variable for any necessary operations
-        }
+
 
         ////////////////////////////////////
         while (rs.moveToNext()) {
@@ -83,7 +78,13 @@ class ListView : AppCompatActivity() {
         val btnExpectListView = findViewById<Button>(R.id.submit_btn)
         btnExpectListView.setOnClickListener {
 
-            var exunit = 100.0
+            var exunit = 0.00
+            var exunit1 = exUnit.text.toString()
+            if (exunit1.matches(Regex("\\d+"))) {
+                exunit = exunit1.toDouble()
+                // Use the userInt variable for any necessary operations
+            }
+
             //var exunit = 100.0
             Log.e("Total units",unit.toString())
             var helper = UserItemDbHelper(applicationContext)
