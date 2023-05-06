@@ -11,6 +11,7 @@ import android.os.Build
 import android.os.Bundle
 import android.widget.Button
 import android.widget.SimpleCursorAdapter
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
@@ -50,19 +51,40 @@ class pamitha_payment : AppCompatActivity() {
 
 
         AddFav.setOnClickListener {
-            var cv = ContentValues()
-            cv.put("PAYEE",payeeCat.selectedItem.toString())
-            cv.put("NAME",ptAccountName.text.toString())
-            cv.put("ACCOUNT",ActNumber.text.toString())
-            cv.put("AMOUNT",etAmount.text.toString())
-            db.insert("PAYMENT",null,cv)
+            val payee = payeeCat.selectedItem.toString()
+            val name = ptAccountName.text.toString()
+            val account = ActNumber.text.toString()
+            val amount = etAmount.text.toString()
 
-            var ad = AlertDialog.Builder(this)
-            ad.setTitle("Add To Favourite")
-            ad.setMessage("Record Added to Favourite List Successflly ....!")
-            ad.setPositiveButton("OK", DialogInterface.OnClickListener{ dialog: DialogInterface?, i->
-            })
-            ad.show()
+            if (payee != "CEYLON ELECTRICITY BOARD[CEB]" && payee != "LANKA ELECTRICITY COMPANY(PVT)LTD[LECO]"){
+                Toast.makeText(this, "Please select a valid payee category", Toast.LENGTH_SHORT).show()
+            }else if (name.isEmpty()){
+                Toast.makeText(this, "Please Enter The Account Holder Name", Toast.LENGTH_SHORT).show()
+            }
+            else if (account.length != 10) {
+            // Display error message if account number does not have exactly 10 digits
+            Toast.makeText(this, "Please enter a 10-digit account number", Toast.LENGTH_SHORT).show()
+            }
+            else if(payee.isEmpty() || name.isEmpty() || account.isEmpty() || amount.isEmpty()) {
+                // Display error message if any field is empty
+                Toast.makeText(this, "Please fill in all fields", Toast.LENGTH_SHORT).show()
+            }
+            else {
+                // Insert the record into the database
+                val cv = ContentValues()
+                cv.put("PAYEE", payee)
+                cv.put("NAME", name)
+                cv.put("ACCOUNT", account)
+                cv.put("AMOUNT", amount)
+                db.insert("PAYMENT", null, cv)
+
+                // Display success message
+                AlertDialog.Builder(this)
+                    .setTitle("Add To Favourite")
+                    .setMessage("Record added to Favourite List successfully!")
+                    .setPositiveButton("OK", null)
+                    .show()
+            }
         }
 
 

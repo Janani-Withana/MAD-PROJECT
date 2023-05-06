@@ -1,10 +1,13 @@
 package com.example.electricitysaver
 
+import android.content.ContentValues.TAG
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
 import android.widget.ImageView
+import android.widget.Toast
 import androidx.appcompat.view.menu.MenuView.ItemView
 import androidx.recyclerview.widget.RecyclerView
 
@@ -35,14 +38,19 @@ class PaymentRecyclerAdapter(private var paymentList: ArrayList<Payment>,private
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val payment = paymentList[position]
-        holder.nameTextView.setText(payment.name)
-        holder.accountTextView.setText(payment.account)
-        holder.editImageView.setImageResource(R.drawable.ic_baseline_edit_note_blue)
-        holder.editImageView.setOnClickListener{updateListner.onEditClick(payment)}
-        holder.deleteImageView.setImageResource(R.drawable.ic_baseline_delete_outline_24)
-        holder.deleteImageView.setOnClickListener{deleteListner.onDeleteClick(payment)}
-
+        try {
+            val payment = paymentList[position]
+            holder.nameTextView.setText(payment.name)
+            holder.accountTextView.setText(payment.account)
+            holder.editImageView.setImageResource(R.drawable.ic_baseline_edit_note_blue)
+            holder.editImageView.setOnClickListener{updateListner.onEditClick(payment)}
+            holder.deleteImageView.setImageResource(R.drawable.ic_baseline_delete_outline_24)
+            holder.deleteImageView.setOnClickListener{deleteListner.onDeleteClick(payment)}
+        } catch (e: Exception) {
+            // Handle the exception here, e.g. log the error, show a message to the user
+            Log.e(TAG, "Error in onBindViewHolder(): ${e.message}", e)
+            Toast.makeText(holder.itemView.context, "Error occurred: ${e.message}", Toast.LENGTH_SHORT).show()
+        }
     }
 
     override fun getItemCount() = paymentList.size

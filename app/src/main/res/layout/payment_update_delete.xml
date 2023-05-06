@@ -112,7 +112,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/btnAdminViewList"
+        android:id="@+id/btnFavList"
         android:layout_width="115dp"
         android:layout_height="50dp"
         android:backgroundTint="@color/additmeviewlistcolor"
