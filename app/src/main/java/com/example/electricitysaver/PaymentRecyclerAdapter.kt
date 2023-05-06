@@ -8,13 +8,13 @@ import android.widget.ImageView
 import androidx.appcompat.view.menu.MenuView.ItemView
 import androidx.recyclerview.widget.RecyclerView
 
-class PaymentRecyclerAdapter(private var paymentList: ArrayList<Payment>,private val updateListner: UpdateListner) :
+class PaymentRecyclerAdapter(private var paymentList: ArrayList<Payment>,private val updateListner: UpdateListner , private val deleteListner:DeleteListener) :
     RecyclerView.Adapter<PaymentRecyclerAdapter.ViewHolder>() {
 
 
 
     interface UpdateListner {fun onEditClick (payment:Payment) }
-
+    interface DeleteListener {fun onDeleteClick (payment:Payment) }
 //    val aname:Array<String> = arrayOf("Pamitha","Lokuge")
 //    val anumber:Array<String> = arrayOf("12345678","98745612")
 
@@ -25,8 +25,7 @@ class PaymentRecyclerAdapter(private var paymentList: ArrayList<Payment>,private
         val nameTextView: EditText = itemView.findViewById(R.id.edtCardName)
         val accountTextView: EditText = itemView.findViewById(R.id.edtCardNo)
          val editImageView: ImageView = itemView.findViewById(R.id.editPayment)
-
-
+         val deleteImageView: ImageView = itemView.findViewById(R.id.deletelist)
     }
 
 
@@ -41,6 +40,9 @@ class PaymentRecyclerAdapter(private var paymentList: ArrayList<Payment>,private
         holder.accountTextView.setText(payment.account)
         holder.editImageView.setImageResource(R.drawable.ic_baseline_edit_note_blue)
         holder.editImageView.setOnClickListener{updateListner.onEditClick(payment)}
+        holder.deleteImageView.setImageResource(R.drawable.ic_baseline_delete_outline_24)
+        holder.deleteImageView.setOnClickListener{deleteListner.onDeleteClick(payment)}
+
     }
 
     override fun getItemCount() = paymentList.size

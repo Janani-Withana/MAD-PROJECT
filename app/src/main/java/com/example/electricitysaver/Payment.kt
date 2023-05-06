@@ -1,3 +1,3 @@
 package com.example.electricitysaver
 
-data class Payment(val name: String, val account: String)
+data class Payment(val id:Long?, val name: String, val account: String)
