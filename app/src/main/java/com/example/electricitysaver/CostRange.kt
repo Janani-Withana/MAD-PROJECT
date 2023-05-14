@@ -31,22 +31,21 @@ class CostRange : AppCompatActivity() {
         var dbHelper = CalculationRatesDbHelper(applicationContext)
         db = dbHelper.readableDatabase
 
-        // Find the button in your layout
         val viewListButton: Button = findViewById(R.id.btnViewList)
         val categorySpinner: Spinner = findViewById(R.id.category_spinner)
         val rangeSpinner: Spinner = findViewById(R.id.range_spinner)
         edtCharge = findViewById(R.id.edtCharge)
         btnUpdate =findViewById(R.id.btnUpdate)
 
-        // Set a click listener on the button
+        // Set setOnClickListener
         viewListButton.setOnClickListener {
             try {
-                // Query the database to retrieve the data
+                //retrieve the data
                 val dbHelper = CalculationRatesDbHelper(this)
                 val db = dbHelper.readableDatabase
                 val cursor = db.query("RATE_TABLE", null, null, null, null, null, null)
 
-                // Create a StringBuilder to hold the data
+                // Create a StringBuilder to store the data
                 val dataBuilder = StringBuilder()
                 cursor.use {
                     while (it.moveToNext()) {
@@ -60,7 +59,7 @@ class CostRange : AppCompatActivity() {
                     }
                 }
 
-                // Show an AlertDialog with the retrieved data
+                //retrieved data
                 val alertDialogBuilder = AlertDialog.Builder(this)
                 alertDialogBuilder
                     .setTitle("Rate Table")
@@ -69,7 +68,7 @@ class CostRange : AppCompatActivity() {
                 val alertDialog = alertDialogBuilder.create()
                 alertDialog.show()
             } catch (e: Exception) {
-                // Show an error message if there was an error retrieving the data
+                // Show a error message
                 Toast.makeText(this, "Error retrieving data for all: ${e.message}", Toast.LENGTH_SHORT).show()
             }
         }
@@ -107,8 +106,8 @@ class CostRange : AppCompatActivity() {
                     }
                     cursor.close()
                 } catch (e: Exception) {
-                    // Show an error message if there was an error retrieving the data
-                    //Toast.makeText(this@CostRange, "Error retrieving data range spinner: ${e.message}", Toast.LENGTH_SHORT).show()
+                    // Show a message
+                    Toast.makeText(this@CostRange, "Error retrieving data range spinner: ${e.message}", Toast.LENGTH_SHORT).show()
                 }
             }
             override fun onNothingSelected(parent: AdapterView<*>?) {}

@@ -27,7 +27,6 @@
     <string name="range_hint">Select Block</string>
 
     <string-array name="tariffCategory">
-        <item>Select Tariff Category</item>
         <item>domestic</item>
         <item>industry</item>
         <item>general</item>
