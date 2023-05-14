@@ -54,7 +54,7 @@ class Cost_calculator : AppCompatActivity() {
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             window.navigationBarColor =
-                Color.parseColor("#133B5C") // Replace with your desired color
+                Color.parseColor("#133B5C")
         }
 
         var helper = CostCalculationDbHelper(applicationContext)
@@ -134,44 +134,68 @@ class Cost_calculator : AppCompatActivity() {
             val currReading = edtCurrReading.text.toString().toDoubleOrNull()
             val unitsInput = edtUnits.text.toString().toDoubleOrNull()
 
-            if ((preReading != null && currReading != null) || unitsInput != null) {
-                val units = unitsInput ?: currReading!! - preReading!!
-                if (units >= 0) {
-                    edtUnits.setText(units.toString())
-                    val days = tvCalDate.text.toString().toDoubleOrNull() ?: 0.0
-                    val (fixedCharge, importCharge, totalCost) = calculateElectricityCost(days, units)
-                    val formattedCost = "Rs. %.2f".format(totalCost)
-                    tvDisplayCost.text = formattedCost
+            if(endDate != null || startDate != null) {
+                if ((preReading != null && currReading != null) || unitsInput != null) {
+                    val units = unitsInput ?: currReading!! - preReading!!
+                    if (units >= 0) {
+                        edtUnits.setText(units.toString())
+                        val days = tvCalDate.text.toString().toDoubleOrNull() ?: 0.0
+                        val (fixedCharge, importCharge, totalCost) = calculateElectricityCost(
+                            days,
+                            units
+                        )
+                        val formattedCost = "Rs. %.2f".format(totalCost)
+                        tvDisplayCost.text = formattedCost
 
-                    try {
-                        //insert records
-                        var cv = ContentValues()
-                        cv.put("DATE","$currentDate")
-                        cv.put("DAYS" , days)
-                        cv.put("UNITS" , units)
-                        cv.put("TOTAL_COST" ,totalCost )
-                        cv.put("FIXED_CHARGE" ,fixedCharge)
-                        cv.put("IMPORT_CHARGE" ,importCharge)
-                        db.insert("COST_CALCULATION", null, cv)
+                        try {
+                            //insert records
+                            var cv = ContentValues()
+                            cv.put("DATE", "$currentDate")
+                            cv.put("DAYS", days)
+                            cv.put("UNITS", units)
+                            cv.put("TOTAL_COST", totalCost)
+                            cv.put("FIXED_CHARGE", fixedCharge)
+                            cv.put("IMPORT_CHARGE", importCharge)
+                            db.insert("COST_CALCULATION", null, cv)
 
-                        // Use the values
-                        val dataString = "Date: $currentDate \nDays: $days \t\t Units: $units \nTotal Cost: $totalCost \nFixed Charge: $fixedCharge \nImport Charge: $importCharge"
-                        AlertDialog.Builder(this)
-                            .setTitle("Details")
-                            .setMessage(dataString)
-                            .setPositiveButton("OK", null)
-                            .show()
-                    } catch (e: Exception) {
-                        Toast.makeText(this, "Error inserting record into database: ${e.message}", Toast.LENGTH_SHORT).show()
+                            // Use the values
+                            val dataString =
+                                "Date: $currentDate \nDays: $days \t\t Units: $units \nTotal Cost: $totalCost \nFixed Charge: $fixedCharge \nImport Charge: $importCharge"
+                            AlertDialog.Builder(this)
+                                .setTitle("Details")
+                                .setMessage(dataString)
+                                .setPositiveButton("OK", null)
+                                .show()
+                        } catch (e: Exception) {
+                            Toast.makeText(
+                                this,
+                                "Error inserting record into database: ${e.message}",
+                                Toast.LENGTH_SHORT
+                            ).show()
+                        }
+
+                    } else {
+                        edtUnits.setText("")
+                        Toast.makeText(
+                            this,
+                            "Current reading cannot be less than previous reading",
+                            Toast.LENGTH_SHORT
+                        ).show()
                     }
-
                 } else {
                     edtUnits.setText("")
-                    Toast.makeText(this, "Current reading cannot be less than previous reading", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(
+                        this,
+                        "Please enter units or readings",
+                        Toast.LENGTH_SHORT
+                    ).show()
                 }
-            } else {
-                edtUnits.setText("")
-                Toast.makeText(this, "Please enter valid numbers", Toast.LENGTH_SHORT).show()
+            }else{
+                Toast.makeText(
+                    this,
+                    "Please select valid start & end date",
+                    Toast.LENGTH_SHORT
+                ).show()
             }
         }
 
@@ -270,12 +294,18 @@ class Cost_calculator : AppCompatActivity() {
 
     private fun updateNumberOfDays() {
         if (startDate != null && endDate != null) {
-            val days = TimeUnit.MILLISECONDS.toDays(endDate!!.timeInMillis - startDate!!.timeInMillis)
-            tvCalDate.setText(days.toString())
+            if (startDate == endDate) {
+                Toast.makeText(this, "Start date and end date cannot be the same", Toast.LENGTH_SHORT).show()
+                tvCalDate.text = ""
+                return
+            }
+            val days = TimeUnit.MILLISECONDS.toDays(endDate!!.timeInMillis - startDate!!.timeInMillis) + 1
+            tvCalDate.text = days.toString()
         } else {
-            tvCalDate.setText("")
+            tvCalDate.text = ""
         }
     }
+
 
     private fun printAllData() {
         val dbHelper = CalculationRatesDbHelper(applicationContext)
