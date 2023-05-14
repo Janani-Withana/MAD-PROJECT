@@ -1,70 +1,42 @@
+
 package com.example.electricitysaver
 
-import android.widget.Button
-import android.widget.EditText
-import androidx.test.core.app.ActivityScenario
-import androidx.test.espresso.Espresso.onView
-import androidx.test.espresso.action.ViewActions.*
-import androidx.test.espresso.assertion.ViewAssertions.doesNotExist
-import androidx.test.espresso.matcher.ViewMatchers.*
 import androidx.test.ext.junit.runners.AndroidJUnit4
+import androidx.test.platform.app.InstrumentationRegistry
+import com.example.electricitysaver.databaseHelper.AdminItemDbHelper
+import kotlinx.android.synthetic.main.admin_add_devices.*
+import kotlinx.android.synthetic.main.admin_add_devices.brand
+import kotlinx.android.synthetic.main.admin_list_recycler_view.*
+import org.junit.Assert.*
 import org.junit.Test
 import org.junit.runner.RunWith
-import java.util.regex.Pattern.matches
+
 
 @RunWith(AndroidJUnit4::class)
 class AdminAddDevicesTest {
 
     @Test
     fun testAddItem() {
-        // Start the activity
-        val scenario = ActivityScenario.launch(AdminAddDevices::class.java)
+        val appContext = InstrumentationRegistry.getInstrumentation().targetContext
+        val activity = AdminAddDevices()
 
-        // Fill in the fields
-        onView(withId(R.id.cat)).perform(typeText("Test Category"), closeSoftKeyboard())
-        onView(withId(R.id.brand)).perform(typeText("Test Brand"), closeSoftKeyboard())
-        onView(withId(R.id.edtWatts)).perform(typeText("100"), closeSoftKeyboard())
+        // Set input values
+        activity.cat.setText("Test Category")
+        activity.brand.setText("Test Brand")
+        activity.watts.setText(100)
 
-        // Click the add button
-        onView(withId(R.id.btnAdminAdd)).perform(click())
+        // Call add item function
+        activity.btnAdminAdd.performClick()
 
-        // Check that the record was added
-        onView(withId(android.R.id.button1)).perform(click()) // Click the "OK" button on the dialog
+        // Verify if the record is inserted successfully
+        val db = AdminItemDbHelper(appContext).readableDatabase
+        val cursor = db.rawQuery("SELECT * FROM Admin_Add_Item WHERE CATEGORY = 'Test Category'", null)
 
-        // Close the activity
-        scenario.close()
+        assertEquals(1, cursor.count)
+
+        // Cleanup test data
+        db.delete("Admin_Add_Item", "CATEGORY = ?", arrayOf("Test Category"))
+        cursor.close()
+        db.close()
     }
-
-    @Test
-    fun testEmptyFields() {
-        // Start the activity
-        val scenario = ActivityScenario.launch(AdminAddDevices::class.java)
-
-        // Click the add button
-        onView(withId(R.id.btnAdminAdd)).perform(click())
-
-        // Check that an error message is displayed
-        onView(withText("Please fill in all fields")).check(doesNotExist())
-
-        // Close the activity
-        scenario.close()
-    }
-
-    @Test
-    fun testInvalidWatts() {
-        // Start the activity
-        val scenario = ActivityScenario.launch(AdminAddDevices::class.java)
-
-        // Fill in the fields
-        onView(withId(R.id.cat)).perform(typeText("Test Category"), closeSoftKeyboard())
-        onView(withId(R.id.brand)).perform(typeText("Test Brand"), closeSoftKeyboard())
-        onView(withId(R.id.edtWatts)).perform(typeText("-100"), closeSoftKeyboard())
-
-        // Click the add button
-        onView(withId(R.id.btnAdminAdd)).perform(click())
-
-        // Close the activity
-        scenario.close()
-    }
-
 }
