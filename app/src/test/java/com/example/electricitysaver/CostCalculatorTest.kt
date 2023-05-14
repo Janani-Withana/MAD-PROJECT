@@ -57,3 +57,4 @@ class CostCalculatorValidatorTest {
         assertEquals(expected, result)
     }
 }
+
