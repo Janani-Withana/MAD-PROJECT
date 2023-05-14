@@ -134,6 +134,8 @@ import android.annotation.SuppressLint
 import android.database.Cursor
 import android.database.SQLException
 import android.database.sqlite.SQLiteDatabase
+import android.graphics.Color
+import android.os.Build
 import android.os.Bundle
 import android.view.*
 import android.view.ContextMenu.ContextMenuInfo
@@ -157,10 +159,16 @@ class cost_history : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.cost_history)
-
+        
+        supportActionBar?.hide()
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            window.navigationBarColor =
+                Color.parseColor("#133B5C") // Replace with your desired color
+        }
+        
         recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
         recyclerView.layoutManager = LinearLayoutManager(this)
-
+        
         // Query the database to get the payment calculation history
         val dbHelper = CostCalculationDbHelper(this)
         db = dbHelper.readableDatabase

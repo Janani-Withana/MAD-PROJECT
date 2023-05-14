@@ -88,7 +88,7 @@ class pamitha_payment : AppCompatActivity() {
         }
 
 
-        val button = findViewById<Button>(R.id.btnDark)
+       /* val button = findViewById<Button>(R.id.btnDark)
         if (AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_NO) {
             isNightModeOn = false
             button.text = "Enable Dark Mode"
@@ -109,7 +109,7 @@ class pamitha_payment : AppCompatActivity() {
                 isNightModeOn = true
                 button.text = "Disable Dark Mode"
             }
-        }
+        }*/
 
 
     }
