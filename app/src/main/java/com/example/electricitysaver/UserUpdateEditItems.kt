@@ -3,6 +3,8 @@ package com.example.electricitysaver
 import android.content.ContentValues
 import android.content.DialogInterface
 import android.content.Intent
+import android.graphics.Color
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -27,6 +29,12 @@ class UserUpdateEditItems : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_user_update_edit_items)
+
+        supportActionBar?.hide()
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            window.navigationBarColor =
+                Color.parseColor("#133B5C") // Replace with your desired color
+        }
 
         ucat = findViewById(R.id.ucat)
         ubrand = findViewById(R.id.ubrand)

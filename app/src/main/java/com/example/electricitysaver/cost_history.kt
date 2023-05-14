@@ -3,6 +3,8 @@ package com.example.electricitysaver
 import android.annotation.SuppressLint
 import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
+import android.graphics.Color
+import android.os.Build
 import android.os.Bundle
 import android.view.ContextMenu
 import android.view.MenuItem
@@ -24,6 +26,11 @@ class cost_history : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.cost_history)
 
+        supportActionBar?.hide()
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            window.navigationBarColor =
+                Color.parseColor("#133B5C") // Replace with your desired color
+        }
 
         var helper = CostCalculationDbHelper(applicationContext)
         db = helper.readableDatabase
