@@ -21,7 +21,7 @@
         app:srcCompat="@drawable/gradient" />
 
     <ImageView
-        android:id="@+id/imageView21"
+        android:id="@+id/btnMenu"
         android:layout_width="36dp"
         android:layout_height="34dp"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -56,5 +56,11 @@ class HomePage : AppCompatActivity() {
             startActivity(mainIntent)
             //finish()
         }
+        val btnHomePage = findViewById<ImageView>(R.id.HomeUser)
+        btnHomePage.setOnClickListener {
+            val mainIntent = Intent(this@HomePage, HomePage::class.java)
+            startActivity(mainIntent)
+            //finish()
+        }
     }
 }
