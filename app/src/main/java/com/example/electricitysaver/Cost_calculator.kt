@@ -183,6 +183,7 @@ class Cost_calculator : AppCompatActivity() {
                         ).show()
                     }
                 } else {
+                    //error handling for enter units
                     edtUnits.setText("")
                     Toast.makeText(
                         this,
@@ -191,6 +192,7 @@ class Cost_calculator : AppCompatActivity() {
                     ).show()
                 }
             }else{
+                //error handling for not selecting dates
                 Toast.makeText(
                     this,
                     "Please select valid start & end date",
