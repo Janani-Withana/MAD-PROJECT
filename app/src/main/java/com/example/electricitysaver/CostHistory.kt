@@ -17,7 +17,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.electricitysaver.databaseHelper.CostCalculationDbHelper
 
 
-class cost_history : AppCompatActivity() {
+class CostHistory : AppCompatActivity() {
 
     lateinit var recyclerView: RecyclerView
     lateinit var db: SQLiteDatabase
@@ -64,7 +64,7 @@ class cost_history : AppCompatActivity() {
         //delete whole DB history
         val clearButton: Button = findViewById(R.id.btn_his_Clear)
         clearButton.setOnClickListener {
-            // Show a confirmation dialog
+            // Show confirmation dialog
             val builder = AlertDialog.Builder(this)
             builder.setTitle("Clear database")
             builder.setMessage("Are you sure you want to clear the History?")

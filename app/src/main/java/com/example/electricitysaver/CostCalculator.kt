@@ -9,7 +9,6 @@ import android.graphics.Color
 import android.graphics.Typeface
 import android.os.Build
 import android.os.Bundle
-import android.util.Log
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import java.text.SimpleDateFormat
@@ -23,7 +22,7 @@ import com.example.electricitysaver.databaseHelper.CostCalculationDbHelper
 import com.example.electricitysaver.databaseHelper.CalculationRatesDbHelper
 
 
-class Cost_calculator : AppCompatActivity() {
+class CostCalculator : AppCompatActivity() {
 
     lateinit var db : SQLiteDatabase
     lateinit var rs : Cursor
@@ -70,7 +69,7 @@ class Cost_calculator : AppCompatActivity() {
 
         val historyButton = findViewById<TextView>(R.id.btnViewHistory)
         historyButton.setOnClickListener {
-            val intent = Intent(this, cost_history::class.java)
+            val intent = Intent(this, CostHistory::class.java)
             startActivity(intent)
         }
 
