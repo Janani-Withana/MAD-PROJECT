@@ -299,7 +299,7 @@ class Cost_calculator : AppCompatActivity() {
                 tvCalDate.text = ""
                 return
             }
-            val days = TimeUnit.MILLISECONDS.toDays(endDate!!.timeInMillis - startDate!!.timeInMillis) + 1
+            val days = TimeUnit.MILLISECONDS.toDays(endDate!!.timeInMillis - startDate!!.timeInMillis)
             tvCalDate.text = days.toString()
         } else {
             tvCalDate.text = ""
