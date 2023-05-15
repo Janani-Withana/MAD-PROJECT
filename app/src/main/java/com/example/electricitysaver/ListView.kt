@@ -140,10 +140,16 @@ class ListView : AppCompatActivity() {
             }
             rs.close()
 
+            if(exunit1.matches(Regex("\\d+"))) {
+                Toast.makeText(this, "Expected Unit Added", Toast.LENGTH_SHORT).show()
+                val mainIntent = Intent(this, expectedUnitList::class.java)
+                startActivity(mainIntent)
+                finish()
+            }
+            else{
+                Toast.makeText(this, "Enter valid Number", Toast.LENGTH_SHORT).show()
+            }
 
-            val mainIntent = Intent(this, expectedUnitList::class.java)
-            startActivity(mainIntent)
-            finish()
 
         }
     }
