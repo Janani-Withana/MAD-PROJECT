@@ -307,7 +307,7 @@ class Cost_calculator : AppCompatActivity() {
         }
     }
 
-
+    //function to check data retrieve
     private fun printAllData() {
         val dbHelper = CalculationRatesDbHelper(applicationContext)
         val blockRates = dbHelper.getAllBlockRates()
