@@ -12,6 +12,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.SimpleCursorAdapter
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import com.example.electricitysaver.databaseHelper.AdminItemDbHelper
 
@@ -48,23 +49,47 @@ class AdminAddDevices : AppCompatActivity() {
 
         //Add Item
         btnAdd.setOnClickListener {
-            var cv = ContentValues()
-            cv.put("CATEGORY", cat.text.toString())
-            cv.put("BRAND", brand.text.toString())
-            cv.put("WATTS",watts.text.toString().toInt())
-            db.insert("Admin_Add_Item",null,cv)
-            rs.requery()
 
-            var ad = AlertDialog.Builder(this)
-            ad.setTitle("Add Record")
-            ad.setMessage("Record Inserted Successfully....")
-            ad.setPositiveButton("OK",DialogInterface.OnClickListener{ dialogInterface, i ->
-                cat.setText("")
-                brand.setText("")
-                watts.setText("")
-                cat.requestFocus()
-            })
-            ad.show()
+            // Validate input fields
+            val wattsValue = watts.text.toString().toDoubleOrNull()
+            // Display error message if any field is empty
+            if (cat.text.isEmpty() && brand.text.isEmpty() && watts.text.isEmpty()) {
+                Toast.makeText(this, "Please fill in all fields", Toast.LENGTH_SHORT).show()
+            } else if(cat.text.isEmpty()) {
+                cat.error = "Category cannot be empty"
+                return@setOnClickListener
+            } else if (brand.text.isEmpty()) {
+                brand.error = "Brand cannot be empty"
+                return@setOnClickListener
+            }
+            else if (watts.text.isEmpty()) {
+                watts.error = "No of watts cannot be empty"
+                return@setOnClickListener
+            }
+              else if (wattsValue == null || wattsValue <= 0) {
+                watts.error = "Watts must be a positive number"
+                return@setOnClickListener
+            }
+              else{
+
+                var cv = ContentValues()
+                cv.put("CATEGORY", cat.text.toString())
+                cv.put("BRAND", brand.text.toString())
+                cv.put("WATTS", watts.text.toString().toDouble())
+                db.insert("Admin_Add_Item", null, cv)
+                rs.requery()
+
+                var ad = AlertDialog.Builder(this)
+                ad.setTitle("Add Record")
+                ad.setMessage("Record Inserted Successfully....")
+                ad.setPositiveButton("OK", DialogInterface.OnClickListener { dialogInterface, i ->
+                    cat.setText("")
+                    brand.setText("")
+                    watts.setText("")
+                    cat.requestFocus()
+                })
+                ad.show()
+            }
         }
 
         val btnList = findViewById<Button>(R.id.btnAdminViewList)
@@ -74,7 +99,6 @@ class AdminAddDevices : AppCompatActivity() {
         }
 
     }
-
 
 
 }

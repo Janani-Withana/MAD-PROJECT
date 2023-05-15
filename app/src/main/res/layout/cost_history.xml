@@ -34,9 +34,10 @@
     <ImageView
         android:id="@+id/imageView27"
         android:layout_width="436dp"
-        android:layout_height="229dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="9dp"
         android:contentDescription="TODO"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.52"
         app:layout_constraintStart_toStartOf="parent"
@@ -75,16 +76,30 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.102" />
 
-    <ListView
-        android:id="@+id/hisListView"
-        android:layout_width="280dp"
-        android:layout_height="386dp"
-        android:layout_marginTop="136dp"
-        android:layout_marginEnd="64dp"
-        app:layout_constraintBottom_toTopOf="@+id/btn_his_Clear"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="301dp"
+        android:layout_height="430dp"
+        android:layout_marginStart="57dp"
+        android:layout_marginEnd="57dp"
+        android:layout_marginBottom="93dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/imageView29"
-        app:layout_constraintTop_toTopOf="@+id/imageView29"
-        app:layout_constraintVertical_bias="0.148" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView27" />
+
+    <!--    <ListView-->
+    <!--        android:id="@+id/hisListView"-->
+    <!--        android:layout_width="280dp"-->
+    <!--        android:layout_height="386dp"-->
+    <!--        android:layout_marginTop="136dp"-->
+    <!--        android:layout_marginEnd="64dp"-->
+    <!--        app:layout_constraintBottom_toTopOf="@+id/btn_his_Clear"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHorizontal_bias="1.0"-->
+    <!--        app:layout_constraintStart_toStartOf="@+id/imageView29"-->
+    <!--        app:layout_constraintTop_toTopOf="@+id/imageView29"-->
+    <!--        app:layout_constraintVertical_bias="0.148" />-->
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

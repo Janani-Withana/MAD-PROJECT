@@ -1,6 +1,7 @@
 package com.example.electricitysaver
 
 import android.content.ContentValues
+import android.content.DialogInterface
 import android.content.Intent
 import android.graphics.Color
 import android.os.Build
@@ -9,6 +10,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.*
+import androidx.appcompat.app.AlertDialog
 import com.example.electricitysaver.databaseHelper.AdminItemDbHelper
 import com.example.electricitysaver.databaseHelper.UserItemDbHelper
 
@@ -71,32 +73,61 @@ class userAddCustomItem : AppCompatActivity() {
         }
 
         val btnuserAdd = findViewById<Button>(R.id.btnuserAdd)
-        val editqty = findViewById<EditText>(R.id.editqty)
-        val editdu = findViewById<EditText>(R.id.editdu)
-        val editmu = findViewById<EditText>(R.id.editmu)
+        var editqty = findViewById<EditText>(R.id.editqty)
+        var editdu = findViewById<EditText>(R.id.editdu)
+        var editmu = findViewById<EditText>(R.id.editmu)
+
+
         btnuserAdd.setOnClickListener {
             val selectedCategory = catespinner.selectedItem.toString()
             val selectedBrand = bradspinner.selectedItem.toString()
-            Log.e("Catergory",selectedCategory)
-            Log.e("Brand",selectedBrand)
-            var helper = UserItemDbHelper(applicationContext)
-            var db = helper.readableDatabase
-            val rs = db.rawQuery("SELECT * FROM USER_ADD_ITEM", null)
 
-            var cv = ContentValues()
-            cv.put("CATEGORY",selectedCategory)
-            cv.put("BRAND",selectedBrand)
-            cv.put("QTY",editqty.text.toString().toInt())
-            cv.put("DAYUSE",editdu.text.toString().toInt())
-            cv.put("MONUSE",editmu.text.toString().toInt())
-            cv.put("NOW",watts.toInt())
-            val rowsAffected = db.insert("USER_ADD_ITEM",null,cv)
-            if (rowsAffected > 0) {
-                Toast.makeText(this, "Insert successful", Toast.LENGTH_SHORT).show()
-            }else{
-                Toast.makeText(this, "Insert Not successful", Toast.LENGTH_SHORT).show()
+            if(editqty.text.toString().isEmpty() ){
+                editqty.error = "Quantity cannot be empty"
+                Toast.makeText(this, "Quantity cannot be empty", Toast.LENGTH_SHORT).show()
             }
-            rs.requery()
+            if (editdu.text.toString().isEmpty()) {
+                editdu.error = "Day use cannot be empty"
+                Toast.makeText(this, "Day use cannot be empty or grater than 24", Toast.LENGTH_SHORT).show()
+            }
+            if (editmu.text.toString().isEmpty()){
+                editmu.error = "Month use cannot be empty"
+                Toast.makeText(this, "Month use cannot be empty or grater than 720", Toast.LENGTH_SHORT).show()
+            }else{
+
+                var helper = UserItemDbHelper(applicationContext)
+                var db = helper.readableDatabase
+                Log.e("WATT function",watts )
+
+                val cv = ContentValues().apply {
+                    put("CATEGORY", selectedCategory)
+                    put("BRAND", selectedBrand)
+                    put("QTY", editqty.text.toString().toInt())
+                    put("DAYUSE", editdu.text.toString().toInt())
+                    put("MONUSE", editmu.text.toString().toInt())
+                    put("NOW", watts.toInt())
+                }
+                val rowsAffected = db.insert("USER_ADD_ITEM",null,cv)
+
+                if (rowsAffected > 0) {
+                    val alertDialog = AlertDialog.Builder(this).apply {
+                        setTitle("Insert record")
+                        setMessage("Item Insert successfully")
+                        setPositiveButton("OK") { _, _ ->
+                            // do something after the user clicks the OK button
+                            editqty.setText("")
+                            editdu.setText("")
+                            editmu.setText("")
+
+                        }
+                    }
+                    alertDialog.show()
+                }else{
+                    Toast.makeText(this, "Insert Not successful", Toast.LENGTH_SHORT).show()
+                }
+
+
+            }
 
         }
 

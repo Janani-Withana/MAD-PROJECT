@@ -1,9 +1,12 @@
 package com.example.electricitysaver
 
+import android.content.Intent
 import android.graphics.Color
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
+import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.electricitysaver.databaseHelper.UserItemDbHelper
@@ -12,10 +15,15 @@ class expectedUnitList : AppCompatActivity() {
 
     private lateinit var recyclerView2: RecyclerView
     private lateinit var adapter: ExpectedListAdapter
+    private lateinit var btnHome: Button
+    private lateinit var btnclear: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_expected_unit_list)
+
+        var btnHome = findViewById<Button>(R.id.btnHome)
+        var btnclear = findViewById<Button>(R.id.btnclear)
 
         supportActionBar?.hide()
         var helper = UserItemDbHelper(applicationContext)
@@ -45,6 +53,30 @@ class expectedUnitList : AppCompatActivity() {
 
         adapter.setItems(items)
         adapter.notifyDataSetChanged()
+
+        btnclear.setOnClickListener {
+            var helper = UserItemDbHelper(applicationContext)
+            var db = helper.writableDatabase
+
+            val alertDialog = AlertDialog.Builder(this).apply {
+                setTitle("Clear All Items")
+                setMessage("Are you sure you want to clear all items?")
+                setPositiveButton("OK") { _, _ ->
+                    db.delete("USER_EXPECTED_ITEM", null, null)
+                    db.close()
+                    adapter.setItems(ArrayList())
+                    adapter.notifyDataSetChanged()
+                }
+            }
+            alertDialog.show()
+
+        }
+
+       //when i press the home button it will go to the home page
+        btnHome.setOnClickListener {
+            val intent = Intent(this, HomePage::class.java)
+            startActivity(intent)
+        }
 
     }
 }

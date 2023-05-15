@@ -97,7 +97,7 @@
         android:layout_width="@dimen/TextView2width"
         android:layout_height="@dimen/TextView2height"
         android:gravity="center"
-        android:text="@string/DailyUsage"
+        android:text="@string/MonthlyUsage"
         android:textColor="@color/black"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -113,7 +113,7 @@
         android:layout_width="@dimen/TextView2width"
         android:layout_height="@dimen/TextView7Height"
         android:gravity="center"
-        android:text="@string/MonthlyUsage"
+        android:text="@string/DailyUsage"
         android:textColor="@color/black"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -123,22 +123,38 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.191" />
 
+
     <Button
-        android:layout_marginEnd="8dp"
-        android:text="@string/Billcalculator"
-        app:cornerRadius="20dp"
-        android:id="@+id/button11"
+        android:id="@+id/btnHome"
         android:layout_width="wrap_content"
         android:layout_height="@dimen/Button2height"
         android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
         android:backgroundTint="@color/tvUsersColor"
+        android:text="Home"
+        app:cornerRadius="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.515"
+        app:layout_constraintHorizontal_bias="0.27"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.976" />
 
+    <Button
+        android:id="@+id/btnclear"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/Button2height"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="@color/btnColorYellow"
+        android:text="clear"
+        app:cornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.762"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.976" />
 
     <RelativeLayout
         android:layout_width="match_parent"

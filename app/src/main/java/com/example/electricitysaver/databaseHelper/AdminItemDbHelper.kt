@@ -19,4 +19,6 @@ class AdminItemDbHelper(context: Context): SQLiteOpenHelper(context, "AdminItems
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
 
     }
+
+
 }
