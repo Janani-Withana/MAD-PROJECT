@@ -249,12 +249,16 @@
         app:layout_constraintVertical_bias="0.057"
         app:srcCompat="@drawable/action_bar" />
 
-    <!--<Button
+    <Button
         android:id="@+id/btnDark"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="DarkMode"
-        tools:layout_editor_absoluteX="14dp"
-        tools:layout_editor_absoluteY="10dp" />-->
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.054"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -99,7 +99,7 @@ class pamitha_payment : AppCompatActivity() {
         }
 
 
-       /* val button = findViewById<Button>(R.id.btnDark)
+        val button = findViewById<Button>(R.id.btnDark)
         if (AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_NO) {
             isNightModeOn = false
             button.text = "Enable Dark Mode"
@@ -120,14 +120,15 @@ class pamitha_payment : AppCompatActivity() {
                 isNightModeOn = true
                 button.text = "Disable Dark Mode"
             }
-        }*/
+        }
 
 //
 
 
         payNow.setOnClickListener {
 
-            fetchApi(1500)
+            val value = "1500.00"
+            fetchApi(value)
 
 
 
@@ -166,7 +167,7 @@ class pamitha_payment : AppCompatActivity() {
         }
     }
 
-      fun fetchApi(i: Int) {
+      fun fetchApi(i: String) {
         Toast.makeText(this, "Call to Fetch API", Toast.LENGTH_SHORT).show()
         val queue = Volley.newRequestQueue(this)
         val url = "http://172.28.14.90:80/PHPStripe/stripe.php"
@@ -189,9 +190,11 @@ class pamitha_payment : AppCompatActivity() {
                     e.printStackTrace()
                 }
             },
+
             Response.ErrorListener { error -> error.printStackTrace() }) {
             override fun getParams(): Map<String, String>? {
                 val paramV: MutableMap<String, String> = HashMap()
+
                 paramV["value"] = i.toString()
                 return paramV
             }
