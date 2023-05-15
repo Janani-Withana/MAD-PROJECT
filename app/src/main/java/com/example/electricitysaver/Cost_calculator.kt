@@ -292,6 +292,7 @@ class Cost_calculator : AppCompatActivity() {
         formattedDate?.let { edtEDate.setText(it) }
     }
 
+    //Update Number function
     private fun updateNumberOfDays() {
         if (startDate != null && endDate != null) {
             if (startDate == endDate) {
