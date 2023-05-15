@@ -17,7 +17,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.electricitysaver.databaseHelper.CostCalculationDbHelper
 
 
-class cost_history : AppCompatActivity() {
+class CostHistory : AppCompatActivity() {
 
     lateinit var recyclerView: RecyclerView
     lateinit var db: SQLiteDatabase
