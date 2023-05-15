@@ -176,7 +176,7 @@
         app:srcCompat="@drawable/ic_baseline_home_24" />
 
     <ImageView
-        android:id="@+id/HomeAdmin"
+        android:id="@+id/Menu"
         android:layout_width="36dp"
         android:layout_height="34dp"
         app:layout_constraintBottom_toBottomOf="parent"

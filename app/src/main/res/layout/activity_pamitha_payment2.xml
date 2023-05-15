@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
+    tools:context=".pamitha_payment"
     >
 
     <!--    <ImageView-->
@@ -226,7 +227,7 @@
         app:srcCompat="@drawable/ic_baseline_home_24" />
 
     <ImageView
-        android:id="@+id/HomeAdmin"
+        android:id="@+id/Menu"
         android:layout_width="30dp"
         android:layout_height="31dp"
         app:layout_constraintBottom_toBottomOf="parent"
