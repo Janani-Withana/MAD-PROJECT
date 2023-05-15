@@ -51,9 +51,10 @@ class CostCalculator : AppCompatActivity() {
 
         supportActionBar?.hide()
 
+        supportActionBar?.hide()
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             window.navigationBarColor =
-                Color.parseColor("#133B5C")
+                Color.parseColor("#133B5C") // Replace with your desired color
         }
 
         var helper = CostCalculationDbHelper(applicationContext)

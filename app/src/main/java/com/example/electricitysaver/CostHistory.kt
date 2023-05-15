@@ -33,7 +33,7 @@ class CostHistory : AppCompatActivity() {
         supportActionBar?.hide()
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             window.navigationBarColor =
-                Color.parseColor("#133B5C")
+                Color.parseColor("#133B5C") // Replace with your desired color
         }
 
         recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
