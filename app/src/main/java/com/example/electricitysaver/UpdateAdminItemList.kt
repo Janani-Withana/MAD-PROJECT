@@ -13,6 +13,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import com.example.electricitysaver.databaseHelper.AdminItemDbHelper
@@ -42,6 +43,14 @@ class UpdateAdminItemList : AppCompatActivity() {
             window.navigationBarColor =
                 Color.parseColor("#133B5C") // Replace with your desired color
         }
+
+        val btnAdminDashboard = findViewById<ImageView>(R.id.HomeAdmin)
+        btnAdminDashboard.setOnClickListener {
+            val mainIntent = Intent(this, AdminDashboard::class.java)
+            startActivity(mainIntent)
+            //finish()
+        }
+
 
         // Retrieve the data from the intent
         val getCategory = intent.getStringExtra("CATEGORY")

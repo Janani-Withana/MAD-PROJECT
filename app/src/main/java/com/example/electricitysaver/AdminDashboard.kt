@@ -6,6 +6,7 @@ import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageButton
+import android.widget.ImageView
 import com.google.android.material.bottomsheet.BottomSheetDialog
 
 class AdminDashboard : AppCompatActivity() {
@@ -19,6 +20,13 @@ class AdminDashboard : AppCompatActivity() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             window.navigationBarColor =
                 Color.parseColor("#133B5C") // Replace with your desired color
+        }
+
+        val btnHomePage = findViewById<ImageView>(R.id.HomeAdmin)
+        btnHomePage.setOnClickListener {
+            val mainIntent = Intent(this, AdminDashboard::class.java)
+            startActivity(mainIntent)
+            //finish()
         }
 
         //View Users Count

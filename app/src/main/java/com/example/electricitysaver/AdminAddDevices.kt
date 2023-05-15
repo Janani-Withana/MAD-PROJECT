@@ -35,9 +35,9 @@ class AdminAddDevices : AppCompatActivity() {
                 Color.parseColor("#133B5C") // Replace with your desired color
         }
 
-        val btnHomePage = findViewById<ImageView>(R.id.HomeAdmin)
-        btnHomePage.setOnClickListener {
-            val mainIntent = Intent(this, HomePage::class.java)
+        val btnAdminPage = findViewById<ImageView>(R.id.HomeAdmin)
+        btnAdminPage.setOnClickListener {
+            val mainIntent = Intent(this, AdminDashboard::class.java)
             startActivity(mainIntent)
             //finish()
         }

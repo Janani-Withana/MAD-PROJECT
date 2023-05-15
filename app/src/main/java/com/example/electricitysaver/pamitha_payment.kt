@@ -10,6 +10,7 @@ import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.SimpleCursorAdapter
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
@@ -40,6 +41,14 @@ class pamitha_payment : AppCompatActivity() {
             window.navigationBarColor =
                 Color.parseColor("#133B5C") // Replace with your desired color
         }
+
+        val btnHomePage = findViewById<ImageView>(R.id.HomeUser)
+        btnHomePage.setOnClickListener {
+            val mainIntent = Intent(this, HomePage::class.java)
+            startActivity(mainIntent)
+            //finish()
+        }
+
         val favourites= findViewById<Button>(R.id.viewFavourites)
         favourites.setOnClickListener {
 

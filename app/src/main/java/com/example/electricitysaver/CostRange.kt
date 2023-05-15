@@ -1,6 +1,7 @@
 package com.example.electricitysaver
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.graphics.Color
@@ -27,6 +28,19 @@ class CostRange : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_cost_range)
+
+        supportActionBar?.hide()
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            window.navigationBarColor =
+                Color.parseColor("#133B5C") // Replace with your desired color
+        }
+
+        val btnAdminDashboard = findViewById<ImageView>(R.id.HomeAdmin)
+        btnAdminDashboard.setOnClickListener {
+            val mainIntent = Intent(this, AdminDashboard::class.java)
+            startActivity(mainIntent)
+            //finish()
+        }
 
         var dbHelper = CalculationRatesDbHelper(applicationContext)
         db = dbHelper.readableDatabase

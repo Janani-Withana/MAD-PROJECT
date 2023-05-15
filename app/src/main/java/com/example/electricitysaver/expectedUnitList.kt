@@ -6,6 +6,7 @@ import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageView
 import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -29,6 +30,13 @@ class expectedUnitList : AppCompatActivity() {
         var helper = UserItemDbHelper(applicationContext)
         var db = helper.readableDatabase
         var rs = db.rawQuery("SELECT * FROM USER_EXPECTED_ITEM ", null)
+
+        val btnHomePage = findViewById<ImageView>(R.id.HomeUser)
+        btnHomePage.setOnClickListener {
+            val mainIntent = Intent(this, HomePage::class.java)
+            startActivity(mainIntent)
+            //finish()
+        }
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             window.navigationBarColor =

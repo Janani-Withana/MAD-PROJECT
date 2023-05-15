@@ -35,6 +35,12 @@ class AdminListView : AppCompatActivity(),adminListAdapter.EditListener, adminLi
             window.navigationBarColor =
                 Color.parseColor("#133B5C") // Replace with your desired color
         }
+        val btnAdminDashboard = findViewById<ImageView>(R.id.HomeAdmin)
+        btnAdminDashboard.setOnClickListener {
+            val mainIntent = Intent(this, AdminDashboard::class.java)
+            startActivity(mainIntent)
+            //finish()
+        }
 
         recyclerView = findViewById(R.id.adminitemreview)
         adapter = adminListAdapter(ArrayList(), this,this)

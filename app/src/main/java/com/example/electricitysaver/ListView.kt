@@ -7,10 +7,7 @@ import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.electricitysaver.databaseHelper.UserItemDbHelper
@@ -40,6 +37,12 @@ class ListView : AppCompatActivity() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             window.navigationBarColor =
                 Color.parseColor("#133B5C") // Replace with your desired color
+        }
+        val btnHomePage = findViewById<ImageView>(R.id.HomeUser)
+        btnHomePage.setOnClickListener {
+            val mainIntent = Intent(this, HomePage::class.java)
+            startActivity(mainIntent)
+            //finish()
         }
 
         val recyclerView: RecyclerView = findViewById(R.id.itemreview)
