@@ -88,7 +88,7 @@ class CostRange : AppCompatActivity() {
                     cursor.close()
                 } catch (e: Exception) {
                     // Show an error message if there was an error retrieving the data
-                    //Toast.makeText(this@CostRange, "Error retrieving data category spinner: ${e.message}", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@CostRange, "Error retrieving data category spinner: ${e.message}", Toast.LENGTH_SHORT).show()
                 }
             }
             override fun onNothingSelected(parent: AdapterView<*>?) {}

@@ -64,7 +64,7 @@ class cost_history : AppCompatActivity() {
         //delete whole DB history
         val clearButton: Button = findViewById(R.id.btn_his_Clear)
         clearButton.setOnClickListener {
-            // Show a confirmation dialog
+            // Show confirmation dialog
             val builder = AlertDialog.Builder(this)
             builder.setTitle("Clear database")
             builder.setMessage("Are you sure you want to clear the History?")
